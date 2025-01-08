@@ -1,24 +1,44 @@
 - File hierarchies under `./data`
 data
+
 ├── data_manipulation_for_aml_gp_maxent
+
 │   └── ...
+
 ├── maxent
+
 │   └── ...
+
 ├── Results
+
 │   ├── test.txt: individual runs
+
 │   ├── output.txt: the average of all the runs
+
 │   ├── maxentResults.csv: 
+
 │   ├── maxentResults.xlsx: 
+
 │   ├── maxentResults_AllBIO.csv: 
+
 ├── species_test.npz: original files
+
 ├── species_train.npz
+
 ├── species_extra.npz
+
 ├── explore_species_data.py: script
+
 ├── data_all.txt: the converted files from .npz to import into code
+
 ├── data_train.txt
+
 ├── data_train_extra.txt
+
 ├── modified.txt: intermediary files to run data modelling
+
 └── modified_data.txt: the data after data cleansing to do further data modelling
+
 
 
 - setup a google colab environment
