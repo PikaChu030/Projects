@@ -23,6 +23,7 @@ data
 └── modified_data.txt: the data after data cleansing to do further data modelling
 
 
+
 - setup a google colab environment
   1. go to https://colab.research.google.com/
   2. press the button "Add a new notebook"
