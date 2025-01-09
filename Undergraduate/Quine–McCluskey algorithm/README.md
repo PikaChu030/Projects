@@ -6,7 +6,7 @@
 - The prime implicant chart should be output to the designated file.
 - This program should also output the Minimum SOP (Sum of Product).
 
-![Quine-McCluskey input Example](~/Downloads/input.png)
+![Quine-McCluskey input Example](./inputexample.png)
 
 ## 2. Requirement
 
@@ -20,7 +20,7 @@ Variable number (v), minterm value indexes (m), don’t-care indexes (d) would b
 Between `v`, `m`, `d` and following value(s) would be separated by a space. Each index would be separated by a single comma with no space.
 Example: `F(A, B, C, D, E, F, G, H, I, J) = Σ m(0,1,16,17,128,343,512,640,1023) + Σ d(341)`
 
-![Quine-McCluskey output Example](~/Downloads/ex.png)
+![Quine-McCluskey output Example](./outputexample.png)
 
 ### 2. Divide the minterms into groups and compare adjacent groups
 You can use arrays to store the different groups of minterms and allocate new arrays to store the result of previous comparison.
