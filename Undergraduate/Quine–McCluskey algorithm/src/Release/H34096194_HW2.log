@@ -1,0 +1,25 @@
+﻿  H34096194_HW2.cpp
+D:\HW\L\H34096194_HW2\H34096194_HW2\H34096194_HW2\H34096194_HW2.cpp(172,23): warning C4018: '<': signed/unsigned 不相符
+D:\HW\L\H34096194_HW2\H34096194_HW2\H34096194_HW2\H34096194_HW2.cpp(177,23): warning C4018: '<': signed/unsigned 不相符
+D:\HW\L\H34096194_HW2\H34096194_HW2\H34096194_HW2\H34096194_HW2.cpp(182,23): warning C4018: '<': signed/unsigned 不相符
+D:\HW\L\H34096194_HW2\H34096194_HW2\H34096194_HW2\H34096194_HW2.cpp(192,23): warning C4018: '<': signed/unsigned 不相符
+D:\HW\L\H34096194_HW2\H34096194_HW2\H34096194_HW2\H34096194_HW2.cpp(205,35): warning C4018: '<': signed/unsigned 不相符
+D:\HW\L\H34096194_HW2\H34096194_HW2\H34096194_HW2\H34096194_HW2.cpp(234,31): warning C4018: '<': signed/unsigned 不相符
+D:\HW\L\H34096194_HW2\H34096194_HW2\H34096194_HW2\H34096194_HW2.cpp(248,31): warning C4018: '<': signed/unsigned 不相符
+D:\HW\L\H34096194_HW2\H34096194_HW2\H34096194_HW2\H34096194_HW2.cpp(266,31): warning C4018: '<': signed/unsigned 不相符
+D:\HW\L\H34096194_HW2\H34096194_HW2\H34096194_HW2\H34096194_HW2.cpp(295,35): warning C4018: '<': signed/unsigned 不相符
+D:\HW\L\H34096194_HW2\H34096194_HW2\H34096194_HW2\H34096194_HW2.cpp(327,35): warning C4018: '<': signed/unsigned 不相符
+D:\HW\L\H34096194_HW2\H34096194_HW2\H34096194_HW2\H34096194_HW2.cpp(346,35): warning C4018: '<': signed/unsigned 不相符
+D:\HW\L\H34096194_HW2\H34096194_HW2\H34096194_HW2\H34096194_HW2.cpp(369,35): warning C4018: '<': signed/unsigned 不相符
+D:\HW\L\H34096194_HW2\H34096194_HW2\H34096194_HW2\H34096194_HW2.cpp(387,35): warning C4018: '<': signed/unsigned 不相符
+D:\HW\L\H34096194_HW2\H34096194_HW2\H34096194_HW2\H34096194_HW2.cpp(419,35): warning C4018: '<': signed/unsigned 不相符
+D:\HW\L\H34096194_HW2\H34096194_HW2\H34096194_HW2\H34096194_HW2.cpp(438,35): warning C4018: '<': signed/unsigned 不相符
+D:\HW\L\H34096194_HW2\H34096194_HW2\H34096194_HW2\H34096194_HW2.cpp(543,27): warning C4018: '<': signed/unsigned 不相符
+D:\HW\L\H34096194_HW2\H34096194_HW2\H34096194_HW2\H34096194_HW2.cpp(755,31): warning C4018: '<': signed/unsigned 不相符
+D:\HW\L\H34096194_HW2\H34096194_HW2\H34096194_HW2\H34096194_HW2.cpp(803,19): warning C4244: '正在初始化': 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
+D:\HW\L\H34096194_HW2\H34096194_HW2\H34096194_HW2\H34096194_HW2.cpp(808,106): warning C4018: '<=': signed/unsigned 不相符
+  正在產生程式碼
+  Previous IPDB not found, fall back to full compilation.
+  All 1143 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成程式碼產生
+  H34096194_HW2.vcxproj -> D:\HW\L\H34096194_HW2\H34096194_HW2\Release\H34096194_HW2.exe
