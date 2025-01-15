@@ -16,3 +16,4 @@ More works will be added continuously
 - Computer Graphics Rendering (software) - C++: (Graphics)
 - Database (estimated to be added by 2025.01.31) (software) - Java: (database)
 - Hardware Chip Design (estimated to be added by 2025.03.31) (hardware) - Verilog: (Chip Design)
+- (other projects will be added continuously...)
