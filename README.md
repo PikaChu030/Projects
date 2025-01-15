@@ -1,7 +1,7 @@
 # Projects
 This repository is used for job application
 
-*Last Updated: 2025.01.13*  
+*Last Updated: 15/01/2025 (DD/MM/YYYY)*  
 *More works will be added continuously*
 
 ## Undergraduate
@@ -13,5 +13,6 @@ This repository is used for job application
 ## Master
 - Predator Prey Simulation (software) - Python: (profile, source control, debug, CI/CD Tools)
 - Assessing ML Models for Species Data Modelling (software) - Python: ()
+- Computer Graphics Rendering (software) - C++: (Graphics)
 - Database (estimated to be added by 2025.01.31) (software) - Java: (database)
 - Hardware Chip Design (estimated to be added by 2025.03.31) (hardware) - Verilog: (Chip Design)
