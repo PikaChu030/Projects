@@ -1,5 +1,5 @@
 # Projects
-This repository is used for job application
+This repository is used for job application  
 More works will be added continuously
 
 *Last Updated: 15/01/2025 (DD/MM/YYYY)*  
