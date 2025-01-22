@@ -1,0 +1,3 @@
+Prime implicant(s): a'c'd,c'df',c'de',b'cd'f',bc'd,a'df,ac'e'f,a'bef',a'cd'ef',bde'f,a'bde,abde'
+Essemtial prime implicant(s): c'df',b'cd'f',bc'd,a'df,ac'e'f,a'bef'
+F(A,B,C,D,E,F)=c'df'+b'cd'f'+bc'd+a'df+ac'e'f+a'bef'

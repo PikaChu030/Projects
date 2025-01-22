@@ -1,0 +1,11 @@
+  \ A|       |
+B  \ |  0   1|
+-----+---+---+
+  0  | 1 | 0 | 
+-----+---+---+
+  1  | x | 0 | 
+-----+---+---+
+
+Prime implicant(s): a'
+Essemtial prime implicant(s): a'
+F(A,B)=a'
