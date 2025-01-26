@@ -19,8 +19,7 @@
 ## Implement PE (06/04/2024)(Sub-Project)
 - Eyeriss System
 - Multiply and Accumulator (MAC) Design  
-- Verilog  
-- Testbench  
+- Verilog/SystemVerilog/Testbench  
 
 ## Implement NoC (/2024)(Sub-Project)
 
