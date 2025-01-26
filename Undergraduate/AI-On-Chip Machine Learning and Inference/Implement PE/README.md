@@ -1,4 +1,7 @@
 # Specification
+- Eyeriss System  
+- Multiply and Accumulator (MAC) Design  
+- Verilog/SystemVerilog/Testbench  
 ## Implement rules:  
 By SystemVerilog or Verilog Synthesizable Combinational Circuit  
 ### Input  
