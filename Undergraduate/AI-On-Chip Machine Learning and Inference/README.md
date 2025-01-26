@@ -16,9 +16,11 @@
 - Analyzing two types of quantization results (i.e. size and accuracy)   
 - Visualization Tool: [NETRON](https://netron.app/)  
 
-## Implement PE (/2024)(Sub-Project)
-
-
+## Implement PE (06/04/2024)(Sub-Project)
+- Eyeriss System
+- Multiply and Accumulator (MAC) Design  
+- Verilog  
+- Testbench  
 
 ## Implement NoC (/2024)(Sub-Project)
 
