@@ -18,6 +18,6 @@ More works will be added continuously
 - REST Service (software) - Java: (Maven, Docker, Postman)
 - Database (estimated to be added by 26/03/2025) (software) - Java: (Database)
 - Cloud Programming (estimated to be added by 26/03/2025) - Java: (Cloud Programming)
-- Smart Contract - Solidty:
+- Smart Contract - Solidty: (Blockchain & Distributed Ledger)
 - Graduation Dissertation (estimated to be added by 31/07/2025) (software) - Python: LLM, NLP, ML, DL
 - (other projects will be added continuously...)
