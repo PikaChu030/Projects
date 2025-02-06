@@ -1,3 +1,4 @@
+*The docker image is removed from this file as it exceeds the max size can be uploaded to Github*  
 # Goals
 1. Create a Java-REST-Service  
 - Preferred with Spring Boot
@@ -22,13 +23,13 @@ Return your student id in a HTML page embedded in a <h1></h1> tag. As it is HTML
 not only the <h1> tag is necessary to form a valid HTML page, but you need [more](https://www.engr.colostate.edu/ets/htmlstructure/#:~:text=Within%20a%20web%20page%2C%20some,before%20the%20tags.)  
 2. Write (HTTP POST) a key/value to the system and store it in memory in a key-value table. New keys will be inserted; existing keys will be overwritten.  
 Implement two types of endpoints:  
-a) valuemanager?key=keyToUse&value=valueToWrite  
-b) valuemanager/key/valueToWrite  
+(a) valuemanager?key=keyToUse&value=valueToWrite  
+(b) valuemanager/key/valueToWrite  
 3. valuemanager/key (HTTP DELETE) shall delete the key if present.  
 4. valuemanager/key (HTTP GET) - key might not be present, or an empty string  
-a) Read the current value for the given key from the system and return as MIMEtype text/plain.  
-b) If the key is not present and no empty string code 404 is to be returned.  
-c) If no key is given, return all entries as JSON as MIME-type application/JSON in the format:  
+(a) Read the current value for the given key from the system and return as MIMEtype text/plain.  
+(b) If the key is not present and no empty string code 404 is to be returned.  
+(c) If no key is given, return all entries as JSON as MIME-type application/JSON in the format:  
 {  
 “key1”: “value1”,  
 “key2”: “value2”  
@@ -40,6 +41,7 @@ The body of the request contains a JSON-object in the following format:
  “externalBaseUrl”: “the URL of the remote server”,  
  “parameters”: “the parameters to combine with the URL”  
 }  
+
 The endpoint is to construct a URL from the “passed in” data (externalBaseUrl + parameters), call the endpoint with a GET, and return the data in the response as the same type as the original response was (so application/json remains application/json, etc.).  
 Should this not be possible, you can degrade to text/plain and pass back what you can.  
 Just be careful with constructing a valid URL as the passed in data might be incorrect(consider /, illegal constructs, etc.).  

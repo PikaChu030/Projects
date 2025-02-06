@@ -1,0 +1,19 @@
+C:/AIonChip/Lab4/PE.v {1 {vlog -work work -vopt C:/AIonChip/Lab4/PE.v
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module Controller
+-- Compiling module Spad
+-- Compiling module Mux
+-- Compiling module PSpad
+-- Compiling module PE
+
+Top level modules:
+	PE
+
+} {} {}} C:/AIonChip/Lab4/top_tb.sv {1 {vlog -work work -vopt -sv C:/AIonChip/Lab4/top_tb.sv
+Model Technology ModelSim SE-64 vlog 10.1c Compiler 2012.07 Jul 27 2012
+-- Compiling module top_tb
+
+Top level modules:
+	top_tb
+
+} {} {}}
