@@ -22,7 +22,9 @@ More works will be added continuously
 2. Very-Large-Scale Integration (VLSI) and Computer-Aided Design (CAD): 
 -
 3. Very-Large-Scale Integration (VLSI) Circuit Design:
--
+- Virtuoso: Schematic
+- HSPICE: Model
+- Laker: Layout, DRC, LVS, PEX
 4. (other projects will be added continuously...)
 
 ## Software
