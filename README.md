@@ -2,36 +2,36 @@
 This repository is used for job application  
 More works will be added continuously
 
-*Last Updated: 06/02/2025 (DD/MM/YYYY)*  
+*Last Updated: 07/02/2025 (DD/MM/YYYY)*  
 
-## Undergraduate
-1. Pipeline CPU and its applications (hardware) - RISCV, C++, Verilog, SystemVerilog:   
-- Digital Circuit Design
-- Hardware Simulation/Verification
-- Testing/Optimization  
-- EDA Tools  
-2. AI-On-Chip Machine Learning and Inference (hardware & software) - Python:  
+## Hardware & Software
+1. AI-On-Chip Machine Learning and Inference - Python:  
 - Design CNN Model   
 - Quantization  
 - PE Implementation  
 - NoC Implementation  
 - Control and Peripheral Implementation  
 - AI Accelerator Design  
-3. Karnaugh map (software) - C++:  
-- Data Structure  
-- Logic Circuit  
-4. Quine–McCluskey algorithm (software) - C++:
-- Data Structure
-- Logic Circuit  
-5. (other projects will be added continuously...)
 
-## Master
-1. Predator Prey Simulation (software) - Python:
+## Hardware
+1. Pipeline CPU and its Applications - RISCV, C++, Verilog, SystemVerilog:   
+- Digital Circuit Design
+- Hardware Simulation/Verification
+- Testing/Optimization  
+- EDA Tools
+2. Very-Large-Scale Integration (VLSI) and Computer-Aided Design (CAD): 
+-
+3. Very-Large-Scale Integration (VLSI) Circuit Design:
+-
+4. (other projects will be added continuously...)
+
+## Software
+1. Predator Prey Simulation - Python:
 - Profile  
 - Source Control  
 - Debug  
 - CI/CD Tools  
-2. Assessing ML Models for Species Data Modelling (software) - Python:  
+2. Assessing ML Models for Species Data Modelling - Python:  
 - Machine Learning (ML)  
 - Deep Learning (DL)  
 - Natural language processing (NLP)  
@@ -43,13 +43,13 @@ More works will be added continuously
 - Exploratory Data Analysis (EDA)   
 - Testing  
 - Optimization  
-3. Computer Graphics Rendering (software) - C++:  
+3. Computer Graphics Rendering - C++:  
 - Graphics  
-4. REST Service (software) - Java:  
+4. REST Service - Java:  
 - Maven  
 - Docker
 - Postman  
-5. Database (estimated to be added by 26/03/2025) (software) - Java:  
+5. Database (estimated to be added by 26/03/2025) - Java:  
 - Database  
 6. Cloud Programming (estimated to be added by 26/03/2025) - Java:
 - Cloud Programming
@@ -59,5 +59,13 @@ More works will be added continuously
 - Large Language Model (LLM)  
 - Natural language processing (NLP)
 - Machine Learning (ML)
+9. Role-Playing Game (RPG) - C:
+-
+10. Karnaugh map (software) - C++:  
+- Data Structure  
+- Logic Circuit  
+11. Quine–McCluskey algorithm (software) - C++:
+- Data Structure
+- Logic Circuit 
 - Deep Learning (DL)   
 9. (other projects will be added continuously...)  
