@@ -1,0 +1,20 @@
+* SPICE NETLIST
+***************************************
+
+.SUBCKT L POS NEG
+.ENDS
+***************************************
+.SUBCKT fig2_1layout Clk D Q Q_ gnd Vdd
+** N=8 EP=6 IP=0 FDC=10
+M0 2 Clk gnd gnd N_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13 PD=1.98e-06 PS=1.98e-06 $X=-2710 $Y=805 $D=0
+M1 Q Clk D gnd N_18 L=1.8e-07 W=1e-06 AD=2.55e-13 AS=4.9e-13 PD=5.1e-07 PS=1.98e-06 $X=145 $Y=805 $D=0
+M2 5 2 Q gnd N_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=2.55e-13 PD=1.98e-06 PS=5.1e-07 $X=835 $Y=805 $D=0
+M3 gnd Q_ 5 gnd N_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13 PD=1.98e-06 PS=1.98e-06 $X=3055 $Y=805 $D=0
+M4 gnd Q Q_ gnd N_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13 PD=1.98e-06 PS=1.98e-06 $X=6145 $Y=805 $D=0
+M5 2 Clk Vdd Vdd P_18 L=1.8e-07 W=2e-06 AD=9.8e-13 AS=9.8e-13 PD=2.98e-06 PS=2.98e-06 $X=-2710 $Y=5630 $D=1
+M6 Q 2 D Vdd P_18 L=1.8e-07 W=1e-06 AD=2.55e-13 AS=4.9e-13 PD=5.1e-07 PS=1.98e-06 $X=145 $Y=5630 $D=1
+M7 5 Clk Q Vdd P_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=2.55e-13 PD=1.98e-06 PS=5.1e-07 $X=835 $Y=5630 $D=1
+M8 Vdd Q_ 5 Vdd P_18 L=1.8e-07 W=2e-06 AD=9.8e-13 AS=9.8e-13 PD=2.98e-06 PS=2.98e-06 $X=3055 $Y=5630 $D=1
+M9 Vdd Q Q_ Vdd P_18 L=1.8e-07 W=2e-06 AD=9.8e-13 AS=9.8e-13 PD=2.98e-06 PS=2.98e-06 $X=6145 $Y=5630 $D=1
+.ENDS
+***************************************

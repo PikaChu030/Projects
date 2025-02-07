@@ -1,0 +1,58 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  Pb1
+* Top Cell Name: fig2_2
+* View Name:     schematic
+* Netlisted on:  Mar 17 20:13:56 2023
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: Pb1
+* Cell Name:    INV
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT INV Vdd gnd in out
+*.PININFO Vdd:I gnd:I in:I out:O
+MMN2 out in gnd gnd N_18 W=1u L=180.00n
+MMN1 out in Vdd Vdd P_18 W=2u L=180n
+.ENDS
+
+************************************************************************
+* Library Name: Pb1
+* Cell Name:    fig2_2
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT fig2_2 Clk D Q Vdd gnd
+*.PININFO Clk:I D:I Vdd:I gnd:I Q:O
+MM7 net142 Clk D Vdd P_18 W=1u L=180n
+MM4 net143 net139 net142 Vdd P_18 W=1u L=180n
+MM1 net149 net025 net159 Vdd P_18 W=1u L=180n
+MM2 net150 Clk net149 Vdd P_18 W=1u L=180n
+XI5 Vdd gnd Clk net139 / INV
+XI4 Vdd gnd net142 net159 / INV
+XI3 Vdd gnd net159 net143 / INV
+XI0 Vdd gnd Clk net025 / INV
+XI1 Vdd gnd net149 Q / INV
+XI2 Vdd gnd Q net150 / INV
+MM6 net142 Clk net143 gnd N_18 W=1u L=180n
+MM5 D net139 net142 gnd N_18 W=1u L=180n
+MM3 net149 net025 net150 gnd N_18 W=1u L=180n
+MM0 net159 Clk net149 gnd N_18 W=1u L=180n
+.ENDS
+

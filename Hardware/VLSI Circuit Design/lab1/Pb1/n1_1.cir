@@ -1,0 +1,33 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  Pb1
+* Top Cell Name: 1_1
+* View Name:     schematic
+* Netlisted on:  Mar 10 19:46:53 2023
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: Pb1
+* Cell Name:    1_1
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT n1_1 Clk Vin Vout_n gnd
+*.PININFO Clk:I Vin:I gnd:I Vout_n:O
+MM0 Vout_n Clk Vin gnd N_18 W=2u L=180n
+.ENDS
+

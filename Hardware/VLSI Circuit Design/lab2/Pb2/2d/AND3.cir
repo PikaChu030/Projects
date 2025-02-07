@@ -1,0 +1,62 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  AND3
+* Top Cell Name: AND3
+* View Name:     schematic
+* Netlisted on:  Apr 24 20:23:31 2023
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: AND3
+* Cell Name:    AND3
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT AND3 B1 B2 B3 EN V1 V2 V3 Vdd gnd
+*.PININFO B1:I B2:I B3:I EN:I Vdd:I gnd:I V1:O V2:O V3:O
+MM24 V1 net080 gnd gnd N_18 W=12.05u L=180n m=2
+MM23 net080 net078 gnd gnd N_18 W=3.9u L=180n
+MM22 net078 net076 gnd gnd N_18 W=600.0n L=180n
+MM21 net076 EN net082 gnd N_18 W=1u L=180n
+MM20 net082 B1 gnd gnd N_18 W=1u L=180n
+MM14 V2 net053 gnd gnd N_18 W=15.2u L=180n
+MM13 net053 net048 gnd gnd N_18 W=3.1u L=180n
+MM12 net048 net040 gnd gnd N_18 W=600.0n L=180n
+MM11 net061 B2 gnd gnd N_18 W=1u L=180n
+MM10 net040 EN net061 gnd N_18 W=1u L=180n
+MM4 V3 net22 gnd gnd N_18 W=9.6u L=180n
+MM3 net22 net19 gnd gnd N_18 W=2.4u L=180n
+MM2 net19 net14 gnd gnd N_18 W=600.0n L=180n
+MM1 net27 B3 gnd gnd N_18 W=1u L=180n
+MM0 net14 EN net27 gnd N_18 W=1u L=180n
+MM29 net080 net078 Vdd Vdd P_18 W=11.7u L=180n
+MM28 net078 net076 Vdd Vdd P_18 W=1.9u L=180n
+MM27 V1 net080 Vdd Vdd P_18 W=18.1u L=180n m=4
+MM26 net076 B1 Vdd Vdd P_18 W=1.5u L=180n
+MM25 net076 EN Vdd Vdd P_18 W=1.5u L=180n
+MM19 V2 net053 Vdd Vdd P_18 W=11.4u L=180n m=4
+MM18 net053 net048 Vdd Vdd P_18 W=9.3u L=180n
+MM17 net048 net040 Vdd Vdd P_18 W=1.9u L=180n
+MM16 net040 B2 Vdd Vdd P_18 W=1.5u L=180n
+MM15 net040 EN Vdd Vdd P_18 W=1.5u L=180n
+MM9 V3 net22 Vdd Vdd P_18 W=14.4u L=180n m=2
+MM8 net22 net19 Vdd Vdd P_18 W=7.3u L=180n
+MM7 net19 net14 Vdd Vdd P_18 W=1.9u L=180n
+MM6 net14 B3 Vdd Vdd P_18 W=1.5u L=180n
+MM5 net14 EN Vdd Vdd P_18 W=1.5u L=180n
+.ENDS
+

@@ -1,0 +1,37 @@
+* File: hw3_2b.pex.netlist
+* Created: Sun May 14 13:24:08 2023
+* Program "Calibre xRC"
+* Version "v2016.4_15.11"
+* 
+.include "hw3_2b.pex.netlist.pex"
+.subckt hw3_2b  VIN GND VDD
+* 
+* VDD	VDD
+* GND	GND
+* VIN	VIN
+M0 N_2_M0_d N_VIN_M0_g N_GND_M0_s N_GND_M0_b N_18 L=1.8e-07 W=1e-06 AD=4.9e-13
++ AS=4.9e-13 PD=1.98e-06 PS=1.98e-06
+M1 N_3_M1_d N_2_M1_g N_GND_M1_s N_GND_M0_b N_18 L=1.8e-07 W=1e-06 AD=4.9e-13
++ AS=4.9e-13 PD=1.98e-06 PS=1.98e-06
+M2 N_4_M2_d N_3_M2_g N_GND_M2_s N_GND_M0_b N_18 L=1.8e-07 W=1e-06 AD=4.9e-13
++ AS=4.9e-13 PD=1.98e-06 PS=1.98e-06
+M3 N_5_M3_d N_4_M3_g N_GND_M3_s N_GND_M0_b N_18 L=1.8e-07 W=1e-06 AD=4.9e-13
++ AS=4.9e-13 PD=1.98e-06 PS=1.98e-06
+M4 N_VIN_M4_d N_5_M4_g N_GND_M4_s N_GND_M0_b N_18 L=1.8e-07 W=1e-06 AD=4.9e-13
++ AS=4.9e-13 PD=1.98e-06 PS=1.98e-06
+M5 N_2_M5_d N_VIN_M5_g N_VDD_M5_s N_VDD_M5_b P_18 L=1.8e-07 W=3e-06 AD=1.47e-12
++ AS=1.47e-12 PD=3.98e-06 PS=3.98e-06
+M6 N_3_M6_d N_2_M6_g N_VDD_M6_s N_VDD_M5_b P_18 L=1.8e-07 W=3e-06 AD=1.47e-12
++ AS=1.47e-12 PD=3.98e-06 PS=3.98e-06
+M7 N_4_M7_d N_3_M7_g N_VDD_M7_s N_VDD_M5_b P_18 L=1.8e-07 W=3e-06 AD=1.47e-12
++ AS=1.47e-12 PD=3.98e-06 PS=3.98e-06
+M8 N_5_M8_d N_4_M8_g N_VDD_M8_s N_VDD_M5_b P_18 L=1.8e-07 W=3e-06 AD=1.47e-12
++ AS=1.47e-12 PD=3.98e-06 PS=3.98e-06
+M9 N_VIN_M9_d N_5_M9_g N_VDD_M9_s N_VDD_M5_b P_18 L=1.8e-07 W=3e-06 AD=1.47e-12
++ AS=1.47e-12 PD=3.98e-06 PS=3.98e-06
+*
+.include "hw3_2b.pex.netlist.HW3_2B.pxi"
+*
+.ends
+*
+*

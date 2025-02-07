@@ -1,0 +1,51 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  Pb1
+* Top Cell Name: fig2_1
+* View Name:     schematic
+* Netlisted on:  Mar 17 19:52:01 2023
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: Pb1
+* Cell Name:    INV
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT INV Vdd gnd in out
+*.PININFO Vdd:I gnd:I in:I out:O
+MMN2 out in gnd gnd N_18 W=1u L=180.00n
+MMN1 out in Vdd Vdd P_18 W=2u L=180n
+.ENDS
+
+************************************************************************
+* Library Name: Pb1
+* Cell Name:    fig2_1
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT fig2_1 Clk D Q Q_ Vdd gnd
+*.PININFO Clk:I D:I Vdd:I gnd:I Q:O Q_:O
+MM2 net34 Clk Q Vdd P_18 W=1u L=180n
+MM1 Q net27 D Vdd P_18 W=1u L=180n
+MM3 Q net27 net34 gnd N_18 W=1u L=180n
+MM0 D Clk Q gnd N_18 W=1u L=180n
+XI2 Vdd gnd Q_ net34 / INV
+XI0 Vdd gnd Clk net27 / INV
+XI1 Vdd gnd Q Q_ / INV
+.ENDS
+

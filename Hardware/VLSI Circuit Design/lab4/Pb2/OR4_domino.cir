@@ -1,0 +1,62 @@
+***OR4.cir***
+****NOR2 0.9u 1.8u high skew 3.16u 0.79u/NOR2 1.56u 3.12u high skew 5.52u 1.38u
+
+.subckt OR4 A B C D clk out vdd gnd Wp=1
+
+****NOR2 A B
+m0 x0 clk vdd vdd p_18 L=0.18u W=0.9u
+
+m1 x0 A x1 gnd n_18 L=0.18u W=3.6u
+m2 x0 B x1 gnd n_18 L=0.18u W=3.6u
+m3 x1 clk gnd gnd n_18 L=0.18u W=3.6u
+
+*m1 x0 A x1 gnd n_18 L=0.18u W=1.8u*Wp
+*m2 x0 B x1 gnd n_18 L=0.18u W=1.8u*Wp
+*m3 x1 clk gnd gnd n_18 L=0.18u W=1.8u*Wp
+
+****high skew 1
+m4 x2 x0 vdd vdd p_18 L=0.18u W=3.16u
+m5 x2 x0 gnd gnd n_18 L=0.18u W=0.79u
+
+
+****NOR2 C D
+m6 x3 clk vdd vdd p_18 L=0.18u W=0.9u
+
+m7 x3 C x4 gnd n_18 L=0.18u W=3.6u
+m8 x3 D x4 gnd n_18 L=0.18u W=3.6u
+m9 x4 clk gnd gnd n_18 L=0.18u W=3.6u
+
+*m7 x3 C x4 gnd n_18 L=0.18u W=1.8u*Wp
+*m8 x3 D x4 gnd n_18 L=0.18u W=1.8u*Wp
+*m9 x4 clk gnd gnd n_18 L=0.18u W=1.8u*Wp
+
+****high skew 2
+m10 x5 x3 vdd vdd p_18 L=0.18u W=3.16u
+m11 x5 x3 gnd gnd n_18 L=0.18u W=0.79u
+
+
+****NOR2 x2 x5
+m12 x6 clk vdd vdd p_18 L=0.18u W=1.56u
+
+m13 x6 x2 x7 gnd n_18 L=0.18u W=6.24u
+m14 x6 x5 x7 gnd n_18 L=0.18u W=6.24u
+m15 x7 clk gnd gnd n_18 L=0.18u W=6.24u
+
+*m13 x6 x2 x7 gnd n_18 L=0.18u W=3.12u*Wp
+*m14 x6 x5 x7 gnd n_18 L=0.18u W=3.12u*Wp
+*m15 x7 clk gnd gnd n_18 L=0.18u W=3.12u*Wp
+
+****high skew 3
+m16 out x6 vdd vdd p_18 L=0.18u W=5.52u
+m17 out x6 gnd gnd n_18 L=0.18u W=1.38u
+
+
+
+
+
+
+
+
+
+.ends
+

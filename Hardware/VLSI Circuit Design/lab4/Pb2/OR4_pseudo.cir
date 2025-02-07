@@ -1,0 +1,26 @@
+***OR4.cir***
+****NOR4 1.35u 2.7u/INV 2.34u 4.68u
+
+.subckt OR4 A B C D out vdd gnd Wp=1
+
+****NOR4 A B C D
+m0 x0 gnd vdd vdd p_18 L=0.18u W=1.35u
+
+*m1 x0 A gnd gnd n_18 L=0.18u W=2.7u*Wp
+*m2 x0 B gnd gnd n_18 L=0.18u W=2.7u*Wp
+*m3 x0 C gnd gnd n_18 L=0.18u W=2.7u*Wp
+*m4 x0 D gnd gnd n_18 L=0.18u W=2.7u*Wp
+
+m1 x0 A gnd gnd n_18 L=0.18u W=1.35u
+m2 x0 B gnd gnd n_18 L=0.18u W=1.35u
+m3 x0 C gnd gnd n_18 L=0.18u W=1.35u
+m4 x0 D gnd gnd n_18 L=0.18u W=1.35u
+
+****INV
+m5 out gnd vdd vdd p_18 L=0.18u W=2.34u
+*m6 out x0 gnd gnd n_18 L=0.18u W=4.68u*Wp
+
+m6 out x0 gnd gnd n_18 L=0.18u W=2.34u
+
+.ends
+

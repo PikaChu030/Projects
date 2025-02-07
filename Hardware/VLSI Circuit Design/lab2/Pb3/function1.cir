@@ -1,0 +1,42 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  Pb3_ciruit
+* Top Cell Name: function1
+* View Name:     schematic
+* Netlisted on:  Apr 20 20:53:07 2023
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: Pb3_ciruit
+* Cell Name:    function1
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT function1 A B C D E Vdd Y gnd
+*.PININFO A:I B:I C:I D:I E:I Vdd:I gnd:I Y:O
+MM4 Y E net19 gnd N_18 W=1u L=180n
+MM3 Y D net19 gnd N_18 W=1u L=180n
+MM2 net19 C gnd gnd N_18 W=1u L=180n
+MM1 net19 B gnd gnd N_18 W=1u L=180n
+MM0 net19 A gnd gnd N_18 W=1u L=180n
+MM9 net23 E Vdd Vdd P_18 W=3u L=180n
+MM8 Y D net23 Vdd P_18 W=3u L=180n
+MM7 net25 A Vdd Vdd P_18 W=4.5u L=180n
+MM6 net24 B net25 Vdd P_18 W=4.5u L=180n
+MM5 Y C net24 Vdd P_18 W=4.5u L=180n
+.ENDS
+

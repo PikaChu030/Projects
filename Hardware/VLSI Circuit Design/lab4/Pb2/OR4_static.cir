@@ -1,0 +1,32 @@
+***OR4.cir***
+****NOR2 2.16u 0.54u/NAND2 2.09u 2.09u
+
+.subckt OR4 A B C D out vdd gnd *Wp=1
+
+****NOR2 A B
+m0 x1 A vdd vdd p_18 L=0.18u W=2.16u
+m1 x0 B x1 vdd p_18 L=0.18u W=2.16u
+*m0 x1 A vdd vdd p_18 L=0.18u W=2.16u*Wp
+*m1 x0 B x1 vdd p_18 L=0.18u W=2.16u*Wp
+m2 x0 A gnd gnd n_18 L=0.18u W=0.54u
+m3 x0 B gnd gnd n_18 L=0.18u W=0.54u
+
+
+****NOR2 C D
+m4 x3 C vdd vdd p_18 L=0.18u W=2.16u
+m5 x2 D x3 vdd p_18 L=0.18u W=2.16u
+*m4 x3 C vdd vdd p_18 L=0.18u W=2.16u*Wp
+*m5 x2 D x3 vdd p_18 L=0.18u W=2.16u*Wp
+m6 x2 C gnd gnd n_18 L=0.18u W=0.54u
+m7 x2 D gnd gnd n_18 L=0.18u W=0.54u
+
+****NAND2
+m8 out x0 vdd vdd p_18 L=0.18u W=2.09u
+m9 out x2 Vdd vdd p_18 L=0.18u W=2.09u
+*m8 out x0 vdd vdd p_18 L=0.18u W=2.09u*Wp
+*m9 out x2 Vdd vdd p_18 L=0.18u W=2.09u*Wp
+m10 out x0 x4 gnd n_18 L=0.18u W=2.09u
+m11 x4 x2 gnd gnd n_18 L=0.18u W=2.09u
+
+.ends
+

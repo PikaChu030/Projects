@@ -1,0 +1,17 @@
+* File: function.pex.netlist.FUNCTION.pxi
+* Created: Thu Apr 20 21:06:02 2023
+* 
+x_PM_FUNCTION%A N_A_M0_g N_A_M5_g A PM_FUNCTION%A
+x_PM_FUNCTION%B N_B_M1_g N_B_M6_g B PM_FUNCTION%B
+x_PM_FUNCTION%GND GND N_GND_M0_b N_GND_M0_s N_GND_M2_s N_GND_M1_d
++ PM_FUNCTION%GND
+x_PM_FUNCTION%C N_C_M2_g N_C_M7_g C PM_FUNCTION%C
+x_PM_FUNCTION%D N_D_M3_g N_D_M8_g D PM_FUNCTION%D
+x_PM_FUNCTION%Y Y N_Y_M7_d N_Y_M8_s N_Y_M4_s N_Y_M3_d PM_FUNCTION%Y
+x_PM_FUNCTION%E N_E_M4_g N_E_M9_g E PM_FUNCTION%E
+x_PM_FUNCTION%noxref_8 N_noxref_8_M1_s N_noxref_8_M0_d N_noxref_8_M3_s
++ N_noxref_8_M2_d N_noxref_8_M4_d PM_FUNCTION%noxref_8
+x_PM_FUNCTION%VDD VDD N_VDD_M5_b N_VDD_M5_s N_VDD_M9_d PM_FUNCTION%VDD
+x_PM_FUNCTION%noxref_10 N_noxref_10_M6_s N_noxref_10_M5_d PM_FUNCTION%noxref_10
+x_PM_FUNCTION%noxref_11 N_noxref_11_M7_s N_noxref_11_M6_d PM_FUNCTION%noxref_11
+x_PM_FUNCTION%noxref_12 N_noxref_12_M9_s N_noxref_12_M8_d PM_FUNCTION%noxref_12

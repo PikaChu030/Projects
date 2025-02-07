@@ -1,0 +1,37 @@
+* File: fig3_1layout.pex.netlist
+* Created: Fri Mar 24 11:12:02 2023
+* Program "Calibre xRC"
+* Version "v2016.4_15.11"
+* 
+.include "fig3_1layout.pex.netlist.pex"
+.subckt fig3_1layout  VDD A B C D Y GND
+* 
+* GND	GND
+* Y	Y
+* D	D
+* C	C
+* B	B
+* A	A
+* VDD	VDD
+M0 N_Y_M0_d N_A_M0_g N_GND_M0_s N_GND_M0_b N_18 L=1.8e-07 W=1e-06 AD=4.9e-13
++ AS=4.9e-13 PD=1.98e-06 PS=1.98e-06
+M1 N_noxref_4_M1_d N_B_M1_g N_Y_M1_s N_GND_M0_b N_18 L=1.8e-07 W=1e-06
++ AD=2.55e-13 AS=4.9e-13 PD=5.1e-07 PS=1.98e-06
+M2 N_GND_M2_d N_C_M2_g N_noxref_4_M2_s N_GND_M0_b N_18 L=1.8e-07 W=1e-06
++ AD=4.9e-13 AS=2.55e-13 PD=1.98e-06 PS=5.1e-07
+M3 N_GND_M3_d N_D_M3_g N_Y_M3_s N_GND_M0_b N_18 L=1.8e-07 W=1e-06 AD=4.9e-13
++ AS=4.9e-13 PD=1.98e-06 PS=1.98e-06
+M4 N_noxref_5_M4_d N_A_M4_g N_VDD_M4_s N_VDD_M4_b P_18 L=1.8e-07 W=3e-06
++ AD=7.65e-13 AS=1.47e-12 PD=5.1e-07 PS=3.98e-06
+M5 N_noxref_8_M5_d N_B_M5_g N_noxref_5_M5_s N_VDD_M4_b P_18 L=1.8e-07 W=3e-06
++ AD=1.47e-12 AS=7.65e-13 PD=3.98e-06 PS=5.1e-07
+M6 N_noxref_8_M6_d N_C_M6_g N_noxref_5_M6_s N_VDD_M4_b P_18 L=1.8e-07 W=3e-06
++ AD=1.47e-12 AS=1.47e-12 PD=3.98e-06 PS=3.98e-06
+M7 N_Y_M7_d N_D_M7_g N_noxref_8_M7_s N_VDD_M4_b P_18 L=1.8e-07 W=3e-06
++ AD=1.47e-12 AS=1.47e-12 PD=3.98e-06 PS=3.98e-06
+*
+.include "fig3_1layout.pex.netlist.FIG3_1LAYOUT.pxi"
+*
+.ends
+*
+*

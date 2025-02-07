@@ -1,0 +1,8 @@
+***INV.cir***
+
+.subckt INV in out vdd gnd Wp=2u Wn=1u
+m1 out gnd vdd vdd p_18 W=Wp L=0.18u
+m2 out in gnd gnd n_18 W=Wn L=0.18u
+CL out gnd 0.1pF
+.ends
+

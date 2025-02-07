@@ -1,0 +1,6614 @@
+ ****** PrimeSim HSPICE -- R-2020.12-SP2 linux64 (May 24 2021 7074677) ******
+  Copyright (c) 1986 - 2023 by Synopsys, Inc. All Rights Reserved.
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: testbench1d_2.sp                                                  
+  Command line options: /cad/synopsys/hspice/2020.12-sp2/hspice/linux64/hspice -i testbench1d_2.sp -o postsim1.lis
+  Start time: Wed Apr 12 21:31:43 2023
+ lic:  
+ lic: FLEXlm: SDK_12.9.5 
+ lic: USER:   vlsisj2023027        HOSTNAME: cic-svr 
+ lic: HOSTID: "90b11c16165c"       PID:      80208 
+ lic: Using FLEXlm license file: 
+ lic: 26585@lshc 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 31-mar-2024/2023.03 
+ lic: 182(in_use)/900(total) FLOATING license(s) on SERVER 26585@lshc 
+ lic:   
+  **warning** (cic018.l:454) Model n_18 device geometries will not be checked against the limits set by lmin, lmax, wmin and wmax. To enable this check, add a period(.) to the model name(i.e. enable model selector).
+  **warning** (testbench1d_2.sp:4) runlvl smaller than 5, reset to 5 when accurate turned on
+1****** PrimeSim HSPICE -- R-2020.12-SP2 linux64 (May 24 2021 7074677) ******
+ ******  
+ .protect
+
+ ****** mos   model parameters tnom=  25.000 temp=  25.000 ******
+ ***************************************************************************
+ ***        model parameters  model name:   0:n_18             model type:nmos   ***
+ ***************************************************************************
+
+   *** general parameters ***
+    deriv=   0.           
+
+   ***  level 49  model parameters  ***
+
+      hspver=    2006.03               level=         49         
+     version=        3.2            paramchk=          0         
+      apwarn=          1                lite=          0         
+      vgslim=          0             binUnit=          1         
+      capMod=          2               xpart=          1         
+      mobMod=          1              nqsMod=          0         
+      stiMod=          0                 elm=          5         
+    sfvtflag=          0                 tox=    4.2e-09 meter   
+          xj=    1.6e-07 meter       binflag=          0         
+        lmin=    1.8e-07 meter          lmax=      5e-05 meter   
+        wmin=    2.4e-07 meter          wmax=     0.0001 meter   
+        lref=          0 meter          wref=          0 meter   
+        lint=  1.587e-08 meter          wint=  1.022e-08 meter   
+       lmult=          1               wmult=          1         
+          ll= -1.062e-15                 lln=          1         
+          lw=  2.996e-15                 lwn=          1         
+         lwl=          0                  wl=          0         
+         wln=          1                  ww=  7.262e-16         
+         wwn=          1                 wwl=          0         
+         dwg= -3.396e-09 m/V             dwb=  1.346e-09 m/V^1/2 
+          xl=  -1.05e-08                  xw=          0         
+          a0=       1.93                 ags=     0.5072 V^-1    
+          b0=  1.486e-06 meter            b1=  9.064e-06 meter   
+        keta=    0.01752 V^-1           voff=    -0.1088 V       
+       ngate=      1e+23 cm^-3           vbx=          0 V       
+         vbm=         -3 V                xt=   1.55e-07 meter   
+        vth0=     0.3075 V               nch= 3.7446e+17 cm^-3   
+        nsub=      6e+16 cm^-3           nlx=  4.279e-07 meter   
+      gamma1=          0 V^-1/2       gamma2=          0 V^-1/2  
+          k1=     0.4578 V^1/2            k2=   -0.02638         
+          k3=     -10.88                 k3b=     0.2379 V^-1    
+          w0= -8.813e-08 meter          dvt0=     0.4042         
+        dvt1=     0.3237                dvt2=    -0.8602 V^-1    
+       dvt0w=      0.383 meter^-1      dvt1w=     600000 meter^-1
+       dvt2w=     -0.025 V^-1           dsub=   0.001592         
+        eta0=   0.001004                etab=  -0.001459 V^-1    
+          u0=      314.1 cm^2/V/sec         ua= -9.201e-10 m/V     
+          ub=  1.907e-18 (m/V)^2          uc=  4.355e-11 V^-1    
+        vsat=      71580 m/sec            a1=          0 v^-1    
+          a2=          1               delta=       0.01 V       
+        rdsw=      4.905 ohm-um         prwg=          0 V^-1    
+        prwb=          0 V^-1/2           wr=          1         
+        pclm=      1.091             pdiblc1=   0.003061         
+     pdiblc2=      1e-06             pdiblcb=          0 V^-1    
+      pscbe1=  4.866e+08 V/m          pscbe2=    2.8e-07 V/m     
+       drout=   0.001592                pvag=    -0.2958         
+     nfactor=      1.038                cdsc=   0.002175 f/m^2   
+       cdscb=  0.0008241 f/V/m^2       cdscd=    -0.0005 f/V/m^2 
+         cit=  -0.001511 f/m^2        alpha0=          0 m/V     
+       beta0=         30 V               dlc=      4e-08 meter   
+         dwc=          0 meter           clc=      1e-07 meter   
+         cle=        0.6                cgso=   2.35e-10 f/m     
+        cgdo=   2.35e-10 f/m            cgbo=          0 f/m     
+        cgsl=          0 f/m            cgdl=          0 f/m     
+      ckappa=        0.6                  cf=  1.533e-10 f/m     
+        acde=          1 m/V            moin=         15 V^1/2   
+        toxm=    4.2e-09 m            dtoxcv=          0 m       
+         vfb (not used)                alpha1=          0 1/V     
+        ijth=          0 A              noff=          1         
+      voffcv=          0                 tcj=          0 1/K     
+       tcjsw=          0 1/K          tcjswg=          0 1/K     
+         tpb=          0 V/K           tpbsw=          0 V/K     
+      tpbswg=          0 V/K             llc=  -6.64e-15         
+         lwc=          0                lwlc=          0         
+         wlc=          0                 wwc=          0         
+        wwlc=          0                tnom=     298.15 K       
+         kt1=    -0.2255 V              kt1l= -4.175e-09         
+         kt2=   -0.02527                 ute=     -1.286         
+         ua1=  2.153e-09 m/V             ub1= -2.673e-18 (m/V)^2 
+         uc1= -3.832e-11 m/V^2            at=      14490 m/s     
+         prt=     -10.18         
+         using Berkeley noise model       noiMod=          1         
+        noia=      1e+20                noib=      50000         
+        noic=   -1.4e-12                  em=    4.1e+07         
+          ef=          1                  af=          1         
+          kf=          0              gdsnoi=-1.23457e-29         
+         using Hspice diodes            using ACM 
+         acm=         3                 hdif=   2.6e-07 meter    
+        ldif=     8e-08 meter             js=     1e-06 amp/m^2  
+         jsw=     7e-11 amp/m            xti=         3          
+           n=         1                   cj=   0.00103 f/m^2    
+          mj=     0.443                   pb=     0.813 V        
+        cjsw=  1.34e-10 f/m             mjsw=      0.33          
+         php=      0.88 V               pbsw (not used)           
+      cjgate=     5e-10 f/m            cjswg (not used)           
+       mjswg (not used)                 pbswg (not used)           
+         la0=    -0.4667                lags=     0.3028         
+       lketa=   -0.01942               lvoff=  -0.004208         
+       lvth0=     -0.001                lnlx= -2.854e-08         
+       leta0=   0.001574            lpdiblc2=  -0.004752         
+         wa0=   -0.04731                wags=   0.004242         
+       wvoff= -0.0004078               wvth0=    0.06027         
+         wu0=       0.54                 wua=  -1.88e-11         
+       wvsat=       5066                wute=    0.06373         
+         wat=       7067                 pa0=   -0.02649         
+       pvoff= -0.0003788                 pw0=    1.3e-09         
+         pub=    3.8e-20         
+ ***************************************************************************
+ ***        model parameters  model name:   0:p_18             model type:pmos   ***
+ ***************************************************************************
+
+   *** general parameters ***
+    deriv=   0.           
+
+   ***  level 49  model parameters  ***
+
+      hspver=    2006.03               level=         49         
+     version=        3.2            paramchk=          0         
+      apwarn=          1                lite=          0         
+      vgslim=          0             binUnit=          1         
+      capMod=          2               xpart=          1         
+      mobMod=          3              nqsMod=          0         
+      stiMod=          0                 elm=          5         
+    sfvtflag=          0                 tox=    4.2e-09 meter   
+          xj=      1e-07 meter       binflag=          0         
+        lmin=    1.8e-07 meter          lmax=      5e-05 meter   
+        wmin=    2.4e-07 meter          wmax=     0.0001 meter   
+        lref=          0 meter          wref=          0 meter   
+        lint= -1.041e-08 meter          wint= -1.525e-07 meter   
+       lmult=          1               wmult=          1         
+          ll=  6.635e-15                 lln=          1         
+          lw= -2.873e-16                 lwn=          1         
+         lwl=          0                  wl=          0         
+         wln=          1                  ww=  1.236e-14         
+         wwn=          1                 wwl=          0         
+         dwg= -1.151e-07 m/V             dwb= -1.039e-07 m/V^1/2 
+          xl=     -2e-09                  xw=          0         
+          a0=       1.35                 ags=     0.3818 V^-1    
+          b0= -3.088e-07 meter            b1=          0 meter   
+        keta=    0.01044 V^-1           voff=    -0.1073 V       
+       ngate=      1e+23 cm^-3           vbx=          0 V       
+         vbm=         -3 V                xt=   1.55e-07 meter   
+        vth0=    -0.4555 V               nch=  6.131e+17 cm^-3   
+        nsub=      6e+16 cm^-3           nlx=   2.53e-07 meter   
+      gamma1=          0 V^-1/2       gamma2=          0 V^-1/2  
+          k1=     0.5704 V^1/2            k2=   0.006973         
+          k3=     -2.833                 k3b=      1.326 V^-1    
+          w0= -1.943e-07 meter          dvt0=     0.4885         
+        dvt1=    0.07578                dvt2=     0.1287 V^-1    
+       dvt0w=    -0.1261 meter^-1      dvt1w=      24790 meter^-1
+       dvt2w=     0.6915 V^-1           dsub=     1.9191         
+        eta0=      1.071                etab=    -0.9291 V^-1    
+          u0=      114.5 cm^2/V/sec         ua=   1.54e-09 m/V     
+          ub=  2.646e-19 (m/V)^2          uc=   -0.09587 V^-1    
+        vsat=      53400 m/sec            a1=          0 v^-1    
+          a2=          1               delta=       0.01 V       
+        rdsw=      792.1 ohm-um         prwg=          0 V^-1    
+        prwb=          0 V^-1/2           wr=          1         
+        pclm=      2.653             pdiblc1=          0         
+     pdiblc2=      5e-06             pdiblcb=          0 V^-1    
+      pscbe1=  4.866e+08 V/m          pscbe2=    2.8e-07 V/m     
+       drout=      1.457                pvag=      1.162         
+     nfactor=      1.535                cdsc=  0.0007578 f/m^2   
+       cdscb=     0.0001 f/V/m^2       cdscd= -2.883e-05 f/V/m^2 
+         cit=  -0.001067 f/m^2        alpha0=          0 m/V     
+       beta0=         30 V               dlc=   7.01e-08 meter   
+         dwc=          0 meter           clc=      1e-07 meter   
+         cle=        0.6                cgso=  2.054e-10 f/m     
+        cgdo=  2.054e-10 f/m            cgbo=          0 f/m     
+        cgsl=          0 f/m            cgdl=          0 f/m     
+      ckappa=        0.6                  cf=  1.533e-10 f/m     
+        acde=          1 m/V            moin=         15 V^1/2   
+        toxm=    4.2e-09 m            dtoxcv=          0 m       
+         vfb (not used)                alpha1=          0 1/V     
+        ijth=          0 A              noff=          1         
+      voffcv=          0                 tcj=          0 1/K     
+       tcjsw=          0 1/K          tcjswg=          0 1/K     
+         tpb=          0 V/K           tpbsw=          0 V/K     
+      tpbswg=          0 V/K             llc=  -1.31e-14         
+         lwc=          0                lwlc=          0         
+         wlc=          0                 wwc=          0         
+        wwlc=          0                tnom=     298.15 K       
+         kt1=    -0.2194 V              kt1l= -8.204e-09         
+         kt2=  -0.009487                 ute=    -0.4484         
+         ua1=  4.571e-09 m/V             ub1= -6.026e-18 (m/V)^2 
+         uc1=    -0.0985 m/V^2            at=      12030 m/s     
+         prt=          0         
+         using Berkeley noise model       noiMod=          1         
+        noia=      1e+20                noib=      50000         
+        noic=   -1.4e-12                  em=    4.1e+07         
+          ef=          1                  af=          1         
+          kf=          0              gdsnoi=-1.23457e-29         
+         using Hspice diodes            using ACM 
+         acm=         3                 hdif=   2.6e-07 meter    
+        ldif=     8e-08 meter             js=     3e-06 amp/m^2  
+         jsw=  4.12e-11 amp/m            xti=         3          
+           n=         1                   cj=   0.00114 f/m^2    
+          mj=     0.395                   pb=     0.762 V        
+        cjsw=  1.74e-10 f/m             mjsw=     0.324          
+         php=     0.665 V               pbsw (not used)           
+      cjgate=  1.74e-10 f/m            cjswg (not used)           
+       mjswg (not used)                 pbswg (not used)           
+         la0=     -0.281                lags=    0.04454         
+       lketa=     -0.012               lvoff= -0.0009871         
+       lvth0=     0.0044                lnlx= -1.584e-08         
+         lua= -8.153e-11            lpdiblc2=   0.003012         
+         wa0=   -0.04807                wags=   -0.04177         
+       wvoff=  -0.009816               wvth0=    -0.0148         
+         wua=   2.63e-09               wvsat=     -14200         
+       wrdsw=      10.07                wute=    -0.2682         
+         wat=      -6405                wprt=      216.6         
+         pa0=    0.08661                pags=   -0.04076         
+       pvoff= -9.833e-05               pvth0=     0.0032         
+         pua=  5.855e-11               pvsat=       -434         
+ 
+
+  
+      
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 6         bypass  = 2.0000    
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.000e-06       ***
+  
+ vth= 6.8575e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.010e-06       ***
+  
+ vth= 6.8666e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.020e-06       ***
+  
+ vth= 6.8755e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.030e-06       ***
+  
+ vth= 6.8845e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.040e-06       ***
+  
+ vth= 6.8934e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.050e-06       ***
+  
+ vth= 6.9024e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.060e-06       ***
+  
+ vth= 6.9115e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.070e-06       ***
+  
+ vth= 6.9204e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.080e-06       ***
+  
+ vth= 6.9293e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.090e-06       ***
+  
+ vth= 6.9380e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.100e-06       ***
+  
+ vth= 6.9466e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.110e-06       ***
+  
+ vth= 6.9551e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.120e-06       ***
+  
+ vth= 6.9636e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.130e-06       ***
+  
+ vth= 6.9720e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.140e-06       ***
+  
+ vth= 6.9804e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.150e-06       ***
+  
+ vth= 6.9888e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.160e-06       ***
+  
+ vth= 6.9971e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.170e-06       ***
+  
+ vth= 7.0056e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.180e-06       ***
+  
+ vth= 7.0141e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.190e-06       ***
+  
+ vth= 7.0224e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.200e-06       ***
+  
+ vth= 7.0306e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.210e-06       ***
+  
+ vth= 7.0388e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.220e-06       ***
+  
+ vth= 7.0468e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.230e-06       ***
+  
+ vth= 7.0548e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.240e-06       ***
+  
+ vth= 7.0628e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.250e-06       ***
+  
+ vth= 7.0707e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.260e-06       ***
+  
+ vth= 7.0785e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.270e-06       ***
+  
+ vth= 7.0864e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.280e-06       ***
+  
+ vth= 7.0943e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.290e-06       ***
+  
+ vth= 7.1022e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.300e-06       ***
+  
+ vth= 7.1101e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.310e-06       ***
+  
+ vth= 7.1180e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.320e-06       ***
+  
+ vth= 7.1257e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.330e-06       ***
+  
+ vth= 7.1334e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.340e-06       ***
+  
+ vth= 7.1410e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.350e-06       ***
+  
+ vth= 7.1485e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.360e-06       ***
+  
+ vth= 7.1560e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.370e-06       ***
+  
+ vth= 7.1635e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.380e-06       ***
+  
+ vth= 7.1709e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.390e-06       ***
+  
+ vth= 7.1783e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.400e-06       ***
+  
+ vth= 7.1857e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.410e-06       ***
+  
+ vth= 7.1930e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.420e-06       ***
+  
+ vth= 7.2004e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.430e-06       ***
+  
+ vth= 7.2079e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.440e-06       ***
+  
+ vth= 7.2153e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.450e-06       ***
+  
+ vth= 7.2226e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.460e-06       ***
+  
+ vth= 7.2298e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.470e-06       ***
+  
+ vth= 7.2370e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.480e-06       ***
+  
+ vth= 7.2441e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.490e-06       ***
+  
+ vth= 7.2512e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.500e-06       ***
+  
+ vth= 7.2582e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.510e-06       ***
+  
+ vth= 7.2652e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.520e-06       ***
+  
+ vth= 7.2721e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.530e-06       ***
+  
+ vth= 7.2791e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.540e-06       ***
+  
+ vth= 7.2860e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.550e-06       ***
+  
+ vth= 7.2930e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.560e-06       ***
+  
+ vth= 7.2999e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.570e-06       ***
+  
+ vth= 7.3069e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.580e-06       ***
+  
+ vth= 7.3139e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.590e-06       ***
+  
+ vth= 7.3207e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.600e-06       ***
+  
+ vth= 7.3275e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.610e-06       ***
+  
+ vth= 7.3343e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.620e-06       ***
+  
+ vth= 7.3410e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.630e-06       ***
+  
+ vth= 7.3476e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.640e-06       ***
+  
+ vth= 7.3543e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.650e-06       ***
+  
+ vth= 7.3608e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.660e-06       ***
+  
+ vth= 7.3674e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.670e-06       ***
+  
+ vth= 7.3740e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.680e-06       ***
+  
+ vth= 7.3805e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.690e-06       ***
+  
+ vth= 7.3870e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.700e-06       ***
+  
+ vth= 7.3935e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.710e-06       ***
+  
+ vth= 7.4001e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.720e-06       ***
+  
+ vth= 7.4067e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.730e-06       ***
+  
+ vth= 7.4132e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.740e-06       ***
+  
+ vth= 7.4196e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.750e-06       ***
+  
+ vth= 7.4260e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.760e-06       ***
+  
+ vth= 7.4324e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.770e-06       ***
+  
+ vth= 7.4387e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.780e-06       ***
+  
+ vth= 7.4449e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.790e-06       ***
+  
+ vth= 7.4512e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.800e-06       ***
+  
+ vth= 7.4574e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.810e-06       ***
+  
+ vth= 7.4636e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.820e-06       ***
+  
+ vth= 7.4697e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.830e-06       ***
+  
+ vth= 7.4759e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.840e-06       ***
+  
+ vth= 7.4820e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.850e-06       ***
+  
+ vth= 7.4882e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.860e-06       ***
+  
+ vth= 7.4943e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.870e-06       ***
+  
+ vth= 7.5005e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.880e-06       ***
+  
+ vth= 7.5067e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.890e-06       ***
+  
+ vth= 7.5128e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.900e-06       ***
+  
+ vth= 7.5189e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.910e-06       ***
+  
+ vth= 7.5249e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.920e-06       ***
+  
+ vth= 7.5308e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.930e-06       ***
+  
+ vth= 7.5368e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.940e-06       ***
+  
+ vth= 7.5427e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.950e-06       ***
+  
+ vth= 7.5485e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.960e-06       ***
+  
+ vth= 7.5544e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.970e-06       ***
+  
+ vth= 7.5602e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.980e-06       ***
+  
+ vth= 7.5660e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.990e-06       ***
+  
+ vth= 7.5718e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.000e-06       ***
+  
+ vth= 7.5776e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.010e-06       ***
+  
+ vth= 7.5834e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.020e-06       ***
+  
+ vth= 7.5892e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.030e-06       ***
+  
+ vth= 7.5950e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.040e-06       ***
+  
+ vth= 7.6008e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.050e-06       ***
+  
+ vth= 7.6066e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.060e-06       ***
+  
+ vth= 7.6123e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.070e-06       ***
+  
+ vth= 7.6180e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.080e-06       ***
+  
+ vth= 7.6237e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.090e-06       ***
+  
+ vth= 7.6293e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.100e-06       ***
+  
+ vth= 7.6349e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.110e-06       ***
+  
+ vth= 7.6404e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.120e-06       ***
+  
+ vth= 7.6460e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.130e-06       ***
+  
+ vth= 7.6515e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.140e-06       ***
+  
+ vth= 7.6570e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.150e-06       ***
+  
+ vth= 7.6624e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.160e-06       ***
+  
+ vth= 7.6679e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.170e-06       ***
+  
+ vth= 7.6733e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.180e-06       ***
+  
+ vth= 7.6788e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.190e-06       ***
+  
+ vth= 7.6842e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.200e-06       ***
+  
+ vth= 7.6897e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.210e-06       ***
+  
+ vth= 7.6951e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.220e-06       ***
+  
+ vth= 7.7006e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.230e-06       ***
+  
+ vth= 7.7060e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.240e-06       ***
+  
+ vth= 7.7114e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.250e-06       ***
+  
+ vth= 7.7168e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.260e-06       ***
+  
+ vth= 7.7221e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.270e-06       ***
+  
+ vth= 7.7274e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.280e-06       ***
+  
+ vth= 7.7327e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.290e-06       ***
+  
+ vth= 7.7379e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.300e-06       ***
+  
+ vth= 7.7431e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.310e-06       ***
+  
+ vth= 7.7483e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.320e-06       ***
+  
+ vth= 7.7535e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.330e-06       ***
+  
+ vth= 7.7586e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.340e-06       ***
+  
+ vth= 7.7638e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.350e-06       ***
+  
+ vth= 7.7689e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.360e-06       ***
+  
+ vth= 7.7740e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.370e-06       ***
+  
+ vth= 7.7792e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.380e-06       ***
+  
+ vth= 7.7843e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.390e-06       ***
+  
+ vth= 7.7894e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.400e-06       ***
+  
+ vth= 7.7945e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.410e-06       ***
+  
+ vth= 7.7997e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.420e-06       ***
+  
+ vth= 7.8048e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.430e-06       ***
+  
+ vth= 7.8099e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.440e-06       ***
+  
+ vth= 7.8149e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.450e-06       ***
+  
+ vth= 7.8199e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.460e-06       ***
+  
+ vth= 7.8249e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.470e-06       ***
+  
+ vth= 7.8299e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.480e-06       ***
+  
+ vth= 7.8348e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.490e-06       ***
+  
+ vth= 7.8397e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.500e-06       ***
+  
+ vth= 7.8446e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.510e-06       ***
+  
+ vth= 7.8495e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.520e-06       ***
+  
+ vth= 7.8543e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.530e-06       ***
+  
+ vth= 7.8592e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.540e-06       ***
+  
+ vth= 7.8640e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.550e-06       ***
+  
+ vth= 7.8688e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.560e-06       ***
+  
+ vth= 7.8737e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.570e-06       ***
+  
+ vth= 7.8785e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.580e-06       ***
+  
+ vth= 7.8833e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.590e-06       ***
+  
+ vth= 7.8882e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.600e-06       ***
+  
+ vth= 7.8930e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.610e-06       ***
+  
+ vth= 7.8978e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.620e-06       ***
+  
+ vth= 7.9026e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.630e-06       ***
+  
+ vth= 7.9074e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.640e-06       ***
+  
+ vth= 7.9122e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.650e-06       ***
+  
+ vth= 7.9169e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.660e-06       ***
+  
+ vth= 7.9216e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.670e-06       ***
+  
+ vth= 7.9263e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.680e-06       ***
+  
+ vth= 7.9309e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.690e-06       ***
+  
+ vth= 7.9355e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.700e-06       ***
+  
+ vth= 7.9401e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.710e-06       ***
+  
+ vth= 7.9447e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.720e-06       ***
+  
+ vth= 7.9493e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.730e-06       ***
+  
+ vth= 7.9539e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.740e-06       ***
+  
+ vth= 7.9584e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.750e-06       ***
+  
+ vth= 7.9630e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.760e-06       ***
+  
+ vth= 7.9675e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.770e-06       ***
+  
+ vth= 7.9721e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.780e-06       ***
+  
+ vth= 7.9766e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.790e-06       ***
+  
+ vth= 7.9812e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.800e-06       ***
+  
+ vth= 7.9857e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.810e-06       ***
+  
+ vth= 7.9902e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.820e-06       ***
+  
+ vth= 7.9948e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.830e-06       ***
+  
+ vth= 7.9993e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.840e-06       ***
+  
+ vth= 8.0038e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.850e-06       ***
+  
+ vth= 8.0083e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.860e-06       ***
+  
+ vth= 8.0128e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.870e-06       ***
+  
+ vth= 8.0172e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.880e-06       ***
+  
+ vth= 8.0216e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.890e-06       ***
+  
+ vth= 8.0260e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.900e-06       ***
+  
+ vth= 8.0304e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.910e-06       ***
+  
+ vth= 8.0347e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.920e-06       ***
+  
+ vth= 8.0390e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.930e-06       ***
+  
+ vth= 8.0434e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.940e-06       ***
+  
+ vth= 8.0477e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.950e-06       ***
+  
+ vth= 8.0520e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.960e-06       ***
+  
+ vth= 8.0562e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.970e-06       ***
+  
+ vth= 8.0605e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.980e-06       ***
+  
+ vth= 8.0648e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   2.990e-06       ***
+  
+ vth= 8.0691e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.000e-06       ***
+  
+ vth= 8.0733e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.010e-06       ***
+  
+ vth= 8.0776e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.020e-06       ***
+  
+ vth= 8.0819e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.030e-06       ***
+  
+ vth= 8.0861e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.040e-06       ***
+  
+ vth= 8.0904e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.050e-06       ***
+  
+ vth= 8.0947e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.060e-06       ***
+  
+ vth= 8.0990e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.070e-06       ***
+  
+ vth= 8.1032e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.080e-06       ***
+  
+ vth= 8.1074e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.090e-06       ***
+  
+ vth= 8.1116e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.100e-06       ***
+  
+ vth= 8.1158e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.110e-06       ***
+  
+ vth= 8.1199e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.120e-06       ***
+  
+ vth= 8.1240e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.130e-06       ***
+  
+ vth= 8.1281e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.140e-06       ***
+  
+ vth= 8.1322e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.150e-06       ***
+  
+ vth= 8.1363e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.160e-06       ***
+  
+ vth= 8.1404e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.170e-06       ***
+  
+ vth= 8.1444e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.180e-06       ***
+  
+ vth= 8.1484e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.190e-06       ***
+  
+ vth= 8.1525e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.200e-06       ***
+  
+ vth= 8.1565e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.210e-06       ***
+  
+ vth= 8.1605e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.220e-06       ***
+  
+ vth= 8.1645e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.230e-06       ***
+  
+ vth= 8.1686e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.240e-06       ***
+  
+ vth= 8.1726e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.250e-06       ***
+  
+ vth= 8.1766e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.260e-06       ***
+  
+ vth= 8.1806e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.270e-06       ***
+  
+ vth= 8.1846e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.280e-06       ***
+  
+ vth= 8.1886e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.290e-06       ***
+  
+ vth= 8.1926e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.300e-06       ***
+  
+ vth= 8.1967e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.310e-06       ***
+  
+ vth= 8.2007e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.320e-06       ***
+  
+ vth= 8.2046e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.330e-06       ***
+  
+ vth= 8.2086e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.340e-06       ***
+  
+ vth= 8.2125e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.350e-06       ***
+  
+ vth= 8.2164e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.360e-06       ***
+  
+ vth= 8.2203e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.370e-06       ***
+  
+ vth= 8.2241e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.380e-06       ***
+  
+ vth= 8.2280e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.390e-06       ***
+  
+ vth= 8.2318e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.400e-06       ***
+  
+ vth= 8.2356e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.410e-06       ***
+  
+ vth= 8.2394e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.420e-06       ***
+  
+ vth= 8.2432e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.430e-06       ***
+  
+ vth= 8.2470e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.440e-06       ***
+  
+ vth= 8.2508e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.450e-06       ***
+  
+ vth= 8.2546e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.460e-06       ***
+  
+ vth= 8.2584e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.470e-06       ***
+  
+ vth= 8.2622e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.480e-06       ***
+  
+ vth= 8.2659e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.490e-06       ***
+  
+ vth= 8.2697e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.500e-06       ***
+  
+ vth= 8.2735e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.510e-06       ***
+  
+ vth= 8.2772e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.520e-06       ***
+  
+ vth= 8.2810e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.530e-06       ***
+  
+ vth= 8.2848e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.540e-06       ***
+  
+ vth= 8.2886e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.550e-06       ***
+  
+ vth= 8.2923e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.560e-06       ***
+  
+ vth= 8.2961e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.570e-06       ***
+  
+ vth= 8.2999e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.580e-06       ***
+  
+ vth= 8.3036e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.590e-06       ***
+  
+ vth= 8.3073e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.600e-06       ***
+  
+ vth= 8.3110e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.610e-06       ***
+  
+ vth= 8.3146e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.620e-06       ***
+  
+ vth= 8.3183e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.630e-06       ***
+  
+ vth= 8.3219e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.640e-06       ***
+  
+ vth= 8.3255e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.650e-06       ***
+  
+ vth= 8.3291e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.660e-06       ***
+  
+ vth= 8.3327e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.670e-06       ***
+  
+ vth= 8.3363e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.680e-06       ***
+  
+ vth= 8.3399e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.690e-06       ***
+  
+ vth= 8.3434e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.700e-06       ***
+  
+ vth= 8.3470e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.710e-06       ***
+  
+ vth= 8.3505e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.720e-06       ***
+  
+ vth= 8.3541e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.730e-06       ***
+  
+ vth= 8.3576e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.740e-06       ***
+  
+ vth= 8.3612e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.750e-06       ***
+  
+ vth= 8.3647e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.760e-06       ***
+  
+ vth= 8.3683e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.770e-06       ***
+  
+ vth= 8.3718e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.780e-06       ***
+  
+ vth= 8.3753e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.790e-06       ***
+  
+ vth= 8.3789e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.800e-06       ***
+  
+ vth= 8.3824e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.810e-06       ***
+  
+ vth= 8.3860e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.820e-06       ***
+  
+ vth= 8.3895e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.830e-06       ***
+  
+ vth= 8.3931e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.840e-06       ***
+  
+ vth= 8.3966e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.850e-06       ***
+  
+ vth= 8.4002e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.860e-06       ***
+  
+ vth= 8.4036e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.870e-06       ***
+  
+ vth= 8.4071e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.880e-06       ***
+  
+ vth= 8.4105e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.890e-06       ***
+  
+ vth= 8.4140e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.900e-06       ***
+  
+ vth= 8.4174e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.910e-06       ***
+  
+ vth= 8.4208e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.920e-06       ***
+  
+ vth= 8.4242e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.930e-06       ***
+  
+ vth= 8.4275e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.940e-06       ***
+  
+ vth= 8.4309e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.950e-06       ***
+  
+ vth= 8.4343e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.960e-06       ***
+  
+ vth= 8.4376e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.970e-06       ***
+  
+ vth= 8.4410e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.980e-06       ***
+  
+ vth= 8.4443e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   3.990e-06       ***
+  
+ vth= 8.4476e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.000e-06       ***
+  
+ vth= 8.4510e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.010e-06       ***
+  
+ vth= 8.4543e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.020e-06       ***
+  
+ vth= 8.4576e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.030e-06       ***
+  
+ vth= 8.4609e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.040e-06       ***
+  
+ vth= 8.4643e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.050e-06       ***
+  
+ vth= 8.4676e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.060e-06       ***
+  
+ vth= 8.4709e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.070e-06       ***
+  
+ vth= 8.4742e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.080e-06       ***
+  
+ vth= 8.4775e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.090e-06       ***
+  
+ vth= 8.4809e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.100e-06       ***
+  
+ vth= 8.4842e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.110e-06       ***
+  
+ vth= 8.4875e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.120e-06       ***
+  
+ vth= 8.4908e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.130e-06       ***
+  
+ vth= 8.4942e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.140e-06       ***
+  
+ vth= 8.4975e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.150e-06       ***
+  
+ vth= 8.5008e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.160e-06       ***
+  
+ vth= 8.5041e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.170e-06       ***
+  
+ vth= 8.5073e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.180e-06       ***
+  
+ vth= 8.5105e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.190e-06       ***
+  
+ vth= 8.5137e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.200e-06       ***
+  
+ vth= 8.5169e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.210e-06       ***
+  
+ vth= 8.5201e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.220e-06       ***
+  
+ vth= 8.5233e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.230e-06       ***
+  
+ vth= 8.5264e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.240e-06       ***
+  
+ vth= 8.5296e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.250e-06       ***
+  
+ vth= 8.5327e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.260e-06       ***
+  
+ vth= 8.5359e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.270e-06       ***
+  
+ vth= 8.5390e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.280e-06       ***
+  
+ vth= 8.5421e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.290e-06       ***
+  
+ vth= 8.5453e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.300e-06       ***
+  
+ vth= 8.5484e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.310e-06       ***
+  
+ vth= 8.5515e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.320e-06       ***
+  
+ vth= 8.5546e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.330e-06       ***
+  
+ vth= 8.5577e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.340e-06       ***
+  
+ vth= 8.5608e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.350e-06       ***
+  
+ vth= 8.5640e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.360e-06       ***
+  
+ vth= 8.5671e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.370e-06       ***
+  
+ vth= 8.5702e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.380e-06       ***
+  
+ vth= 8.5733e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.390e-06       ***
+  
+ vth= 8.5764e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.400e-06       ***
+  
+ vth= 8.5795e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.410e-06       ***
+  
+ vth= 8.5826e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.420e-06       ***
+  
+ vth= 8.5857e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.430e-06       ***
+  
+ vth= 8.5889e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.440e-06       ***
+  
+ vth= 8.5920e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.450e-06       ***
+  
+ vth= 8.5951e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.460e-06       ***
+  
+ vth= 8.5983e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.470e-06       ***
+  
+ vth= 8.6013e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.480e-06       ***
+  
+ vth= 8.6044e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.490e-06       ***
+  
+ vth= 8.6074e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.500e-06       ***
+  
+ vth= 8.6104e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.510e-06       ***
+  
+ vth= 8.6134e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.520e-06       ***
+  
+ vth= 8.6164e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.530e-06       ***
+  
+ vth= 8.6194e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.540e-06       ***
+  
+ vth= 8.6223e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.550e-06       ***
+  
+ vth= 8.6253e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.560e-06       ***
+  
+ vth= 8.6282e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.570e-06       ***
+  
+ vth= 8.6312e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.580e-06       ***
+  
+ vth= 8.6341e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.590e-06       ***
+  
+ vth= 8.6371e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.600e-06       ***
+  
+ vth= 8.6400e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.610e-06       ***
+  
+ vth= 8.6429e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.620e-06       ***
+  
+ vth= 8.6458e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.630e-06       ***
+  
+ vth= 8.6488e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.640e-06       ***
+  
+ vth= 8.6517e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.650e-06       ***
+  
+ vth= 8.6546e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.660e-06       ***
+  
+ vth= 8.6575e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.670e-06       ***
+  
+ vth= 8.6604e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.680e-06       ***
+  
+ vth= 8.6633e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.690e-06       ***
+  
+ vth= 8.6662e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.700e-06       ***
+  
+ vth= 8.6692e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.710e-06       ***
+  
+ vth= 8.6721e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.720e-06       ***
+  
+ vth= 8.6750e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.730e-06       ***
+  
+ vth= 8.6779e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.740e-06       ***
+  
+ vth= 8.6808e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.750e-06       ***
+  
+ vth= 8.6837e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.760e-06       ***
+  
+ vth= 8.6867e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.770e-06       ***
+  
+ vth= 8.6896e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.780e-06       ***
+  
+ vth= 8.6925e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.790e-06       ***
+  
+ vth= 8.6954e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.800e-06       ***
+  
+ vth= 8.6984e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.810e-06       ***
+  
+ vth= 8.7013e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.820e-06       ***
+  
+ vth= 8.7041e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.830e-06       ***
+  
+ vth= 8.7069e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.840e-06       ***
+  
+ vth= 8.7097e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.850e-06       ***
+  
+ vth= 8.7125e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.860e-06       ***
+  
+ vth= 8.7153e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.870e-06       ***
+  
+ vth= 8.7181e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.880e-06       ***
+  
+ vth= 8.7209e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.890e-06       ***
+  
+ vth= 8.7236e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.900e-06       ***
+  
+ vth= 8.7264e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.910e-06       ***
+  
+ vth= 8.7292e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.920e-06       ***
+  
+ vth= 8.7319e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.930e-06       ***
+  
+ vth= 8.7347e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.940e-06       ***
+  
+ vth= 8.7374e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.950e-06       ***
+  
+ vth= 8.7401e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.960e-06       ***
+  
+ vth= 8.7429e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.970e-06       ***
+  
+ vth= 8.7456e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.980e-06       ***
+  
+ vth= 8.7483e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   4.990e-06       ***
+  
+ vth= 8.7511e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.000e-06       ***
+  
+ vth= 8.7538e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.010e-06       ***
+  
+ vth= 8.7565e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.020e-06       ***
+  
+ vth= 8.7593e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.030e-06       ***
+  
+ vth= 8.7620e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.040e-06       ***
+  
+ vth= 8.7647e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.050e-06       ***
+  
+ vth= 8.7674e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.060e-06       ***
+  
+ vth= 8.7701e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.070e-06       ***
+  
+ vth= 8.7729e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.080e-06       ***
+  
+ vth= 8.7756e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.090e-06       ***
+  
+ vth= 8.7783e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.100e-06       ***
+  
+ vth= 8.7811e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.110e-06       ***
+  
+ vth= 8.7838e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.120e-06       ***
+  
+ vth= 8.7865e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.130e-06       ***
+  
+ vth= 8.7893e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.140e-06       ***
+  
+ vth= 8.7920e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.150e-06       ***
+  
+ vth= 8.7947e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.160e-06       ***
+  
+ vth= 8.7975e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.170e-06       ***
+  
+ vth= 8.8002e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.180e-06       ***
+  
+ vth= 8.8029e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.190e-06       ***
+  
+ vth= 8.8055e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.200e-06       ***
+  
+ vth= 8.8081e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.210e-06       ***
+  
+ vth= 8.8108e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.220e-06       ***
+  
+ vth= 8.8134e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.230e-06       ***
+  
+ vth= 8.8160e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.240e-06       ***
+  
+ vth= 8.8186e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.250e-06       ***
+  
+ vth= 8.8211e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.260e-06       ***
+  
+ vth= 8.8237e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.270e-06       ***
+  
+ vth= 8.8263e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.280e-06       ***
+  
+ vth= 8.8289e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.290e-06       ***
+  
+ vth= 8.8315e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.300e-06       ***
+  
+ vth= 8.8340e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.310e-06       ***
+  
+ vth= 8.8366e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.320e-06       ***
+  
+ vth= 8.8391e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.330e-06       ***
+  
+ vth= 8.8417e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.340e-06       ***
+  
+ vth= 8.8442e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.350e-06       ***
+  
+ vth= 8.8468e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.360e-06       ***
+  
+ vth= 8.8493e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.370e-06       ***
+  
+ vth= 8.8519e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.380e-06       ***
+  
+ vth= 8.8544e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.390e-06       ***
+  
+ vth= 8.8570e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.400e-06       ***
+  
+ vth= 8.8595e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.410e-06       ***
+  
+ vth= 8.8621e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.420e-06       ***
+  
+ vth= 8.8646e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.430e-06       ***
+  
+ vth= 8.8672e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.440e-06       ***
+  
+ vth= 8.8697e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.450e-06       ***
+  
+ vth= 8.8723e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.460e-06       ***
+  
+ vth= 8.8748e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.470e-06       ***
+  
+ vth= 8.8774e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.480e-06       ***
+  
+ vth= 8.8799e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.490e-06       ***
+  
+ vth= 8.8825e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.500e-06       ***
+  
+ vth= 8.8850e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.510e-06       ***
+  
+ vth= 8.8876e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.520e-06       ***
+  
+ vth= 8.8901e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.530e-06       ***
+  
+ vth= 8.8927e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.540e-06       ***
+  
+ vth= 8.8953e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.550e-06       ***
+  
+ vth= 8.8978e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.560e-06       ***
+  
+ vth= 8.9004e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.570e-06       ***
+  
+ vth= 8.9029e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.580e-06       ***
+  
+ vth= 8.9053e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.590e-06       ***
+  
+ vth= 8.9078e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.600e-06       ***
+  
+ vth= 8.9102e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.610e-06       ***
+  
+ vth= 8.9126e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.620e-06       ***
+  
+ vth= 8.9150e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.630e-06       ***
+  
+ vth= 8.9175e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.640e-06       ***
+  
+ vth= 8.9199e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.650e-06       ***
+  
+ vth= 8.9223e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.660e-06       ***
+  
+ vth= 8.9247e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.670e-06       ***
+  
+ vth= 8.9271e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.680e-06       ***
+  
+ vth= 8.9295e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.690e-06       ***
+  
+ vth= 8.9319e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.700e-06       ***
+  
+ vth= 8.9343e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.710e-06       ***
+  
+ vth= 8.9367e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.720e-06       ***
+  
+ vth= 8.9391e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.730e-06       ***
+  
+ vth= 8.9414e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.740e-06       ***
+  
+ vth= 8.9438e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.750e-06       ***
+  
+ vth= 8.9462e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.760e-06       ***
+  
+ vth= 8.9486e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.770e-06       ***
+  
+ vth= 8.9510e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.780e-06       ***
+  
+ vth= 8.9533e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.790e-06       ***
+  
+ vth= 8.9557e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.800e-06       ***
+  
+ vth= 8.9581e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.810e-06       ***
+  
+ vth= 8.9605e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.820e-06       ***
+  
+ vth= 8.9628e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.830e-06       ***
+  
+ vth= 8.9652e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.840e-06       ***
+  
+ vth= 8.9676e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.850e-06       ***
+  
+ vth= 8.9700e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.860e-06       ***
+  
+ vth= 8.9723e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.870e-06       ***
+  
+ vth= 8.9747e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.880e-06       ***
+  
+ vth= 8.9771e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.890e-06       ***
+  
+ vth= 8.9795e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.900e-06       ***
+  
+ vth= 8.9819e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.910e-06       ***
+  
+ vth= 8.9843e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.920e-06       ***
+  
+ vth= 8.9866e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.930e-06       ***
+  
+ vth= 8.9890e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.940e-06       ***
+  
+ vth= 8.9914e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.950e-06       ***
+  
+ vth= 8.9938e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.960e-06       ***
+  
+ vth= 8.9962e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.970e-06       ***
+  
+ vth= 8.9986e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.980e-06       ***
+  
+ vth= 9.0010e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   5.990e-06       ***
+  
+ vth= 9.0033e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.000e-06       ***
+  
+ vth= 9.0055e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.010e-06       ***
+  
+ vth= 9.0078e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.020e-06       ***
+  
+ vth= 9.0101e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.030e-06       ***
+  
+ vth= 9.0124e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.040e-06       ***
+  
+ vth= 9.0146e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.050e-06       ***
+  
+ vth= 9.0169e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.060e-06       ***
+  
+ vth= 9.0191e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.070e-06       ***
+  
+ vth= 9.0214e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.080e-06       ***
+  
+ vth= 9.0236e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.090e-06       ***
+  
+ vth= 9.0258e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.100e-06       ***
+  
+ vth= 9.0281e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.110e-06       ***
+  
+ vth= 9.0303e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.120e-06       ***
+  
+ vth= 9.0325e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.130e-06       ***
+  
+ vth= 9.0348e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.140e-06       ***
+  
+ vth= 9.0370e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.150e-06       ***
+  
+ vth= 9.0392e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.160e-06       ***
+  
+ vth= 9.0414e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.170e-06       ***
+  
+ vth= 9.0437e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.180e-06       ***
+  
+ vth= 9.0459e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.190e-06       ***
+  
+ vth= 9.0481e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.200e-06       ***
+  
+ vth= 9.0503e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.210e-06       ***
+  
+ vth= 9.0525e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.220e-06       ***
+  
+ vth= 9.0547e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.230e-06       ***
+  
+ vth= 9.0569e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.240e-06       ***
+  
+ vth= 9.0592e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.250e-06       ***
+  
+ vth= 9.0614e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.260e-06       ***
+  
+ vth= 9.0636e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.270e-06       ***
+  
+ vth= 9.0658e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.280e-06       ***
+  
+ vth= 9.0680e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.290e-06       ***
+  
+ vth= 9.0702e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.300e-06       ***
+  
+ vth= 9.0724e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.310e-06       ***
+  
+ vth= 9.0747e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.320e-06       ***
+  
+ vth= 9.0769e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.330e-06       ***
+  
+ vth= 9.0791e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.340e-06       ***
+  
+ vth= 9.0813e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.350e-06       ***
+  
+ vth= 9.0835e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.360e-06       ***
+  
+ vth= 9.0858e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.370e-06       ***
+  
+ vth= 9.0880e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.380e-06       ***
+  
+ vth= 9.0902e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.390e-06       ***
+  
+ vth= 9.0925e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.400e-06       ***
+  
+ vth= 9.0947e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.410e-06       ***
+  
+ vth= 9.0969e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.420e-06       ***
+  
+ vth= 9.0992e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.430e-06       ***
+  
+ vth= 9.1014e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.440e-06       ***
+  
+ vth= 9.1035e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.450e-06       ***
+  
+ vth= 9.1056e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.460e-06       ***
+  
+ vth= 9.1077e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.470e-06       ***
+  
+ vth= 9.1098e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.480e-06       ***
+  
+ vth= 9.1119e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.490e-06       ***
+  
+ vth= 9.1140e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.500e-06       ***
+  
+ vth= 9.1161e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.510e-06       ***
+  
+ vth= 9.1182e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.520e-06       ***
+  
+ vth= 9.1203e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.530e-06       ***
+  
+ vth= 9.1224e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.540e-06       ***
+  
+ vth= 9.1245e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.550e-06       ***
+  
+ vth= 9.1266e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.560e-06       ***
+  
+ vth= 9.1286e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.570e-06       ***
+  
+ vth= 9.1307e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.580e-06       ***
+  
+ vth= 9.1328e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.590e-06       ***
+  
+ vth= 9.1349e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.600e-06       ***
+  
+ vth= 9.1369e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.610e-06       ***
+  
+ vth= 9.1390e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.620e-06       ***
+  
+ vth= 9.1411e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.630e-06       ***
+  
+ vth= 9.1431e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.640e-06       ***
+  
+ vth= 9.1452e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.650e-06       ***
+  
+ vth= 9.1472e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.660e-06       ***
+  
+ vth= 9.1493e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.670e-06       ***
+  
+ vth= 9.1514e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.680e-06       ***
+  
+ vth= 9.1534e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.690e-06       ***
+  
+ vth= 9.1555e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.700e-06       ***
+  
+ vth= 9.1575e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.710e-06       ***
+  
+ vth= 9.1596e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.720e-06       ***
+  
+ vth= 9.1617e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.730e-06       ***
+  
+ vth= 9.1637e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.740e-06       ***
+  
+ vth= 9.1658e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.750e-06       ***
+  
+ vth= 9.1678e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.760e-06       ***
+  
+ vth= 9.1699e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.770e-06       ***
+  
+ vth= 9.1720e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.780e-06       ***
+  
+ vth= 9.1740e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.790e-06       ***
+  
+ vth= 9.1761e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.800e-06       ***
+  
+ vth= 9.1782e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.810e-06       ***
+  
+ vth= 9.1802e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.820e-06       ***
+  
+ vth= 9.1823e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.830e-06       ***
+  
+ vth= 9.1844e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.840e-06       ***
+  
+ vth= 9.1865e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.850e-06       ***
+  
+ vth= 9.1885e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.860e-06       ***
+  
+ vth= 9.1906e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.870e-06       ***
+  
+ vth= 9.1927e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.880e-06       ***
+  
+ vth= 9.1948e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.890e-06       ***
+  
+ vth= 9.1969e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.900e-06       ***
+  
+ vth= 9.1990e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.910e-06       ***
+  
+ vth= 9.2010e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.920e-06       ***
+  
+ vth= 9.2030e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.930e-06       ***
+  
+ vth= 9.2049e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.940e-06       ***
+  
+ vth= 9.2069e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.950e-06       ***
+  
+ vth= 9.2088e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.960e-06       ***
+  
+ vth= 9.2108e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.970e-06       ***
+  
+ vth= 9.2128e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.980e-06       ***
+  
+ vth= 9.2147e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   6.990e-06       ***
+  
+ vth= 9.2166e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.000e-06       ***
+  
+ vth= 9.2186e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.010e-06       ***
+  
+ vth= 9.2205e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.020e-06       ***
+  
+ vth= 9.2225e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.030e-06       ***
+  
+ vth= 9.2244e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.040e-06       ***
+  
+ vth= 9.2263e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.050e-06       ***
+  
+ vth= 9.2283e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.060e-06       ***
+  
+ vth= 9.2302e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.070e-06       ***
+  
+ vth= 9.2321e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.080e-06       ***
+  
+ vth= 9.2340e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.090e-06       ***
+  
+ vth= 9.2360e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.100e-06       ***
+  
+ vth= 9.2379e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.110e-06       ***
+  
+ vth= 9.2398e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.120e-06       ***
+  
+ vth= 9.2417e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.130e-06       ***
+  
+ vth= 9.2436e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.140e-06       ***
+  
+ vth= 9.2455e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.150e-06       ***
+  
+ vth= 9.2475e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.160e-06       ***
+  
+ vth= 9.2494e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.170e-06       ***
+  
+ vth= 9.2513e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.180e-06       ***
+  
+ vth= 9.2532e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.190e-06       ***
+  
+ vth= 9.2551e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.200e-06       ***
+  
+ vth= 9.2570e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.210e-06       ***
+  
+ vth= 9.2589e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.220e-06       ***
+  
+ vth= 9.2609e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.230e-06       ***
+  
+ vth= 9.2628e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.240e-06       ***
+  
+ vth= 9.2647e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.250e-06       ***
+  
+ vth= 9.2666e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.260e-06       ***
+  
+ vth= 9.2685e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.270e-06       ***
+  
+ vth= 9.2704e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.280e-06       ***
+  
+ vth= 9.2724e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.290e-06       ***
+  
+ vth= 9.2743e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.300e-06       ***
+  
+ vth= 9.2762e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.310e-06       ***
+  
+ vth= 9.2781e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.320e-06       ***
+  
+ vth= 9.2800e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.330e-06       ***
+  
+ vth= 9.2820e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.340e-06       ***
+  
+ vth= 9.2839e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.350e-06       ***
+  
+ vth= 9.2858e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.360e-06       ***
+  
+ vth= 9.2878e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.370e-06       ***
+  
+ vth= 9.2897e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.380e-06       ***
+  
+ vth= 9.2916e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.390e-06       ***
+  
+ vth= 9.2936e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.400e-06       ***
+  
+ vth= 9.2955e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.410e-06       ***
+  
+ vth= 9.2974e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.420e-06       ***
+  
+ vth= 9.2994e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.430e-06       ***
+  
+ vth= 9.3013e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.440e-06       ***
+  
+ vth= 9.3031e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.450e-06       ***
+  
+ vth= 9.3049e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.460e-06       ***
+  
+ vth= 9.3067e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.470e-06       ***
+  
+ vth= 9.3085e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.480e-06       ***
+  
+ vth= 9.3104e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.490e-06       ***
+  
+ vth= 9.3122e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.500e-06       ***
+  
+ vth= 9.3140e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.510e-06       ***
+  
+ vth= 9.3158e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.520e-06       ***
+  
+ vth= 9.3176e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.530e-06       ***
+  
+ vth= 9.3194e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.540e-06       ***
+  
+ vth= 9.3212e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.550e-06       ***
+  
+ vth= 9.3230e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.560e-06       ***
+  
+ vth= 9.3248e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.570e-06       ***
+  
+ vth= 9.3265e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.580e-06       ***
+  
+ vth= 9.3283e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.590e-06       ***
+  
+ vth= 9.3301e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.600e-06       ***
+  
+ vth= 9.3319e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.610e-06       ***
+  
+ vth= 9.3337e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.620e-06       ***
+  
+ vth= 9.3355e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.630e-06       ***
+  
+ vth= 9.3373e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.640e-06       ***
+  
+ vth= 9.3390e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.650e-06       ***
+  
+ vth= 9.3408e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.660e-06       ***
+  
+ vth= 9.3426e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.670e-06       ***
+  
+ vth= 9.3444e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.680e-06       ***
+  
+ vth= 9.3461e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.690e-06       ***
+  
+ vth= 9.3479e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.700e-06       ***
+  
+ vth= 9.3497e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.710e-06       ***
+  
+ vth= 9.3515e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.720e-06       ***
+  
+ vth= 9.3532e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.730e-06       ***
+  
+ vth= 9.3550e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.740e-06       ***
+  
+ vth= 9.3568e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.750e-06       ***
+  
+ vth= 9.3586e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.760e-06       ***
+  
+ vth= 9.3603e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.770e-06       ***
+  
+ vth= 9.3621e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.780e-06       ***
+  
+ vth= 9.3639e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.790e-06       ***
+  
+ vth= 9.3657e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.800e-06       ***
+  
+ vth= 9.3675e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.810e-06       ***
+  
+ vth= 9.3692e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.820e-06       ***
+  
+ vth= 9.3710e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.830e-06       ***
+  
+ vth= 9.3728e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.840e-06       ***
+  
+ vth= 9.3746e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.850e-06       ***
+  
+ vth= 9.3764e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.860e-06       ***
+  
+ vth= 9.3781e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.870e-06       ***
+  
+ vth= 9.3799e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.880e-06       ***
+  
+ vth= 9.3817e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.890e-06       ***
+  
+ vth= 9.3835e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.900e-06       ***
+  
+ vth= 9.3853e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.910e-06       ***
+  
+ vth= 9.3871e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.920e-06       ***
+  
+ vth= 9.3889e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.930e-06       ***
+  
+ vth= 9.3907e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.940e-06       ***
+  
+ vth= 9.3925e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.950e-06       ***
+  
+ vth= 9.3943e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.960e-06       ***
+  
+ vth= 9.3961e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.970e-06       ***
+  
+ vth= 9.3979e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.980e-06       ***
+  
+ vth= 9.3997e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   7.990e-06       ***
+  
+ vth= 9.4014e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.000e-06       ***
+  
+ vth= 9.4031e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.010e-06       ***
+  
+ vth= 9.4048e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.020e-06       ***
+  
+ vth= 9.4065e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.030e-06       ***
+  
+ vth= 9.4081e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.040e-06       ***
+  
+ vth= 9.4098e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.050e-06       ***
+  
+ vth= 9.4115e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.060e-06       ***
+  
+ vth= 9.4132e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.070e-06       ***
+  
+ vth= 9.4148e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.080e-06       ***
+  
+ vth= 9.4165e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.090e-06       ***
+  
+ vth= 9.4182e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.100e-06       ***
+  
+ vth= 9.4198e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.110e-06       ***
+  
+ vth= 9.4215e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.120e-06       ***
+  
+ vth= 9.4232e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.130e-06       ***
+  
+ vth= 9.4248e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.140e-06       ***
+  
+ vth= 9.4265e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.150e-06       ***
+  
+ vth= 9.4281e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.160e-06       ***
+  
+ vth= 9.4298e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.170e-06       ***
+  
+ vth= 9.4314e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.180e-06       ***
+  
+ vth= 9.4331e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.190e-06       ***
+  
+ vth= 9.4347e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.200e-06       ***
+  
+ vth= 9.4364e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.210e-06       ***
+  
+ vth= 9.4380e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.220e-06       ***
+  
+ vth= 9.4397e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.230e-06       ***
+  
+ vth= 9.4413e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.240e-06       ***
+  
+ vth= 9.4430e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.250e-06       ***
+  
+ vth= 9.4446e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.260e-06       ***
+  
+ vth= 9.4463e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.270e-06       ***
+  
+ vth= 9.4479e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.280e-06       ***
+  
+ vth= 9.4495e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.290e-06       ***
+  
+ vth= 9.4512e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.300e-06       ***
+  
+ vth= 9.4528e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.310e-06       ***
+  
+ vth= 9.4545e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.320e-06       ***
+  
+ vth= 9.4561e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.330e-06       ***
+  
+ vth= 9.4578e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.340e-06       ***
+  
+ vth= 9.4594e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.350e-06       ***
+  
+ vth= 9.4611e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.360e-06       ***
+  
+ vth= 9.4627e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.370e-06       ***
+  
+ vth= 9.4643e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.380e-06       ***
+  
+ vth= 9.4660e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.390e-06       ***
+  
+ vth= 9.4676e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.400e-06       ***
+  
+ vth= 9.4693e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.410e-06       ***
+  
+ vth= 9.4709e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.420e-06       ***
+  
+ vth= 9.4726e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.430e-06       ***
+  
+ vth= 9.4742e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.440e-06       ***
+  
+ vth= 9.4759e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.450e-06       ***
+  
+ vth= 9.4775e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.460e-06       ***
+  
+ vth= 9.4792e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.470e-06       ***
+  
+ vth= 9.4809e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.480e-06       ***
+  
+ vth= 9.4825e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.490e-06       ***
+  
+ vth= 9.4842e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.500e-06       ***
+  
+ vth= 9.4858e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.510e-06       ***
+  
+ vth= 9.4875e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.520e-06       ***
+  
+ vth= 9.4892e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.530e-06       ***
+  
+ vth= 9.4908e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.540e-06       ***
+  
+ vth= 9.4925e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.550e-06       ***
+  
+ vth= 9.4942e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.560e-06       ***
+  
+ vth= 9.4958e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.570e-06       ***
+  
+ vth= 9.4975e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.580e-06       ***
+  
+ vth= 9.4992e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.590e-06       ***
+  
+ vth= 9.5008e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.600e-06       ***
+  
+ vth= 9.5024e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.610e-06       ***
+  
+ vth= 9.5039e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.620e-06       ***
+  
+ vth= 9.5055e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.630e-06       ***
+  
+ vth= 9.5070e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.640e-06       ***
+  
+ vth= 9.5086e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.650e-06       ***
+  
+ vth= 9.5101e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.660e-06       ***
+  
+ vth= 9.5117e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.670e-06       ***
+  
+ vth= 9.5132e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.680e-06       ***
+  
+ vth= 9.5148e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.690e-06       ***
+  
+ vth= 9.5163e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.700e-06       ***
+  
+ vth= 9.5178e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.710e-06       ***
+  
+ vth= 9.5194e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.720e-06       ***
+  
+ vth= 9.5209e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.730e-06       ***
+  
+ vth= 9.5224e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.740e-06       ***
+  
+ vth= 9.5240e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.750e-06       ***
+  
+ vth= 9.5255e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.760e-06       ***
+  
+ vth= 9.5270e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.770e-06       ***
+  
+ vth= 9.5286e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.780e-06       ***
+  
+ vth= 9.5301e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.790e-06       ***
+  
+ vth= 9.5316e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.800e-06       ***
+  
+ vth= 9.5331e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.810e-06       ***
+  
+ vth= 9.5347e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.820e-06       ***
+  
+ vth= 9.5362e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.830e-06       ***
+  
+ vth= 9.5377e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.840e-06       ***
+  
+ vth= 9.5392e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.850e-06       ***
+  
+ vth= 9.5407e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.860e-06       ***
+  
+ vth= 9.5423e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.870e-06       ***
+  
+ vth= 9.5438e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.880e-06       ***
+  
+ vth= 9.5453e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.890e-06       ***
+  
+ vth= 9.5468e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.900e-06       ***
+  
+ vth= 9.5483e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.910e-06       ***
+  
+ vth= 9.5499e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.920e-06       ***
+  
+ vth= 9.5514e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.930e-06       ***
+  
+ vth= 9.5529e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.940e-06       ***
+  
+ vth= 9.5544e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.950e-06       ***
+  
+ vth= 9.5559e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.960e-06       ***
+  
+ vth= 9.5575e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.970e-06       ***
+  
+ vth= 9.5590e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.980e-06       ***
+  
+ vth= 9.5605e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   8.990e-06       ***
+  
+ vth= 9.5620e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.000e-06       ***
+  
+ vth= 9.5636e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.010e-06       ***
+  
+ vth= 9.5651e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.020e-06       ***
+  
+ vth= 9.5666e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.030e-06       ***
+  
+ vth= 9.5681e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.040e-06       ***
+  
+ vth= 9.5696e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.050e-06       ***
+  
+ vth= 9.5712e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.060e-06       ***
+  
+ vth= 9.5727e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.070e-06       ***
+  
+ vth= 9.5742e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.080e-06       ***
+  
+ vth= 9.5758e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.090e-06       ***
+  
+ vth= 9.5773e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.100e-06       ***
+  
+ vth= 9.5788e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.110e-06       ***
+  
+ vth= 9.5803e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.120e-06       ***
+  
+ vth= 9.5819e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.130e-06       ***
+  
+ vth= 9.5834e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.140e-06       ***
+  
+ vth= 9.5849e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.150e-06       ***
+  
+ vth= 9.5865e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.160e-06       ***
+  
+ vth= 9.5880e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.170e-06       ***
+  
+ vth= 9.5896e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.180e-06       ***
+  
+ vth= 9.5911e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.190e-06       ***
+  
+ vth= 9.5926e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.200e-06       ***
+  
+ vth= 9.5942e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.210e-06       ***
+  
+ vth= 9.5957e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.220e-06       ***
+  
+ vth= 9.5973e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.230e-06       ***
+  
+ vth= 9.5988e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.240e-06       ***
+  
+ vth= 9.6003e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.250e-06       ***
+  
+ vth= 9.6018e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.260e-06       ***
+  
+ vth= 9.6032e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.270e-06       ***
+  
+ vth= 9.6047e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.280e-06       ***
+  
+ vth= 9.6061e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.290e-06       ***
+  
+ vth= 9.6075e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.300e-06       ***
+  
+ vth= 9.6089e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.310e-06       ***
+  
+ vth= 9.6104e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.320e-06       ***
+  
+ vth= 9.6118e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.330e-06       ***
+  
+ vth= 9.6132e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.340e-06       ***
+  
+ vth= 9.6146e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.350e-06       ***
+  
+ vth= 9.6161e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.360e-06       ***
+  
+ vth= 9.6175e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.370e-06       ***
+  
+ vth= 9.6189e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.380e-06       ***
+  
+ vth= 9.6203e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.390e-06       ***
+  
+ vth= 9.6217e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.400e-06       ***
+  
+ vth= 9.6231e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.410e-06       ***
+  
+ vth= 9.6246e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.420e-06       ***
+  
+ vth= 9.6260e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.430e-06       ***
+  
+ vth= 9.6274e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.440e-06       ***
+  
+ vth= 9.6288e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.450e-06       ***
+  
+ vth= 9.6302e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.460e-06       ***
+  
+ vth= 9.6316e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.470e-06       ***
+  
+ vth= 9.6330e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.480e-06       ***
+  
+ vth= 9.6344e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.490e-06       ***
+  
+ vth= 9.6358e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.500e-06       ***
+  
+ vth= 9.6372e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.510e-06       ***
+  
+ vth= 9.6386e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.520e-06       ***
+  
+ vth= 9.6400e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.530e-06       ***
+  
+ vth= 9.6414e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.540e-06       ***
+  
+ vth= 9.6428e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.550e-06       ***
+  
+ vth= 9.6442e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.560e-06       ***
+  
+ vth= 9.6456e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.570e-06       ***
+  
+ vth= 9.6470e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.580e-06       ***
+  
+ vth= 9.6484e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.590e-06       ***
+  
+ vth= 9.6498e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.600e-06       ***
+  
+ vth= 9.6512e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.610e-06       ***
+  
+ vth= 9.6526e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.620e-06       ***
+  
+ vth= 9.6540e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.630e-06       ***
+  
+ vth= 9.6554e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.640e-06       ***
+  
+ vth= 9.6568e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.650e-06       ***
+  
+ vth= 9.6582e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.660e-06       ***
+  
+ vth= 9.6596e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.670e-06       ***
+  
+ vth= 9.6611e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.680e-06       ***
+  
+ vth= 9.6625e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.690e-06       ***
+  
+ vth= 9.6639e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.700e-06       ***
+  
+ vth= 9.6653e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.710e-06       ***
+  
+ vth= 9.6667e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.720e-06       ***
+  
+ vth= 9.6681e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.730e-06       ***
+  
+ vth= 9.6695e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.740e-06       ***
+  
+ vth= 9.6709e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.750e-06       ***
+  
+ vth= 9.6723e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.760e-06       ***
+  
+ vth= 9.6737e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.770e-06       ***
+  
+ vth= 9.6751e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.780e-06       ***
+  
+ vth= 9.6765e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.790e-06       ***
+  
+ vth= 9.6779e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.800e-06       ***
+  
+ vth= 9.6793e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.810e-06       ***
+  
+ vth= 9.6808e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.820e-06       ***
+  
+ vth= 9.6822e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.830e-06       ***
+  
+ vth= 9.6836e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.840e-06       ***
+  
+ vth= 9.6850e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.850e-06       ***
+  
+ vth= 9.6864e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.860e-06       ***
+  
+ vth= 9.6878e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.870e-06       ***
+  
+ vth= 9.6893e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.880e-06       ***
+  
+ vth= 9.6907e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.890e-06       ***
+  
+ vth= 9.6921e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.900e-06       ***
+  
+ vth= 9.6935e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.910e-06       ***
+  
+ vth= 9.6950e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.920e-06       ***
+  
+ vth= 9.6964e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.930e-06       ***
+  
+ vth= 9.6978e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.940e-06       ***
+  
+ vth= 9.6993e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.950e-06       ***
+  
+ vth= 9.7006e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.960e-06       ***
+  
+ vth= 9.7020e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.970e-06       ***
+  
+ vth= 9.7033e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.980e-06       ***
+  
+ vth= 9.7046e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   9.990e-06       ***
+  
+ vth= 9.7059e-01
+ ******
+ .protect
+
+ ****** dc transfer curves tnom=  25.000 temp=  25.000 ******
+  *** parameter w1 =   1.000e-05       ***
+  
+ vth= 9.7072e-01
+
+          ***** job concluded
+ ******  
+ .protect
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) CPU E7- 4820  @ 2.00GHz
+ cpu MHz	: 1995.148
+ CPU(s)		: 32
+  
+ OS:
+ Linux version 2.6.32-696.el6.x86_64 (mockbuild@c1bm.rdu2.centos.org) (gcc version 4.4.7 20120313 (Red Hat 4.4.7-18) (GCC) ) #1 SMP Tue Mar 21 19:29:05 UTC 2017
+
+ System loadavg : 7.51 7.29 7.23 8/2222 80222
+
+
+  ******  PrimeSim HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :    32
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =       8 # elements   =       4
+  # resistors   =       0 # capacitors =       0 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       2
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       2 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1           0
+  dc sweep          10.52      163081      370183
+  readin             0.01
+  errchk             0.00
+  setup              0.00
+  output             0.02
+
+
+           peak memory used        438.36 megabytes
+           total cpu time           10.92 seconds
+           total elapsed time       11.46 seconds
+           job started at     21:31:43 04/12/2023
+           job ended   at     21:31:55 04/12/2023
+           job total runtime        11.46 seconds
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        0.54(s)

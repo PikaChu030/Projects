@@ -1,0 +1,21 @@
+***1A.cir***
+
+.subckt delay in out vdd gnd
+m0 in  gnd out vdd p_18 W=2u L=0.18u
+m1 out vdd in  gnd n_18 W=1u L=0.18u
+.ends
+
+.subckt buffer in out vdd gnd
+m0 x1 in vdd vdd p_18 W=2u L=0.18u
+m1 x1 in gnd gnd n_18 W=1u L=0.18u
+
+m2 out x1 vdd vdd p_18 W=2u L=0.18u
+m3 out x1 gnd gnd n_18 W=1u L=0.18u
+.ends
+
+
+
+.subckt inv in out vdd gnd
+m0 out in vdd vdd p_18 W=2u L=0.18u
+m1 out in gnd gnd n_18 W=1u L=0.18u
+.ends

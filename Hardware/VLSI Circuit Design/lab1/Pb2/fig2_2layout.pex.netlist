@@ -1,0 +1,59 @@
+* File: fig2_2layout.pex.netlist
+* Created: Fri Mar 24 10:59:52 2023
+* Program "Calibre xRC"
+* Version "v2016.4_15.11"
+* 
+.include "fig2_2layout.pex.netlist.pex"
+.subckt fig2_2layout  CLK D Q VDD GND
+* 
+* GND	GND
+* VDD	VDD
+* Q	Q
+* D	D
+* CLK	CLK
+M0 N_2_M0_d N_CLK_M0_g N_GND_M0_s N_GND_M0_b N_18 L=1.8e-07 W=1e-06 AD=4.9e-13
++ AS=4.9e-13 PD=1.98e-06 PS=1.98e-06
+M1 N_4_M1_d N_2_M1_g N_D_M1_s N_GND_M0_b N_18 L=1.8e-07 W=1e-06 AD=2.55e-13
++ AS=4.9e-13 PD=5.1e-07 PS=1.98e-06
+M2 N_5_M2_d N_CLK_M2_g N_4_M2_s N_GND_M0_b N_18 L=1.8e-07 W=1e-06 AD=4.9e-13
++ AS=2.55e-13 PD=1.98e-06 PS=5.1e-07
+M3 N_GND_M3_d N_6_M3_g N_5_M3_s N_GND_M0_b N_18 L=1.8e-07 W=1e-06 AD=4.9e-13
++ AS=4.9e-13 PD=1.98e-06 PS=1.98e-06
+M4 N_GND_M4_d N_4_M4_g N_6_M4_s N_GND_M0_b N_18 L=1.8e-07 W=1e-06 AD=4.9e-13
++ AS=4.9e-13 PD=1.98e-06 PS=1.98e-06
+M5 N_7_M5_d N_CLK_M5_g N_GND_M5_s N_GND_M0_b N_18 L=1.8e-07 W=1e-06 AD=4.9e-13
++ AS=4.9e-13 PD=1.98e-06 PS=1.98e-06
+M6 N_8_M6_d N_CLK_M6_g N_6_M6_s N_GND_M0_b N_18 L=1.8e-07 W=1e-06 AD=2.55e-13
++ AS=4.9e-13 PD=5.1e-07 PS=1.98e-06
+M7 N_9_M7_d N_7_M7_g N_8_M7_s N_GND_M0_b N_18 L=1.8e-07 W=1e-06 AD=4.9e-13
++ AS=2.55e-13 PD=1.98e-06 PS=5.1e-07
+M8 N_GND_M8_d N_Q_M8_g N_9_M8_s N_GND_M0_b N_18 L=1.8e-07 W=1e-06 AD=4.9e-13
++ AS=4.9e-13 PD=1.98e-06 PS=1.98e-06
+M9 N_GND_M9_d N_8_M9_g N_Q_M9_s N_GND_M0_b N_18 L=1.8e-07 W=1e-06 AD=4.9e-13
++ AS=4.9e-13 PD=1.98e-06 PS=1.98e-06
+M10 N_2_M10_d N_CLK_M10_g N_VDD_M10_s N_VDD_M10_b P_18 L=1.8e-07 W=2e-06
++ AD=9.8e-13 AS=9.8e-13 PD=2.98e-06 PS=2.98e-06
+M11 N_4_M11_d N_CLK_M11_g N_D_M11_s N_VDD_M10_b P_18 L=1.8e-07 W=1e-06
++ AD=2.55e-13 AS=4.9e-13 PD=5.1e-07 PS=1.98e-06
+M12 N_5_M12_d N_2_M12_g N_4_M12_s N_VDD_M10_b P_18 L=1.8e-07 W=1e-06 AD=4.9e-13
++ AS=2.55e-13 PD=1.98e-06 PS=5.1e-07
+M13 N_VDD_M13_d N_6_M13_g N_5_M13_s N_VDD_M10_b P_18 L=1.8e-07 W=2e-06
++ AD=9.8e-13 AS=9.8e-13 PD=2.98e-06 PS=2.98e-06
+M14 N_VDD_M14_d N_4_M14_g N_6_M14_s N_VDD_M10_b P_18 L=1.8e-07 W=2e-06
++ AD=9.8e-13 AS=9.8e-13 PD=2.98e-06 PS=2.98e-06
+M15 N_7_M15_d N_CLK_M15_g N_VDD_M15_s N_VDD_M10_b P_18 L=1.8e-07 W=2e-06
++ AD=9.8e-13 AS=9.8e-13 PD=2.98e-06 PS=2.98e-06
+M16 N_8_M16_d N_7_M16_g N_6_M16_s N_VDD_M10_b P_18 L=1.8e-07 W=1e-06 AD=2.55e-13
++ AS=4.9e-13 PD=5.1e-07 PS=1.98e-06
+M17 N_9_M17_d N_CLK_M17_g N_8_M17_s N_VDD_M10_b P_18 L=1.8e-07 W=1e-06
++ AD=4.9e-13 AS=2.55e-13 PD=1.98e-06 PS=5.1e-07
+M18 N_VDD_M18_d N_Q_M18_g N_9_M18_s N_VDD_M10_b P_18 L=1.8e-07 W=2e-06
++ AD=9.8e-13 AS=9.8e-13 PD=2.98e-06 PS=2.98e-06
+M19 N_VDD_M19_d N_8_M19_g N_Q_M19_s N_VDD_M10_b P_18 L=1.8e-07 W=2e-06
++ AD=9.8e-13 AS=9.8e-13 PD=2.98e-06 PS=2.98e-06
+*
+.include "fig2_2layout.pex.netlist.FIG2_2LAYOUT.pxi"
+*
+.ends
+*
+*

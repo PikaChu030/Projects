@@ -1,0 +1,3037 @@
+ ****** PrimeSim HSPICE -- R-2020.12-SP2 linux64 (May 24 2021 7074677) ******
+  Copyright (c) 1986 - 2023 by Synopsys, Inc. All Rights Reserved.
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: testbench3c.sp                                                    
+  Command line options: /cad/synopsys/hspice/2020.12-sp2/hspice/linux64/hspice -i testbench3c.sp -o postsim.lis
+  Start time: Tue May  9 20:36:40 2023
+ lic:  
+ lic: FLEXlm: SDK_12.9.5 
+ lic: USER:   vlsisj2023027        HOSTNAME: cic-svr 
+ lic: HOSTID: "90b11c16165c"       PID:      80935 
+ lic: Using FLEXlm license file: 
+ lic: 26585@lshc 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 31-mar-2024/2023.03 
+ lic: 338(in_use)/900(total) FLOATING license(s) on SERVER 26585@lshc 
+ lic:   
+  **warning** (cic018.l:454) Model n_18 device geometries will not be checked against the limits set by lmin, lmax, wmin and wmax. To enable this check, add a period(.) to the model name(i.e. enable model selector).
+  **warning** (testbench3c.sp:4) runlvl smaller than 5, reset to 5 when accurate turned on
+  **warning** (testbench3c.sp:13) Global net name "gnd" in subckt pin list. The pin will be connected to the local net. Recommend to not use global net names in subckt pin lists.
+1****** PrimeSim HSPICE -- R-2020.12-SP2 linux64 (May 24 2021 7074677) ******
+ ******  
+ .protect
+
+ ****** circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 xinv11.                         input_inv          2.00 
+        2 xinv12.                         input_inv          8.00 
+        3 xinv13.                         inv                1.00 
+        4 xinv14.                         output_inv         1.00 
+ ******  
+ .protect
+
+ ****** mos   model parameters tnom=  25.000 temp=  25.000 ******
+ ***************************************************************************
+ ***        model parameters  model name:   0:n_18             model type:nmos   ***
+ ***************************************************************************
+
+   *** general parameters ***
+    deriv=   0.           
+
+   ***  level 49  model parameters  ***
+
+      hspver=    2006.03               level=         49         
+     version=        3.2            paramchk=          0         
+      apwarn=          1                lite=          0         
+      vgslim=          0             binUnit=          1         
+      capMod=          2               xpart=          1         
+      mobMod=          1              nqsMod=          0         
+      stiMod=          0                 elm=          5         
+    sfvtflag=          0                 tox=    4.2e-09 meter   
+          xj=    1.6e-07 meter       binflag=          0         
+        lmin=    1.8e-07 meter          lmax=      5e-05 meter   
+        wmin=    2.4e-07 meter          wmax=     0.0001 meter   
+        lref=          0 meter          wref=          0 meter   
+        lint=  1.587e-08 meter          wint=  1.022e-08 meter   
+       lmult=          1               wmult=          1         
+          ll= -1.062e-15                 lln=          1         
+          lw=  2.996e-15                 lwn=          1         
+         lwl=          0                  wl=          0         
+         wln=          1                  ww=  7.262e-16         
+         wwn=          1                 wwl=          0         
+         dwg= -3.396e-09 m/V             dwb=  1.346e-09 m/V^1/2 
+          xl=  -1.05e-08                  xw=          0         
+          a0=       1.93                 ags=     0.5072 V^-1    
+          b0=  1.486e-06 meter            b1=  9.064e-06 meter   
+        keta=    0.01752 V^-1           voff=    -0.1088 V       
+       ngate=      1e+23 cm^-3           vbx=          0 V       
+         vbm=         -3 V                xt=   1.55e-07 meter   
+        vth0=     0.3075 V               nch= 3.7446e+17 cm^-3   
+        nsub=      6e+16 cm^-3           nlx=  4.279e-07 meter   
+      gamma1=          0 V^-1/2       gamma2=          0 V^-1/2  
+          k1=     0.4578 V^1/2            k2=   -0.02638         
+          k3=     -10.88                 k3b=     0.2379 V^-1    
+          w0= -8.813e-08 meter          dvt0=     0.4042         
+        dvt1=     0.3237                dvt2=    -0.8602 V^-1    
+       dvt0w=      0.383 meter^-1      dvt1w=     600000 meter^-1
+       dvt2w=     -0.025 V^-1           dsub=   0.001592         
+        eta0=   0.001004                etab=  -0.001459 V^-1    
+          u0=      314.1 cm^2/V/sec         ua= -9.201e-10 m/V     
+          ub=  1.907e-18 (m/V)^2          uc=  4.355e-11 V^-1    
+        vsat=      71580 m/sec            a1=          0 v^-1    
+          a2=          1               delta=       0.01 V       
+        rdsw=      4.905 ohm-um         prwg=          0 V^-1    
+        prwb=          0 V^-1/2           wr=          1         
+        pclm=      1.091             pdiblc1=   0.003061         
+     pdiblc2=      1e-06             pdiblcb=          0 V^-1    
+      pscbe1=  4.866e+08 V/m          pscbe2=    2.8e-07 V/m     
+       drout=   0.001592                pvag=    -0.2958         
+     nfactor=      1.038                cdsc=   0.002175 f/m^2   
+       cdscb=  0.0008241 f/V/m^2       cdscd=    -0.0005 f/V/m^2 
+         cit=  -0.001511 f/m^2        alpha0=          0 m/V     
+       beta0=         30 V               dlc=      4e-08 meter   
+         dwc=          0 meter           clc=      1e-07 meter   
+         cle=        0.6                cgso=   2.35e-10 f/m     
+        cgdo=   2.35e-10 f/m            cgbo=          0 f/m     
+        cgsl=          0 f/m            cgdl=          0 f/m     
+      ckappa=        0.6                  cf=  1.533e-10 f/m     
+        acde=          1 m/V            moin=         15 V^1/2   
+        toxm=    4.2e-09 m            dtoxcv=          0 m       
+         vfb (not used)                alpha1=          0 1/V     
+        ijth=          0 A              noff=          1         
+      voffcv=          0                 tcj=          0 1/K     
+       tcjsw=          0 1/K          tcjswg=          0 1/K     
+         tpb=          0 V/K           tpbsw=          0 V/K     
+      tpbswg=          0 V/K             llc=  -6.64e-15         
+         lwc=          0                lwlc=          0         
+         wlc=          0                 wwc=          0         
+        wwlc=          0                tnom=     298.15 K       
+         kt1=    -0.2255 V              kt1l= -4.175e-09         
+         kt2=   -0.02527                 ute=     -1.286         
+         ua1=  2.153e-09 m/V             ub1= -2.673e-18 (m/V)^2 
+         uc1= -3.832e-11 m/V^2            at=      14490 m/s     
+         prt=     -10.18         
+         using Berkeley noise model       noiMod=          1         
+        noia=      1e+20                noib=      50000         
+        noic=   -1.4e-12                  em=    4.1e+07         
+          ef=          1                  af=          1         
+          kf=          0              gdsnoi=-1.23457e-29         
+         using Hspice diodes            using ACM 
+         acm=         3                 hdif=   2.6e-07 meter    
+        ldif=     8e-08 meter             js=     1e-06 amp/m^2  
+         jsw=     7e-11 amp/m            xti=         3          
+           n=         1                   cj=   0.00103 f/m^2    
+          mj=     0.443                   pb=     0.813 V        
+        cjsw=  1.34e-10 f/m             mjsw=      0.33          
+         php=      0.88 V               pbsw (not used)           
+      cjgate=     5e-10 f/m            cjswg (not used)           
+       mjswg (not used)                 pbswg (not used)           
+         la0=    -0.4667                lags=     0.3028         
+       lketa=   -0.01942               lvoff=  -0.004208         
+       lvth0=     -0.001                lnlx= -2.854e-08         
+       leta0=   0.001574            lpdiblc2=  -0.004752         
+         wa0=   -0.04731                wags=   0.004242         
+       wvoff= -0.0004078               wvth0=    0.06027         
+         wu0=       0.54                 wua=  -1.88e-11         
+       wvsat=       5066                wute=    0.06373         
+         wat=       7067                 pa0=   -0.02649         
+       pvoff= -0.0003788                 pw0=    1.3e-09         
+         pub=    3.8e-20         
+ ***************************************************************************
+ ***        model parameters  model name:   0:p_18             model type:pmos   ***
+ ***************************************************************************
+
+   *** general parameters ***
+    deriv=   0.           
+
+   ***  level 49  model parameters  ***
+
+      hspver=    2006.03               level=         49         
+     version=        3.2            paramchk=          0         
+      apwarn=          1                lite=          0         
+      vgslim=          0             binUnit=          1         
+      capMod=          2               xpart=          1         
+      mobMod=          3              nqsMod=          0         
+      stiMod=          0                 elm=          5         
+    sfvtflag=          0                 tox=    4.2e-09 meter   
+          xj=      1e-07 meter       binflag=          0         
+        lmin=    1.8e-07 meter          lmax=      5e-05 meter   
+        wmin=    2.4e-07 meter          wmax=     0.0001 meter   
+        lref=          0 meter          wref=          0 meter   
+        lint= -1.041e-08 meter          wint= -1.525e-07 meter   
+       lmult=          1               wmult=          1         
+          ll=  6.635e-15                 lln=          1         
+          lw= -2.873e-16                 lwn=          1         
+         lwl=          0                  wl=          0         
+         wln=          1                  ww=  1.236e-14         
+         wwn=          1                 wwl=          0         
+         dwg= -1.151e-07 m/V             dwb= -1.039e-07 m/V^1/2 
+          xl=     -2e-09                  xw=          0         
+          a0=       1.35                 ags=     0.3818 V^-1    
+          b0= -3.088e-07 meter            b1=          0 meter   
+        keta=    0.01044 V^-1           voff=    -0.1073 V       
+       ngate=      1e+23 cm^-3           vbx=          0 V       
+         vbm=         -3 V                xt=   1.55e-07 meter   
+        vth0=    -0.4555 V               nch=  6.131e+17 cm^-3   
+        nsub=      6e+16 cm^-3           nlx=   2.53e-07 meter   
+      gamma1=          0 V^-1/2       gamma2=          0 V^-1/2  
+          k1=     0.5704 V^1/2            k2=   0.006973         
+          k3=     -2.833                 k3b=      1.326 V^-1    
+          w0= -1.943e-07 meter          dvt0=     0.4885         
+        dvt1=    0.07578                dvt2=     0.1287 V^-1    
+       dvt0w=    -0.1261 meter^-1      dvt1w=      24790 meter^-1
+       dvt2w=     0.6915 V^-1           dsub=     1.9191         
+        eta0=      1.071                etab=    -0.9291 V^-1    
+          u0=      114.5 cm^2/V/sec         ua=   1.54e-09 m/V     
+          ub=  2.646e-19 (m/V)^2          uc=   -0.09587 V^-1    
+        vsat=      53400 m/sec            a1=          0 v^-1    
+          a2=          1               delta=       0.01 V       
+        rdsw=      792.1 ohm-um         prwg=          0 V^-1    
+        prwb=          0 V^-1/2           wr=          1         
+        pclm=      2.653             pdiblc1=          0         
+     pdiblc2=      5e-06             pdiblcb=          0 V^-1    
+      pscbe1=  4.866e+08 V/m          pscbe2=    2.8e-07 V/m     
+       drout=      1.457                pvag=      1.162         
+     nfactor=      1.535                cdsc=  0.0007578 f/m^2   
+       cdscb=     0.0001 f/V/m^2       cdscd= -2.883e-05 f/V/m^2 
+         cit=  -0.001067 f/m^2        alpha0=          0 m/V     
+       beta0=         30 V               dlc=   7.01e-08 meter   
+         dwc=          0 meter           clc=      1e-07 meter   
+         cle=        0.6                cgso=  2.054e-10 f/m     
+        cgdo=  2.054e-10 f/m            cgbo=          0 f/m     
+        cgsl=          0 f/m            cgdl=          0 f/m     
+      ckappa=        0.6                  cf=  1.533e-10 f/m     
+        acde=          1 m/V            moin=         15 V^1/2   
+        toxm=    4.2e-09 m            dtoxcv=          0 m       
+         vfb (not used)                alpha1=          0 1/V     
+        ijth=          0 A              noff=          1         
+      voffcv=          0                 tcj=          0 1/K     
+       tcjsw=          0 1/K          tcjswg=          0 1/K     
+         tpb=          0 V/K           tpbsw=          0 V/K     
+      tpbswg=          0 V/K             llc=  -1.31e-14         
+         lwc=          0                lwlc=          0         
+         wlc=          0                 wwc=          0         
+        wwlc=          0                tnom=     298.15 K       
+         kt1=    -0.2194 V              kt1l= -8.204e-09         
+         kt2=  -0.009487                 ute=    -0.4484         
+         ua1=  4.571e-09 m/V             ub1= -6.026e-18 (m/V)^2 
+         uc1=    -0.0985 m/V^2            at=      12030 m/s     
+         prt=          0         
+         using Berkeley noise model       noiMod=          1         
+        noia=      1e+20                noib=      50000         
+        noic=   -1.4e-12                  em=    4.1e+07         
+          ef=          1                  af=          1         
+          kf=          0              gdsnoi=-1.23457e-29         
+         using Hspice diodes            using ACM 
+         acm=         3                 hdif=   2.6e-07 meter    
+        ldif=     8e-08 meter             js=     3e-06 amp/m^2  
+         jsw=  4.12e-11 amp/m            xti=         3          
+           n=         1                   cj=   0.00114 f/m^2    
+          mj=     0.395                   pb=     0.762 V        
+        cjsw=  1.74e-10 f/m             mjsw=     0.324          
+         php=     0.665 V               pbsw (not used)           
+      cjgate=  1.74e-10 f/m            cjswg (not used)           
+       mjswg (not used)                 pbswg (not used)           
+         la0=     -0.281                lags=    0.04454         
+       lketa=     -0.012               lvoff= -0.0009871         
+       lvth0=     0.0044                lnlx= -1.584e-08         
+         lua= -8.153e-11            lpdiblc2=   0.003012         
+         wa0=   -0.04807                wags=   -0.04177         
+       wvoff=  -0.009816               wvth0=    -0.0148         
+         wua=   2.63e-09               wvsat=     -14200         
+       wrdsw=      10.07                wute=    -0.2682         
+         wat=      -6405                wprt=      216.6         
+         pa0=    0.08661                pags=   -0.04076         
+       pvoff= -9.833e-05               pvth0=     0.0032         
+         pua=  5.855e-11               pvsat=       -434         
+  **info** (testbench3c.sp:43) DC voltage reset to initial transient source value in source 0:vvin. new dc=0.0000D+00
+ 
+
+  
+      
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 6         bypass  = 2.0000    
+  Opening plot unit= 15
+ file=postsim.pa0
+
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    1.000E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.4093e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.4382e-10  targ= 8.0104e-07   trig= 8.0079e-07
+ falling_delay= 2.4382e-10  targ= 8.0104e-07   trig= 8.0079e-07
+ delay_avg= 2.4382e-10
+ pdp=-5.8744e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    1.050E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.4227e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.3726e-10  targ= 8.0103e-07   trig= 8.0079e-07
+ falling_delay= 2.3726e-10  targ= 8.0103e-07   trig= 8.0079e-07
+ delay_avg= 2.3726e-10
+ pdp=-5.7480e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    1.100E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.4361e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.3137e-10  targ= 8.0102e-07   trig= 8.0079e-07
+ falling_delay= 2.3137e-10  targ= 8.0102e-07   trig= 8.0079e-07
+ delay_avg= 2.3137e-10
+ pdp=-5.6362e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    1.150E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.4499e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.2612e-10  targ= 8.0102e-07   trig= 8.0079e-07
+ falling_delay= 2.2612e-10  targ= 8.0102e-07   trig= 8.0079e-07
+ delay_avg= 2.2612e-10
+ pdp=-5.5397e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    1.200E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.4634e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.2153e-10  targ= 8.0101e-07   trig= 8.0079e-07
+ falling_delay= 2.2153e-10  targ= 8.0101e-07   trig= 8.0079e-07
+ delay_avg= 2.2153e-10
+ pdp=-5.4571e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    1.250E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.4764e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.1723e-10  targ= 8.0101e-07   trig= 8.0079e-07
+ falling_delay= 2.1723e-10  targ= 8.0101e-07   trig= 8.0079e-07
+ delay_avg= 2.1723e-10
+ pdp=-5.3795e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    1.300E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.4893e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.1354e-10  targ= 8.0101e-07   trig= 8.0079e-07
+ falling_delay= 2.1354e-10  targ= 8.0101e-07   trig= 8.0079e-07
+ delay_avg= 2.1354e-10
+ pdp=-5.3158e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    1.350E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.5031e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.1021e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ falling_delay= 2.1021e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ delay_avg= 2.1021e-10
+ pdp=-5.2617e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    1.400E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.5163e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.0712e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ falling_delay= 2.0712e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ delay_avg= 2.0712e-10
+ pdp=-5.2118e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    1.450E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.5295e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.0440e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ falling_delay= 2.0440e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ delay_avg= 2.0440e-10
+ pdp=-5.1705e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    1.500E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.5426e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.0210e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ falling_delay= 2.0210e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ delay_avg= 2.0210e-10
+ pdp=-5.1386e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    1.550E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.5565e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.9998e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ falling_delay= 1.9998e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ delay_avg= 1.9998e-10
+ pdp=-5.1126e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    1.600E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.5692e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.9800e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ falling_delay= 1.9800e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ delay_avg= 1.9800e-10
+ pdp=-5.0870e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    1.650E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.5826e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.9615e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ falling_delay= 1.9615e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ delay_avg= 1.9615e-10
+ pdp=-5.0659e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    1.700E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.5956e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.9467e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ falling_delay= 1.9467e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ delay_avg= 1.9467e-10
+ pdp=-5.0530e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    1.750E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.6097e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.9341e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ falling_delay= 1.9341e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ delay_avg= 1.9341e-10
+ pdp=-5.0475e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    1.800E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.6234e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.9227e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ falling_delay= 1.9227e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ delay_avg= 1.9227e-10
+ pdp=-5.0441e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    1.850E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.6363e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.9121e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ falling_delay= 1.9121e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ delay_avg= 1.9121e-10
+ pdp=-5.0407e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    1.900E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.6495e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.9025e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ falling_delay= 1.9025e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ delay_avg= 1.9025e-10
+ pdp=-5.0407e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    1.950E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.6637e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.8946e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ falling_delay= 1.8946e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ delay_avg= 1.8946e-10
+ pdp=-5.0467e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    2.000E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.6767e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.8877e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ falling_delay= 1.8877e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ delay_avg= 1.8877e-10
+ pdp=-5.0529e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    2.050E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.6898e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.8824e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ falling_delay= 1.8824e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ delay_avg= 1.8824e-10
+ pdp=-5.0634e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    2.100E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.7035e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.8777e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ falling_delay= 1.8777e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ delay_avg= 1.8777e-10
+ pdp=-5.0764e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    2.150E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.7171e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.8735e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ falling_delay= 1.8735e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ delay_avg= 1.8735e-10
+ pdp=-5.0907e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    2.200E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.7299e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.8708e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ falling_delay= 1.8708e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ delay_avg= 1.8708e-10
+ pdp=-5.1072e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    2.250E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.7440e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.8679e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ falling_delay= 1.8679e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ delay_avg= 1.8679e-10
+ pdp=-5.1255e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    2.300E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.7584e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.8668e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ falling_delay= 1.8668e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ delay_avg= 1.8668e-10
+ pdp=-5.1493e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    2.350E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.7723e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.8657e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ falling_delay= 1.8657e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ delay_avg= 1.8657e-10
+ pdp=-5.1722e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    2.400E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.7856e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.8653e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ falling_delay= 1.8653e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ delay_avg= 1.8653e-10
+ pdp=-5.1959e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    2.450E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.7997e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.8657e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ falling_delay= 1.8657e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ delay_avg= 1.8657e-10
+ pdp=-5.2234e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    2.500E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.8132e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.8662e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ falling_delay= 1.8662e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ delay_avg= 1.8662e-10
+ pdp=-5.2502e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    2.550E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.8281e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.8675e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ falling_delay= 1.8675e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ delay_avg= 1.8675e-10
+ pdp=-5.2817e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    2.600E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.8421e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.8688e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ falling_delay= 1.8688e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ delay_avg= 1.8688e-10
+ pdp=-5.3113e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    2.650E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.8561e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.8708e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ falling_delay= 1.8708e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ delay_avg= 1.8708e-10
+ pdp=-5.3431e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    2.700E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.8705e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.8732e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ falling_delay= 1.8732e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ delay_avg= 1.8732e-10
+ pdp=-5.3770e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    2.750E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.8845e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.8760e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ falling_delay= 1.8760e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ delay_avg= 1.8760e-10
+ pdp=-5.4112e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    2.800E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.8989e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.8791e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ falling_delay= 1.8791e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ delay_avg= 1.8791e-10
+ pdp=-5.4473e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    2.850E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.9126e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.8833e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ falling_delay= 1.8833e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ delay_avg= 1.8833e-10
+ pdp=-5.4852e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    2.900E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.9276e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.8869e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ falling_delay= 1.8869e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ delay_avg= 1.8869e-10
+ pdp=-5.5242e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    2.950E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.9419e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.8911e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ falling_delay= 1.8911e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ delay_avg= 1.8911e-10
+ pdp=-5.5633e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    3.000E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.9564e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.8938e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ falling_delay= 1.8938e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ delay_avg= 1.8938e-10
+ pdp=-5.5988e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    3.050E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.9716e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.8988e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ falling_delay= 1.8988e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ delay_avg= 1.8988e-10
+ pdp=-5.6424e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    3.100E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-2.9869e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.9038e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ falling_delay= 1.9038e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ delay_avg= 1.9038e-10
+ pdp=-5.6866e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    3.150E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.0022e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.9088e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ falling_delay= 1.9088e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ delay_avg= 1.9088e-10
+ pdp=-5.7306e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    3.200E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.0164e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.9134e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ falling_delay= 1.9134e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ delay_avg= 1.9134e-10
+ pdp=-5.7715e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    3.250E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.0322e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.9194e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ falling_delay= 1.9194e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ delay_avg= 1.9194e-10
+ pdp=-5.8199e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    3.300E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.0480e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.9246e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ falling_delay= 1.9246e-10  targ= 8.0098e-07   trig= 8.0079e-07
+ delay_avg= 1.9246e-10
+ pdp=-5.8661e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    3.350E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.0641e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.9306e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ falling_delay= 1.9306e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ delay_avg= 1.9306e-10
+ pdp=-5.9157e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    3.400E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.0798e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.9358e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ falling_delay= 1.9358e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ delay_avg= 1.9358e-10
+ pdp=-5.9619e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    3.450E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.0951e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.9421e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ falling_delay= 1.9421e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ delay_avg= 1.9421e-10
+ pdp=-6.0110e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    3.500E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.1102e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.9479e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ falling_delay= 1.9479e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ delay_avg= 1.9479e-10
+ pdp=-6.0583e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    3.550E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.1265e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.9543e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ falling_delay= 1.9543e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ delay_avg= 1.9543e-10
+ pdp=-6.1102e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    3.600E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.1429e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.9606e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ falling_delay= 1.9606e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ delay_avg= 1.9606e-10
+ pdp=-6.1621e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    3.650E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.1592e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.9671e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ falling_delay= 1.9671e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ delay_avg= 1.9671e-10
+ pdp=-6.2143e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    3.700E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.1752e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.9726e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ falling_delay= 1.9726e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ delay_avg= 1.9726e-10
+ pdp=-6.2634e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    3.750E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.1918e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.9803e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ falling_delay= 1.9803e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ delay_avg= 1.9803e-10
+ pdp=-6.3208e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    3.800E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.2086e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.9865e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ falling_delay= 1.9865e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ delay_avg= 1.9865e-10
+ pdp=-6.3738e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    3.850E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.2254e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.9934e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ falling_delay= 1.9934e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ delay_avg= 1.9934e-10
+ pdp=-6.4293e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    3.900E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.2420e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 1.9998e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ falling_delay= 1.9998e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ delay_avg= 1.9998e-10
+ pdp=-6.4835e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    3.950E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.2598e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.0077e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ falling_delay= 2.0077e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ delay_avg= 2.0077e-10
+ pdp=-6.5447e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    4.000E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.2772e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.0148e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ falling_delay= 2.0148e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ delay_avg= 2.0148e-10
+ pdp=-6.6029e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    4.050E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.2945e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.0220e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ falling_delay= 2.0220e-10  targ= 8.0099e-07   trig= 8.0079e-07
+ delay_avg= 2.0220e-10
+ pdp=-6.6613e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    4.100E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.3112e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.0284e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ falling_delay= 2.0284e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ delay_avg= 2.0284e-10
+ pdp=-6.7163e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    4.150E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.3292e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.0360e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ falling_delay= 2.0360e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ delay_avg= 2.0360e-10
+ pdp=-6.7782e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    4.200E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.3475e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.0434e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ falling_delay= 2.0434e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ delay_avg= 2.0434e-10
+ pdp=-6.8404e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    4.250E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.3650e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.0509e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ falling_delay= 2.0509e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ delay_avg= 2.0509e-10
+ pdp=-6.9013e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    4.300E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.3831e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.0586e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ falling_delay= 2.0586e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ delay_avg= 2.0586e-10
+ pdp=-6.9644e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    4.350E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.4014e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.0664e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ falling_delay= 2.0664e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ delay_avg= 2.0664e-10
+ pdp=-7.0288e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    4.400E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.4202e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.0739e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ falling_delay= 2.0739e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ delay_avg= 2.0739e-10
+ pdp=-7.0933e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    4.450E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.4382e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.0819e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ falling_delay= 2.0819e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ delay_avg= 2.0819e-10
+ pdp=-7.1582e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    4.500E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.4570e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.0892e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ falling_delay= 2.0892e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ delay_avg= 2.0892e-10
+ pdp=-7.2224e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    4.550E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.4766e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.0980e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ falling_delay= 2.0980e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ delay_avg= 2.0980e-10
+ pdp=-7.2939e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    4.600E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.4962e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.1059e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ falling_delay= 2.1059e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ delay_avg= 2.1059e-10
+ pdp=-7.3625e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    4.650E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.5154e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.1134e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ falling_delay= 2.1134e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ delay_avg= 2.1134e-10
+ pdp=-7.4296e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    4.700E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.5345e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.1215e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ falling_delay= 2.1215e-10  targ= 8.0100e-07   trig= 8.0079e-07
+ delay_avg= 2.1215e-10
+ pdp=-7.4986e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    4.750E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.5545e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.1295e-10  targ= 8.0101e-07   trig= 8.0079e-07
+ falling_delay= 2.1295e-10  targ= 8.0101e-07   trig= 8.0079e-07
+ delay_avg= 2.1295e-10
+ pdp=-7.5693e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    4.800E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.5735e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.1380e-10  targ= 8.0101e-07   trig= 8.0079e-07
+ falling_delay= 2.1380e-10  targ= 8.0101e-07   trig= 8.0079e-07
+ delay_avg= 2.1380e-10
+ pdp=-7.6402e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    4.850E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.5934e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.1463e-10  targ= 8.0101e-07   trig= 8.0079e-07
+ falling_delay= 2.1463e-10  targ= 8.0101e-07   trig= 8.0079e-07
+ delay_avg= 2.1463e-10
+ pdp=-7.7124e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    4.900E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.6137e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.1546e-10  targ= 8.0101e-07   trig= 8.0079e-07
+ falling_delay= 2.1546e-10  targ= 8.0101e-07   trig= 8.0079e-07
+ delay_avg= 2.1546e-10
+ pdp=-7.7859e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    4.950E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.6356e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.1630e-10  targ= 8.0101e-07   trig= 8.0079e-07
+ falling_delay= 2.1630e-10  targ= 8.0101e-07   trig= 8.0079e-07
+ delay_avg= 2.1630e-10
+ pdp=-7.8638e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    5.000E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.6570e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.1708e-10  targ= 8.0101e-07   trig= 8.0079e-07
+ falling_delay= 2.1708e-10  targ= 8.0101e-07   trig= 8.0079e-07
+ delay_avg= 2.1708e-10
+ pdp=-7.9386e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    5.050E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.6781e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.1794e-10  targ= 8.0101e-07   trig= 8.0079e-07
+ falling_delay= 2.1794e-10  targ= 8.0101e-07   trig= 8.0079e-07
+ delay_avg= 2.1794e-10
+ pdp=-8.0159e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    5.100E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.6986e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.1876e-10  targ= 8.0101e-07   trig= 8.0079e-07
+ falling_delay= 2.1876e-10  targ= 8.0101e-07   trig= 8.0079e-07
+ delay_avg= 2.1876e-10
+ pdp=-8.0909e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    5.150E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.7202e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.1962e-10  targ= 8.0101e-07   trig= 8.0079e-07
+ falling_delay= 2.1962e-10  targ= 8.0101e-07   trig= 8.0079e-07
+ delay_avg= 2.1962e-10
+ pdp=-8.1702e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    5.200E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.7416e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.2047e-10  targ= 8.0101e-07   trig= 8.0079e-07
+ falling_delay= 2.2047e-10  targ= 8.0101e-07   trig= 8.0079e-07
+ delay_avg= 2.2047e-10
+ pdp=-8.2493e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    5.250E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.7634e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.2137e-10  targ= 8.0101e-07   trig= 8.0079e-07
+ falling_delay= 2.2137e-10  targ= 8.0101e-07   trig= 8.0079e-07
+ delay_avg= 2.2137e-10
+ pdp=-8.3311e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    5.300E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.7858e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.2219e-10  targ= 8.0101e-07   trig= 8.0079e-07
+ falling_delay= 2.2219e-10  targ= 8.0101e-07   trig= 8.0079e-07
+ delay_avg= 2.2219e-10
+ pdp=-8.4118e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    5.350E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.8078e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.2311e-10  targ= 8.0102e-07   trig= 8.0079e-07
+ falling_delay= 2.2311e-10  targ= 8.0102e-07   trig= 8.0079e-07
+ delay_avg= 2.2311e-10
+ pdp=-8.4955e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    5.400E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.8288e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.2390e-10  targ= 8.0102e-07   trig= 8.0079e-07
+ falling_delay= 2.2390e-10  targ= 8.0102e-07   trig= 8.0079e-07
+ delay_avg= 2.2390e-10
+ pdp=-8.5727e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    5.450E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.8511e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.2478e-10  targ= 8.0102e-07   trig= 8.0079e-07
+ falling_delay= 2.2478e-10  targ= 8.0102e-07   trig= 8.0079e-07
+ delay_avg= 2.2478e-10
+ pdp=-8.6565e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    5.500E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.8744e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.2566e-10  targ= 8.0102e-07   trig= 8.0079e-07
+ falling_delay= 2.2566e-10  targ= 8.0102e-07   trig= 8.0079e-07
+ delay_avg= 2.2566e-10
+ pdp=-8.7427e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    5.550E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.8990e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.2664e-10  targ= 8.0102e-07   trig= 8.0079e-07
+ falling_delay= 2.2664e-10  targ= 8.0102e-07   trig= 8.0079e-07
+ delay_avg= 2.2664e-10
+ pdp=-8.8370e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    5.600E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.9221e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.2751e-10  targ= 8.0102e-07   trig= 8.0079e-07
+ falling_delay= 2.2751e-10  targ= 8.0102e-07   trig= 8.0079e-07
+ delay_avg= 2.2751e-10
+ pdp=-8.9233e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    5.650E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.9460e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.2835e-10  targ= 8.0102e-07   trig= 8.0079e-07
+ falling_delay= 2.2835e-10  targ= 8.0102e-07   trig= 8.0079e-07
+ delay_avg= 2.2835e-10
+ pdp=-9.0108e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    5.700E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.9695e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.2929e-10  targ= 8.0102e-07   trig= 8.0079e-07
+ falling_delay= 2.2929e-10  targ= 8.0102e-07   trig= 8.0079e-07
+ delay_avg= 2.2929e-10
+ pdp=-9.1016e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    5.750E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-3.9940e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.3017e-10  targ= 8.0102e-07   trig= 8.0079e-07
+ falling_delay= 2.3017e-10  targ= 8.0102e-07   trig= 8.0079e-07
+ delay_avg= 2.3017e-10
+ pdp=-9.1930e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    5.800E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.0176e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.3104e-10  targ= 8.0102e-07   trig= 8.0079e-07
+ falling_delay= 2.3104e-10  targ= 8.0102e-07   trig= 8.0079e-07
+ delay_avg= 2.3104e-10
+ pdp=-9.2823e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    5.850E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.0423e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.3194e-10  targ= 8.0102e-07   trig= 8.0079e-07
+ falling_delay= 2.3194e-10  targ= 8.0102e-07   trig= 8.0079e-07
+ delay_avg= 2.3194e-10
+ pdp=-9.3757e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    5.900E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.0674e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.3284e-10  targ= 8.0103e-07   trig= 8.0079e-07
+ falling_delay= 2.3284e-10  targ= 8.0103e-07   trig= 8.0079e-07
+ delay_avg= 2.3284e-10
+ pdp=-9.4707e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    5.950E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.0920e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.3381e-10  targ= 8.0103e-07   trig= 8.0079e-07
+ falling_delay= 2.3381e-10  targ= 8.0103e-07   trig= 8.0079e-07
+ delay_avg= 2.3381e-10
+ pdp=-9.5674e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    6.000E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.1174e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.3473e-10  targ= 8.0103e-07   trig= 8.0079e-07
+ falling_delay= 2.3473e-10  targ= 8.0103e-07   trig= 8.0079e-07
+ delay_avg= 2.3473e-10
+ pdp=-9.6646e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    6.050E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.1421e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.3550e-10  targ= 8.0103e-07   trig= 8.0079e-07
+ falling_delay= 2.3550e-10  targ= 8.0103e-07   trig= 8.0079e-07
+ delay_avg= 2.3550e-10
+ pdp=-9.7546e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    6.100E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.1678e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.3644e-10  targ= 8.0103e-07   trig= 8.0079e-07
+ falling_delay= 2.3644e-10  targ= 8.0103e-07   trig= 8.0079e-07
+ delay_avg= 2.3644e-10
+ pdp=-9.8545e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    6.150E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.1938e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.3735e-10  targ= 8.0103e-07   trig= 8.0079e-07
+ falling_delay= 2.3735e-10  targ= 8.0103e-07   trig= 8.0079e-07
+ delay_avg= 2.3735e-10
+ pdp=-9.9542e-16
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    6.200E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.2201e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.3840e-10  targ= 8.0103e-07   trig= 8.0079e-07
+ falling_delay= 2.3840e-10  targ= 8.0103e-07   trig= 8.0079e-07
+ delay_avg= 2.3840e-10
+ pdp=-1.0061e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    6.250E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.2472e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.3931e-10  targ= 8.0103e-07   trig= 8.0079e-07
+ falling_delay= 2.3931e-10  targ= 8.0103e-07   trig= 8.0079e-07
+ delay_avg= 2.3931e-10
+ pdp=-1.0164e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    6.300E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.2745e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.4020e-10  targ= 8.0103e-07   trig= 8.0079e-07
+ falling_delay= 2.4020e-10  targ= 8.0103e-07   trig= 8.0079e-07
+ delay_avg= 2.4020e-10
+ pdp=-1.0267e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    6.350E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.3015e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.4112e-10  targ= 8.0103e-07   trig= 8.0079e-07
+ falling_delay= 2.4112e-10  targ= 8.0103e-07   trig= 8.0079e-07
+ delay_avg= 2.4112e-10
+ pdp=-1.0372e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    6.400E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.3292e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.4204e-10  targ= 8.0103e-07   trig= 8.0079e-07
+ falling_delay= 2.4204e-10  targ= 8.0103e-07   trig= 8.0079e-07
+ delay_avg= 2.4204e-10
+ pdp=-1.0479e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    6.450E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.3567e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.4297e-10  targ= 8.0104e-07   trig= 8.0079e-07
+ falling_delay= 2.4297e-10  targ= 8.0104e-07   trig= 8.0079e-07
+ delay_avg= 2.4297e-10
+ pdp=-1.0585e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    6.500E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.3847e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.4391e-10  targ= 8.0104e-07   trig= 8.0079e-07
+ falling_delay= 2.4391e-10  targ= 8.0104e-07   trig= 8.0079e-07
+ delay_avg= 2.4391e-10
+ pdp=-1.0695e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    6.550E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.4131e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.4487e-10  targ= 8.0104e-07   trig= 8.0079e-07
+ falling_delay= 2.4487e-10  targ= 8.0104e-07   trig= 8.0079e-07
+ delay_avg= 2.4487e-10
+ pdp=-1.0807e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    6.600E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.4404e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.4571e-10  targ= 8.0104e-07   trig= 8.0079e-07
+ falling_delay= 2.4571e-10  targ= 8.0104e-07   trig= 8.0079e-07
+ delay_avg= 2.4571e-10
+ pdp=-1.0911e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    6.650E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.4689e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.4670e-10  targ= 8.0104e-07   trig= 8.0079e-07
+ falling_delay= 2.4670e-10  targ= 8.0104e-07   trig= 8.0079e-07
+ delay_avg= 2.4670e-10
+ pdp=-1.1025e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    6.700E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.4986e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.4769e-10  targ= 8.0104e-07   trig= 8.0079e-07
+ falling_delay= 2.4769e-10  targ= 8.0104e-07   trig= 8.0079e-07
+ delay_avg= 2.4769e-10
+ pdp=-1.1143e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    6.750E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.5283e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.4861e-10  targ= 8.0104e-07   trig= 8.0079e-07
+ falling_delay= 2.4861e-10  targ= 8.0104e-07   trig= 8.0079e-07
+ delay_avg= 2.4861e-10
+ pdp=-1.1258e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    6.800E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.5579e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.4956e-10  targ= 8.0104e-07   trig= 8.0079e-07
+ falling_delay= 2.4956e-10  targ= 8.0104e-07   trig= 8.0079e-07
+ delay_avg= 2.4956e-10
+ pdp=-1.1374e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    6.850E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.5878e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.5058e-10  targ= 8.0104e-07   trig= 8.0079e-07
+ falling_delay= 2.5058e-10  targ= 8.0104e-07   trig= 8.0079e-07
+ delay_avg= 2.5058e-10
+ pdp=-1.1496e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    6.900E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.6177e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.5154e-10  targ= 8.0104e-07   trig= 8.0079e-07
+ falling_delay= 2.5154e-10  targ= 8.0104e-07   trig= 8.0079e-07
+ delay_avg= 2.5154e-10
+ pdp=-1.1616e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    6.950E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.6490e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.5246e-10  targ= 8.0104e-07   trig= 8.0079e-07
+ falling_delay= 2.5246e-10  targ= 8.0104e-07   trig= 8.0079e-07
+ delay_avg= 2.5246e-10
+ pdp=-1.1737e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    7.000E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.6789e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.5346e-10  targ= 8.0105e-07   trig= 8.0079e-07
+ falling_delay= 2.5346e-10  targ= 8.0105e-07   trig= 8.0079e-07
+ delay_avg= 2.5346e-10
+ pdp=-1.1859e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    7.050E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.7104e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.5443e-10  targ= 8.0105e-07   trig= 8.0079e-07
+ falling_delay= 2.5443e-10  targ= 8.0105e-07   trig= 8.0079e-07
+ delay_avg= 2.5443e-10
+ pdp=-1.1984e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    7.100E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.7420e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.5534e-10  targ= 8.0105e-07   trig= 8.0079e-07
+ falling_delay= 2.5534e-10  targ= 8.0105e-07   trig= 8.0079e-07
+ delay_avg= 2.5534e-10
+ pdp=-1.2108e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    7.150E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.7736e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.5626e-10  targ= 8.0105e-07   trig= 8.0079e-07
+ falling_delay= 2.5626e-10  targ= 8.0105e-07   trig= 8.0079e-07
+ delay_avg= 2.5626e-10
+ pdp=-1.2233e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    7.200E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.8057e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.5726e-10  targ= 8.0105e-07   trig= 8.0079e-07
+ falling_delay= 2.5726e-10  targ= 8.0105e-07   trig= 8.0079e-07
+ delay_avg= 2.5726e-10
+ pdp=-1.2363e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    7.250E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.8382e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.5820e-10  targ= 8.0105e-07   trig= 8.0079e-07
+ falling_delay= 2.5820e-10  targ= 8.0105e-07   trig= 8.0079e-07
+ delay_avg= 2.5820e-10
+ pdp=-1.2492e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    7.300E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.8701e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.5917e-10  targ= 8.0105e-07   trig= 8.0079e-07
+ falling_delay= 2.5917e-10  targ= 8.0105e-07   trig= 8.0079e-07
+ delay_avg= 2.5917e-10
+ pdp=-1.2622e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    7.350E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.9040e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.6021e-10  targ= 8.0105e-07   trig= 8.0079e-07
+ falling_delay= 2.6021e-10  targ= 8.0105e-07   trig= 8.0079e-07
+ delay_avg= 2.6021e-10
+ pdp=-1.2760e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    7.400E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.9368e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.6109e-10  targ= 8.0105e-07   trig= 8.0079e-07
+ falling_delay= 2.6109e-10  targ= 8.0105e-07   trig= 8.0079e-07
+ delay_avg= 2.6109e-10
+ pdp=-1.2890e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    7.450E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-4.9701e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.6204e-10  targ= 8.0105e-07   trig= 8.0079e-07
+ falling_delay= 2.6204e-10  targ= 8.0105e-07   trig= 8.0079e-07
+ delay_avg= 2.6204e-10
+ pdp=-1.3024e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    7.500E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-5.0036e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.6301e-10  targ= 8.0106e-07   trig= 8.0079e-07
+ falling_delay= 2.6301e-10  targ= 8.0106e-07   trig= 8.0079e-07
+ delay_avg= 2.6301e-10
+ pdp=-1.3160e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    7.550E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-5.0382e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.6404e-10  targ= 8.0106e-07   trig= 8.0079e-07
+ falling_delay= 2.6404e-10  targ= 8.0106e-07   trig= 8.0079e-07
+ delay_avg= 2.6404e-10
+ pdp=-1.3303e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    7.600E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-5.0735e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.6499e-10  targ= 8.0106e-07   trig= 8.0079e-07
+ falling_delay= 2.6499e-10  targ= 8.0106e-07   trig= 8.0079e-07
+ delay_avg= 2.6499e-10
+ pdp=-1.3444e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    7.650E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-5.1079e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.6596e-10  targ= 8.0106e-07   trig= 8.0079e-07
+ falling_delay= 2.6596e-10  targ= 8.0106e-07   trig= 8.0079e-07
+ delay_avg= 2.6596e-10
+ pdp=-1.3585e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    7.700E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-5.1421e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.6701e-10  targ= 8.0106e-07   trig= 8.0079e-07
+ falling_delay= 2.6701e-10  targ= 8.0106e-07   trig= 8.0079e-07
+ delay_avg= 2.6701e-10
+ pdp=-1.3730e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    7.750E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-5.1779e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.6799e-10  targ= 8.0106e-07   trig= 8.0079e-07
+ falling_delay= 2.6799e-10  targ= 8.0106e-07   trig= 8.0079e-07
+ delay_avg= 2.6799e-10
+ pdp=-1.3876e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    7.800E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-5.2142e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.6898e-10  targ= 8.0106e-07   trig= 8.0079e-07
+ falling_delay= 2.6898e-10  targ= 8.0106e-07   trig= 8.0079e-07
+ delay_avg= 2.6898e-10
+ pdp=-1.4025e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    7.850E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-5.2475e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.6988e-10  targ= 8.0106e-07   trig= 8.0079e-07
+ falling_delay= 2.6988e-10  targ= 8.0106e-07   trig= 8.0079e-07
+ delay_avg= 2.6988e-10
+ pdp=-1.4162e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    7.900E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-5.2838e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.7088e-10  targ= 8.0106e-07   trig= 8.0079e-07
+ falling_delay= 2.7088e-10  targ= 8.0106e-07   trig= 8.0079e-07
+ delay_avg= 2.7088e-10
+ pdp=-1.4313e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    7.950E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-5.3231e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.7188e-10  targ= 8.0106e-07   trig= 8.0079e-07
+ falling_delay= 2.7188e-10  targ= 8.0106e-07   trig= 8.0079e-07
+ delay_avg= 2.7188e-10
+ pdp=-1.4473e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    8.000E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-5.3597e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.7289e-10  targ= 8.0107e-07   trig= 8.0079e-07
+ falling_delay= 2.7289e-10  targ= 8.0107e-07   trig= 8.0079e-07
+ delay_avg= 2.7289e-10
+ pdp=-1.4626e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    8.050E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-5.3967e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.7384e-10  targ= 8.0107e-07   trig= 8.0079e-07
+ falling_delay= 2.7384e-10  targ= 8.0107e-07   trig= 8.0079e-07
+ delay_avg= 2.7384e-10
+ pdp=-1.4778e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    8.100E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-5.4348e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.7487e-10  targ= 8.0107e-07   trig= 8.0079e-07
+ falling_delay= 2.7487e-10  targ= 8.0107e-07   trig= 8.0079e-07
+ delay_avg= 2.7487e-10
+ pdp=-1.4939e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    8.150E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-5.4730e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.7586e-10  targ= 8.0107e-07   trig= 8.0079e-07
+ falling_delay= 2.7586e-10  targ= 8.0107e-07   trig= 8.0079e-07
+ delay_avg= 2.7586e-10
+ pdp=-1.5098e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    8.200E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-5.5079e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.7678e-10  targ= 8.0107e-07   trig= 8.0079e-07
+ falling_delay= 2.7678e-10  targ= 8.0107e-07   trig= 8.0079e-07
+ delay_avg= 2.7678e-10
+ pdp=-1.5245e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    8.250E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-5.5470e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.7775e-10  targ= 8.0107e-07   trig= 8.0079e-07
+ falling_delay= 2.7775e-10  targ= 8.0107e-07   trig= 8.0079e-07
+ delay_avg= 2.7775e-10
+ pdp=-1.5407e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    8.300E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-5.5871e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.7885e-10  targ= 8.0107e-07   trig= 8.0079e-07
+ falling_delay= 2.7885e-10  targ= 8.0107e-07   trig= 8.0079e-07
+ delay_avg= 2.7885e-10
+ pdp=-1.5579e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    8.350E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-5.6264e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.7985e-10  targ= 8.0107e-07   trig= 8.0079e-07
+ falling_delay= 2.7985e-10  targ= 8.0107e-07   trig= 8.0079e-07
+ delay_avg= 2.7985e-10
+ pdp=-1.5745e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    8.400E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-5.6649e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.8080e-10  targ= 8.0107e-07   trig= 8.0079e-07
+ falling_delay= 2.8080e-10  targ= 8.0107e-07   trig= 8.0079e-07
+ delay_avg= 2.8080e-10
+ pdp=-1.5907e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    8.450E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-5.7058e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.8182e-10  targ= 8.0107e-07   trig= 8.0079e-07
+ falling_delay= 2.8182e-10  targ= 8.0107e-07   trig= 8.0079e-07
+ delay_avg= 2.8182e-10
+ pdp=-1.6080e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    8.500E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-5.7444e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.8276e-10  targ= 8.0108e-07   trig= 8.0079e-07
+ falling_delay= 2.8276e-10  targ= 8.0108e-07   trig= 8.0079e-07
+ delay_avg= 2.8276e-10
+ pdp=-1.6243e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    8.550E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-5.7849e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.8379e-10  targ= 8.0108e-07   trig= 8.0079e-07
+ falling_delay= 2.8379e-10  targ= 8.0108e-07   trig= 8.0079e-07
+ delay_avg= 2.8379e-10
+ pdp=-1.6417e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    8.600E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-5.8269e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.8477e-10  targ= 8.0108e-07   trig= 8.0079e-07
+ falling_delay= 2.8477e-10  targ= 8.0108e-07   trig= 8.0079e-07
+ delay_avg= 2.8477e-10
+ pdp=-1.6593e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    8.650E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-5.8676e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.8582e-10  targ= 8.0108e-07   trig= 8.0079e-07
+ falling_delay= 2.8582e-10  targ= 8.0108e-07   trig= 8.0079e-07
+ delay_avg= 2.8582e-10
+ pdp=-1.6771e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    8.700E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-5.9095e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.8676e-10  targ= 8.0108e-07   trig= 8.0079e-07
+ falling_delay= 2.8676e-10  targ= 8.0108e-07   trig= 8.0079e-07
+ delay_avg= 2.8676e-10
+ pdp=-1.6946e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    8.750E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-5.9501e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.8774e-10  targ= 8.0108e-07   trig= 8.0079e-07
+ falling_delay= 2.8774e-10  targ= 8.0108e-07   trig= 8.0079e-07
+ delay_avg= 2.8774e-10
+ pdp=-1.7121e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    8.800E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-5.9908e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.8874e-10  targ= 8.0108e-07   trig= 8.0079e-07
+ falling_delay= 2.8874e-10  targ= 8.0108e-07   trig= 8.0079e-07
+ delay_avg= 2.8874e-10
+ pdp=-1.7297e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    8.850E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-6.0333e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.8984e-10  targ= 8.0108e-07   trig= 8.0079e-07
+ falling_delay= 2.8984e-10  targ= 8.0108e-07   trig= 8.0079e-07
+ delay_avg= 2.8984e-10
+ pdp=-1.7487e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    8.900E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-6.0742e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.9078e-10  targ= 8.0108e-07   trig= 8.0079e-07
+ falling_delay= 2.9078e-10  targ= 8.0108e-07   trig= 8.0079e-07
+ delay_avg= 2.9078e-10
+ pdp=-1.7663e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    8.950E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-6.1180e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.9178e-10  targ= 8.0108e-07   trig= 8.0079e-07
+ falling_delay= 2.9178e-10  targ= 8.0108e-07   trig= 8.0079e-07
+ delay_avg= 2.9178e-10
+ pdp=-1.7851e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    9.000E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-6.1614e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.9284e-10  targ= 8.0109e-07   trig= 8.0079e-07
+ falling_delay= 2.9284e-10  targ= 8.0109e-07   trig= 8.0079e-07
+ delay_avg= 2.9284e-10
+ pdp=-1.8043e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    9.050E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-6.2056e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.9386e-10  targ= 8.0109e-07   trig= 8.0079e-07
+ falling_delay= 2.9386e-10  targ= 8.0109e-07   trig= 8.0079e-07
+ delay_avg= 2.9386e-10
+ pdp=-1.8236e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    9.100E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-6.2479e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.9480e-10  targ= 8.0109e-07   trig= 8.0079e-07
+ falling_delay= 2.9480e-10  targ= 8.0109e-07   trig= 8.0079e-07
+ delay_avg= 2.9480e-10
+ pdp=-1.8419e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    9.150E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-6.2917e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.9581e-10  targ= 8.0109e-07   trig= 8.0079e-07
+ falling_delay= 2.9581e-10  targ= 8.0109e-07   trig= 8.0079e-07
+ delay_avg= 2.9581e-10
+ pdp=-1.8611e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    9.200E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-6.3375e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.9682e-10  targ= 8.0109e-07   trig= 8.0079e-07
+ falling_delay= 2.9682e-10  targ= 8.0109e-07   trig= 8.0079e-07
+ delay_avg= 2.9682e-10
+ pdp=-1.8811e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    9.250E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-6.3816e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.9786e-10  targ= 8.0109e-07   trig= 8.0079e-07
+ falling_delay= 2.9786e-10  targ= 8.0109e-07   trig= 8.0079e-07
+ delay_avg= 2.9786e-10
+ pdp=-1.9008e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    9.300E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-6.4261e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.9885e-10  targ= 8.0109e-07   trig= 8.0079e-07
+ falling_delay= 2.9885e-10  targ= 8.0109e-07   trig= 8.0079e-07
+ delay_avg= 2.9885e-10
+ pdp=-1.9204e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    9.350E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-6.4703e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 2.9991e-10  targ= 8.0109e-07   trig= 8.0079e-07
+ falling_delay= 2.9991e-10  targ= 8.0109e-07   trig= 8.0079e-07
+ delay_avg= 2.9991e-10
+ pdp=-1.9405e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    9.400E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-6.5168e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 3.0093e-10  targ= 8.0109e-07   trig= 8.0079e-07
+ falling_delay= 3.0093e-10  targ= 8.0109e-07   trig= 8.0079e-07
+ delay_avg= 3.0093e-10
+ pdp=-1.9611e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    9.450E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-6.5613e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 3.0185e-10  targ= 8.0109e-07   trig= 8.0079e-07
+ falling_delay= 3.0185e-10  targ= 8.0109e-07   trig= 8.0079e-07
+ delay_avg= 3.0185e-10
+ pdp=-1.9805e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    9.500E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-6.6064e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 3.0292e-10  targ= 8.0110e-07   trig= 8.0079e-07
+ falling_delay= 3.0292e-10  targ= 8.0110e-07   trig= 8.0079e-07
+ delay_avg= 3.0292e-10
+ pdp=-2.0012e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    9.550E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-6.6527e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 3.0394e-10  targ= 8.0110e-07   trig= 8.0079e-07
+ falling_delay= 3.0394e-10  targ= 8.0110e-07   trig= 8.0079e-07
+ delay_avg= 3.0394e-10
+ pdp=-2.0221e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    9.600E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-6.6990e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 3.0491e-10  targ= 8.0110e-07   trig= 8.0079e-07
+ falling_delay= 3.0491e-10  targ= 8.0110e-07   trig= 8.0079e-07
+ delay_avg= 3.0491e-10
+ pdp=-2.0426e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    9.650E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-6.7453e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 3.0598e-10  targ= 8.0110e-07   trig= 8.0079e-07
+ falling_delay= 3.0598e-10  targ= 8.0110e-07   trig= 8.0079e-07
+ delay_avg= 3.0598e-10
+ pdp=-2.0639e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    9.700E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-6.7918e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 3.0696e-10  targ= 8.0110e-07   trig= 8.0079e-07
+ falling_delay= 3.0696e-10  targ= 8.0110e-07   trig= 8.0079e-07
+ delay_avg= 3.0696e-10
+ pdp=-2.0848e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    9.750E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-6.8402e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 3.0803e-10  targ= 8.0110e-07   trig= 8.0079e-07
+ falling_delay= 3.0803e-10  targ= 8.0110e-07   trig= 8.0079e-07
+ delay_avg= 3.0803e-10
+ pdp=-2.1070e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    9.800E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-6.8873e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 3.0904e-10  targ= 8.0110e-07   trig= 8.0079e-07
+ falling_delay= 3.0904e-10  targ= 8.0110e-07   trig= 8.0079e-07
+ delay_avg= 3.0904e-10
+ pdp=-2.1285e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    9.850E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-6.9348e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 3.1006e-10  targ= 8.0110e-07   trig= 8.0079e-07
+ falling_delay= 3.1006e-10  targ= 8.0110e-07   trig= 8.0079e-07
+ delay_avg= 3.1006e-10
+ pdp=-2.1502e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    9.900E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-6.9834e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 3.1106e-10  targ= 8.0110e-07   trig= 8.0079e-07
+ falling_delay= 3.1106e-10  targ= 8.0110e-07   trig= 8.0079e-07
+ delay_avg= 3.1106e-10
+ pdp=-2.1723e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    9.950E-06 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-7.0319e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 3.1207e-10  targ= 8.0110e-07   trig= 8.0079e-07
+ falling_delay= 3.1207e-10  targ= 8.0110e-07   trig= 8.0079e-07
+ delay_avg= 3.1207e-10
+ pdp=-2.1945e-15
+
+          ***** job concluded
+ **info** dc convergence successful at Newton-Raphson method 
+
+   *** parameter w1 =    1.000E-05 ***
+
+ ******
+ .protect
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ power=-7.0803e-06  from= 0.0000e+00     to= 2.0000e-06
+ rising_delay= 3.1305e-10  targ= 8.0111e-07   trig= 8.0079e-07
+ falling_delay= 3.1305e-10  targ= 8.0111e-07   trig= 8.0079e-07
+ delay_avg= 3.1305e-10
+ pdp=-2.2165e-15
+
+          ***** job concluded
+ ******  
+ .protect
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) CPU E7- 4820  @ 2.00GHz
+ cpu MHz	: 1995.148
+ CPU(s)		: 32
+  
+ OS:
+ Linux version 2.6.32-696.el6.x86_64 (mockbuild@c1bm.rdu2.centos.org) (gcc version 4.4.7 20120313 (Red Hat 4.4.7-18) (GCC) ) #1 SMP Tue Mar 21 19:29:05 UTC 2017
+
+ System loadavg : 23.74 23.26 23.08 26/2586 81497
+
+
+  ******  PrimeSim HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :    32
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =      24 # elements   =      12
+  # resistors   =       0 # capacitors =       1 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       3
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       8 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.09           1         724
+  transient         53.15   362000181     1213451      466804 rev=     54239
+  readin             0.02
+  errchk             0.01
+  setup              0.00
+  output             0.02
+
+
+           peak memory used        438.37 megabytes
+           total cpu time           53.41 seconds
+           total elapsed time       53.98 seconds
+           job started at     20:36:40 05/09/2023
+           job ended   at     20:37:34 05/09/2023
+           job total runtime        53.98 seconds
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        0.57(s)

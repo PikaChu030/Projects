@@ -1,0 +1,56 @@
+***1B.cir***
+
+.subckt delay in out vdd gnd
+m0 in  gnd out vdd p_18 W=2u L=0.18u
+m1 out vdd in  gnd n_18 W=1u L=0.18u
+.ends
+
+.subckt transmission_gate in out vdd gnd
+m0 in  gnd out vdd p_18 W=1u L=0.18u
+m1 out vdd in  gnd n_18 W=1u L=0.18u
+.ends
+
+.subckt buffer in out vdd gnd
+m0 x1 in vdd vdd p_18 W=2u L=0.18u
+m1 x1 in gnd gnd n_18 W=1u L=0.18u
+
+m2 out x1 vdd vdd p_18 W=2u L=0.18u
+m3 out x1 gnd gnd n_18 W=1u L=0.18u
+.ends
+
+
+
+.subckt inv in out vdd gnd
+m0 out in vdd vdd p_18 W=2u L=0.18u
+m1 out in gnd gnd n_18 W=1u L=0.18u
+.ends
+
+.subckt DFF in out clk clk_b vdd gnd
+
+m0 x0 clk   in vdd p_18 W=1u L=0.18u
+m1 in clk_b x0 gnd n_18 W=1u L=0.18u
+
+m2 out1 x0 vdd vdd p_18 W=2u L=0.18u
+m3 out1 x0 gnd gnd n_18 W=1u L=0.18u
+
+m4 x1 out1 vdd vdd p_18 W=2u L=0.18u
+m5 x1 out1 gnd gnd n_18 W=1u L=0.18u
+
+m6 x0 clk_b x1 vdd p_18 W=1u L=0.18u
+m7 x1 clk   x0 gnd n_18 W=1u L=0.18u
+
+
+
+m8 x2   clk_b out1 vdd p_18 W=1u L=0.18u
+m9 out1 clk   x2   gnd n_18 W=1u L=0.18u
+
+m10 out x2 vdd vdd p_18 W=2u L=0.18u
+m11 out x2 gnd gnd n_18 W=1u L=0.18u
+
+m12 x3 out vdd vdd p_18 W=2u L=0.18u
+m13 x3 out gnd gnd n_18 W=1u L=0.18u
+
+m14 x2 clk   x3 vdd p_18 W=1u L=0.18u
+m15 x3 clk_b x2 gnd n_18 W=1u L=0.18u
+
+.ends
