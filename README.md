@@ -59,6 +59,7 @@ More works will be added continuously
 - Large Language Model (LLM)  
 - Natural language processing (NLP)
 - Machine Learning (ML)
+- Deep Learning (DL)   
 9. Role-Playing Game (RPG) - C:
 -
 10. Karnaugh map (software) - C++:  
@@ -67,5 +68,4 @@ More works will be added continuously
 11. Quine–McCluskey algorithm (software) - C++:
 - Data Structure
 - Logic Circuit 
-- Deep Learning (DL)   
-9. (other projects will be added continuously...)  
+12. (other projects will be added continuously...)  
