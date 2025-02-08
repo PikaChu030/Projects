@@ -1,32 +1,40 @@
-# VLSI Circuit Design
+## lab5
+- Task 1: Apply memory concepts to design a 6T SRAM cell and its peripheral circuitry. Analyze its stability by measuring the static noise margin during read and write operations.  
 
-## Environment
-- Layout Rule File: `rule.drc`, `Rule.lvs`, `Rule.rce`  
-- Manufacturing File: `cic018.l`(confidential)  
-1. OS
-- `CenterOS v6`
+- Task 2: Apply sequencing concepts to analyze the timing characteristics of latches and flip-flops.  Determine the test cases, variable values, and ranges for the analysis.  Generate plots of the sequencing element delay and analyze them to extract component parameters like setup time. 
 
-2. Software
+## 6T SRAM Architecture, Read/Write Mechanisms, and Transistor Sizing:
 
-|Name|Functionality|
-|---|---|
-|Virtuoso|Produce `*.cir`|
-|HSPICE|Take `*.cir`, `.*sp` as input to model the circuit.|
-|Laker|Layout and check rules of DRC, LVS, PEX|
-|Matlab|Analyze the circuit with numerical data|
+- Data Storage: N2 and N4 are the access transistors. P1, N1 and P2, N2 form cross-coupled inverters. The output of one inverter is connected to the input of the other, creating a positive feedback loop. When the data is slightly disturbed by noise, the positive feedback circuit corrects it back to 0 or VDD. This ensures robust data storage.
 
-## hw1
-- Pass Transistor, 2-1 MUX
-- D Latch, D Flip-Flop
-- Combinational Logic Design
+- Layout Techniques: The wordline is a long wire. To reduce its resistance, a combination of low-resistance metal and high-resistance polysilicon is used in a parallel configuration. Contacts are placed at intervals to create the parallel connection, effectively reducing the wordline resistance.
 
-## hw2
-- Device, logic effort
-- Delay Estimation and Optimization
-- Elmore Delay Model
-- Layout Effect on Diffusion Capacitance
-## hw3
+- Read Operation: When φ2 = 1, the PMOS in the bitline conditioning circuit turns on, precharging both bit and bit_b to VDD.  When φ2 = 0, the PMOS turns off, and bit and bit_b become floating. Then, the wordline transitions from 0 to 1, turning on N2 and N4. Assuming A = 0, the precharged bit is pulled down to 0, representing the read data. Therefore, the internal transistors must be stronger than the external read transistors (N1 > N2, N3 > N4). Finally, a HI-skew inverter is connected. Since the input only has a falling transition, a HI-skew inverter (faster rising output) is used.
 
-## hw4
+- Write Operation: Similar to the read operation, when φ2 = 1, the PMOS in the bitline conditioning circuit turns on, precharging both bit and bit_b to VDD. When φ2 = 0, the PMOS turns off, and bit and bit_b become floating. The write driver selectively discharges either bit or bit_b to 0 depending on the data to be written. Then, the wordline transitions from 0 to 1, turning on N2 and N4, writing the value of bit or bit_b into the cross-coupled inverter. Assuming A = 0 and A_b = 1, bit = 1 and bit_b = 0. When writing 1 to bit, N3 and N4 are on. Due to the N3 > N4 condition from the read operation, the write fails. Considering writing 0 to bit_b, P1 and N2 are on. Therefore, designing N2 to be stronger than P1 allows the data to be written into the cross-coupled inverter. The overall conditions are N2 > P1 and N4 > P2.
 
-## hw5
+## Analysis of SRAM Stability - Static Noise Margin:
+
+Previously, the SRAM transistor sizing was considered. Next, the stability of the SRAM during hold, read, and write operations is analyzed. The static noise margin (SNM) is defined as the amount of noise that can be applied before the cross-coupled inverter loses its original stable state. The SNMs under different operating conditions are the hold margin, read margin, and write margin.
+
+- Hold Margin: In hold mode, the access transistors are off. Therefore, only the two inverters' loop is seen. Voltage sources V1 and V2 are connected before the two inverters. Changing V1 and observing the output results; changing V2 and observing the output results. Plotting the two DC transfer curves yields the butterfly diagram. The side length of the largest square enclosed by the two DC transfer curves is the static noise margin (SNM). Increasing VDD (scaling) or increasing Vt (changing slope) can increase the hold margin.
+
+- Read Margin: Perform a static analysis at the "beginning" of the read operation. Two conducting access transistors are seen on the left and right, connected to the precharged high potential. Since the PMOS is always on, the DC transfer curve cannot drop to 0. Therefore, the read margin is always less than the hold margin. Due to the transistor size limitations of the previous read operation, the beta ratio (strength of pull-down transistor / access transistor) must be greater than 0. If the beta ratio is increased, the access transistor becomes less likely to conduct, and the lowest point of the DC transfer curve will be closer to 0, thus increasing the read margin. Similar to the hold margin, increasing VDD or increasing Vt can increase the read margin.
+
+- Write Margin: The difference from the read margin is that one side of the conducting access transistors is connected to the precharged high potential, and the other side is connected to the precharged high potential and then discharged to a low potential by the write driver. The DC transfer curve of V1 is the same as the read margin, but V2 is shifted to the left because when the weak inverter output is 1, it needs to perform voltage division with a strong access transistor with one end connected to 0. To increase the write margin, try to increase the access transistor (increase the equivalent wordline voltage) and reduce the pull-up transistor, so that the DC transfer curve of V2 moves to the left and closer to 0.
+
+Notes: Under PVT process variations, the hold margin, read margin, and write margin cannot have negative values, otherwise, the circuit operation will have problems. The static noise margin mostly depends on the VDD size, so even if the process advances, VDD cannot be reduced further. The static noise margin is a conservative static analysis. In reality, the noise is not constant, and the bitline is not always precharged to a high potential. Therefore, there is another analysis method - dynamic noise margin.
+
+## Definitions of Flip-Flop and Latch Parameters such as Setup Time and Hold Time:
+
+- For a flip-flop, the input-to-output delay tDQ is divided into tDC and tCQ. When the input arrives earlier before CLK, i.e., tDC is larger, the internal node settles earlier, and the delay tCQ is smaller. Plotting tDQ = tDC + tCQ, tCQ has a constant slope of 1 on the x-axis. Therefore, when the slope of tCQ on the y-axis is -1, the slope of the sum is 0, representing the minimum value of tDQ. At this point, tsetup and tpcq are defined, and tccq is defined where tDC is larger.
+
+- For a flip-flop, if the input rises and then immediately falls, the output will not be able to transition successfully. As the time interval between the falling edge and CLK gets smaller, it is "easier to transition," and the delay time will be smaller. The hold time is defined as the tDC value under the same sequencing overhead tCQ = tpcq as the setup time. Since the hold time generally occurs before CLK arrives, the hold time is negative, denoted as -thold.
+
+In reality, the tsetup, tpcq, and thold of input 0 and 1 are different. The aperture width is defined as the time during which the data cannot change around the clock edge. If it changes, it may cause a metastable state or infinite delay. It is divided into the aperture width of the rising input tar = tsetup1 + thold0 and the aperture width of the falling input taf = tsetup0 + thold1.
+
+- For a latch, when the input arrives earlier than the clock rising edge tDCr > 0, the earlier it arrives, the fixed tCrQ, and tDQ = tDCr + tCrQ increase; when the input arrives later than the clock rising edge tDCr < 0, the tCrQ = tCrD + tDQ increases, the fixed tDQ, and tDCr continue to become smaller until it approaches the clock's falling edge, and the delay will increase rapidly. According to the definition of different books, tsetup is defined here as the 5% value above the minimum value of tDQ.
+
+When the data changes within the aperture window time, making the delay much larger than tpcq, it may enter a metastable state. There is a stable point in the transient state. Theoretically, it will stay at the voltage at that point stably, but the slope around this stable point is very large. Therefore, once there is any noise interference, it will be pulled back to the stable state. The time required for this process is called recovery time.
+
+After the small signal analysis, it can be known that to make the signal leave the metastable state earlier, τ = RC should be smaller.
