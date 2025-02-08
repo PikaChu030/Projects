@@ -20,7 +20,14 @@ More works will be added continuously
 - Testing/Optimization  
 - EDA Tools
 2. Very-Large-Scale Integration (VLSI) and Computer-Aided Design (CAD): 
--
+- NC Verilog: HDL simulation  
+- nWave in Verdi: Analyze simulation results  
+- Superlint: Check HDL code  
+- Design Vision: Synthesis  
+- HSPICE: Circuit simulation  
+- Laker: Layout  
+- Calibre: Verification for DRC, LVS, PEX  
+- Mobaxterm: Remote workstations  
 3. Very-Large-Scale Integration (VLSI) Circuit Design:
 - Virtuoso: Schematic
 - HSPICE: Model
