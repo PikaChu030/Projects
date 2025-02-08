@@ -1,0 +1,14 @@
+#----------------------------------------
+# JasperGold Version Info
+# tool      : JasperGold 2018.03
+# platform  : Linux 3.10.0-957.21.3.el7.x86_64
+# version   : 2018.03p001 64 bits
+# build date: 2018.04.24 18:13:05 PDT
+#----------------------------------------
+# started Tue Mar 08 15:19:54 CST 2022
+# hostname  : vlsicad9
+# pid       : 23640
+# arguments : '-label' 'session_0' '-console' 'vlsicad9:38117' '-style' 'windows' '-data' 'AQAAADx/////AAAAAAAAA3oBAAAAEABMAE0AUgBFAE0ATwBWAEU=' '-proj' '/home/user2/vlsi22/vlsi22114/Lab2/ProbB/jgproject/sessionLogs/session_0' '-init' '-hidden' '/home/user2/vlsi22/vlsi22114/Lab2/ProbB/jgproject/.tmp/.initCmds.tcl'
+check_superlint -init
+include /home/user2/vlsi22/vlsi22114/Lab2/ProbB/superlint.tcl
+check_superlint -extract 

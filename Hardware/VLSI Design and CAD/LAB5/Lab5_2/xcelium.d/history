@@ -1,0 +1,7 @@
+//
+// File created by:  xrun
+// Do not modify this file
+
+s1::(29Mar2022:13:56:02):( ncverilog BP.v )
+s2::(29Mar2022:13:56:20):( ncverilog BP_tb.v +access+r +define+FSDB )
+s3::(30Mar2022:13:38:27):( ncverilog BP_tb.v +access+r +define+FSDB+syn )

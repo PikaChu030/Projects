@@ -1,0 +1,110 @@
+xmverilog(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xmverilog	20.09-s007: Started on Mar 08, 2022 at 17:29:30 CST
+ncverilog
+	multi_tb.sv
+	multi.v
+	+access+r
+	+define+FSDB
+xmverilog: *W,NCEXDEP: Executable (ncverilog) is deprecated. Use (xmverilog) instead.
+file: multi.v
+	module worklib.FullAdder:v
+		errors: 0, warnings: 0
+	module worklib.multi:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                  7       3
+		Primitives:              37       4
+		Registers:                4       4
+		Scalar wires:             1       -
+		Expanded wires:           6       2
+		Initial blocks:           3       3
+		Pseudo assignments:       2       2
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.multi_tb:sv
+Loading snapshot worklib.multi_tb:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+*Verdi* Loading libsscore_xcelium.so
+xcelium> source /usr/cad/cadence/XCELIUM/XCELIUM_20.09.007/tools/xcelium/files/xmsimrc
+xcelium> run
+FSDB Dumper for Xcelium, Release Verdi_S-2021.09, Linux x86_64/64bit, 08/29/2021
+(C) 1996 - 2021 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'multi.fsdb'
+*Verdi* : Begin traversing the scope (multi_tb.multi), layer (0).
+*Verdi* : End of traversing.
+                   0ns, A=x, B=x, S in decimal= x, S in binary=xxxxxx
+                  10ns, A=0, B=0, S in decimal= 0, S in binary=000000
+                  20ns, A=0, B=1, S in decimal= 0, S in binary=000000
+                  30ns, A=0, B=2, S in decimal= 0, S in binary=000000
+                  40ns, A=0, B=3, S in decimal= 0, S in binary=000000
+                  50ns, A=0, B=4, S in decimal= 0, S in binary=000000
+                  60ns, A=0, B=5, S in decimal= 0, S in binary=000000
+                  70ns, A=0, B=6, S in decimal= 0, S in binary=000000
+                  80ns, A=0, B=7, S in decimal= 0, S in binary=000000
+                  90ns, A=1, B=0, S in decimal= 0, S in binary=000000
+                 100ns, A=1, B=1, S in decimal= 1, S in binary=000001
+                 110ns, A=1, B=2, S in decimal= 2, S in binary=000010
+                 120ns, A=1, B=3, S in decimal= 3, S in binary=000011
+                 130ns, A=1, B=4, S in decimal= 4, S in binary=000100
+                 140ns, A=1, B=5, S in decimal= 5, S in binary=000101
+                 150ns, A=1, B=6, S in decimal= 6, S in binary=000110
+                 160ns, A=1, B=7, S in decimal= 7, S in binary=000111
+                 170ns, A=2, B=0, S in decimal= 0, S in binary=000000
+                 180ns, A=2, B=1, S in decimal= 2, S in binary=000010
+                 190ns, A=2, B=2, S in decimal= 4, S in binary=000100
+                 200ns, A=2, B=3, S in decimal= 6, S in binary=000110
+                 210ns, A=2, B=4, S in decimal= 8, S in binary=001000
+                 220ns, A=2, B=5, S in decimal=10, S in binary=001010
+                 230ns, A=2, B=6, S in decimal=12, S in binary=001100
+                 240ns, A=2, B=7, S in decimal=14, S in binary=001110
+                 250ns, A=3, B=0, S in decimal= 0, S in binary=000000
+                 260ns, A=3, B=1, S in decimal= 3, S in binary=000011
+                 270ns, A=3, B=2, S in decimal= 6, S in binary=000110
+                 280ns, A=3, B=3, S in decimal= 9, S in binary=001001
+                 290ns, A=3, B=4, S in decimal=12, S in binary=001100
+                 300ns, A=3, B=5, S in decimal=15, S in binary=001111
+                 310ns, A=3, B=6, S in decimal=18, S in binary=010010
+                 320ns, A=3, B=7, S in decimal=21, S in binary=010101
+                 330ns, A=4, B=0, S in decimal= 0, S in binary=000000
+                 340ns, A=4, B=1, S in decimal= 4, S in binary=000100
+                 350ns, A=4, B=2, S in decimal= 8, S in binary=001000
+                 360ns, A=4, B=3, S in decimal=12, S in binary=001100
+                 370ns, A=4, B=4, S in decimal=16, S in binary=010000
+                 380ns, A=4, B=5, S in decimal=20, S in binary=010100
+                 390ns, A=4, B=6, S in decimal=24, S in binary=011000
+                 400ns, A=4, B=7, S in decimal=28, S in binary=011100
+                 410ns, A=5, B=0, S in decimal= 0, S in binary=000000
+                 420ns, A=5, B=1, S in decimal= 5, S in binary=000101
+                 430ns, A=5, B=2, S in decimal=10, S in binary=001010
+                 440ns, A=5, B=3, S in decimal=15, S in binary=001111
+                 450ns, A=5, B=4, S in decimal=20, S in binary=010100
+                 460ns, A=5, B=5, S in decimal=25, S in binary=011001
+                 470ns, A=5, B=6, S in decimal=30, S in binary=011110
+                 480ns, A=5, B=7, S in decimal=35, S in binary=100011
+                 490ns, A=6, B=0, S in decimal= 0, S in binary=000000
+                 500ns, A=6, B=1, S in decimal= 6, S in binary=000110
+                 510ns, A=6, B=2, S in decimal=12, S in binary=001100
+                 520ns, A=6, B=3, S in decimal=18, S in binary=010010
+                 530ns, A=6, B=4, S in decimal=24, S in binary=011000
+                 540ns, A=6, B=5, S in decimal=30, S in binary=011110
+                 550ns, A=6, B=6, S in decimal=36, S in binary=100100
+                 560ns, A=6, B=7, S in decimal=42, S in binary=101010
+                 570ns, A=7, B=0, S in decimal= 0, S in binary=000000
+                 580ns, A=7, B=1, S in decimal= 7, S in binary=000111
+                 590ns, A=7, B=2, S in decimal=14, S in binary=001110
+                 600ns, A=7, B=3, S in decimal=21, S in binary=010101
+                 610ns, A=7, B=4, S in decimal=28, S in binary=011100
+                 620ns, A=7, B=5, S in decimal=35, S in binary=100011
+                 630ns, A=7, B=6, S in decimal=42, S in binary=101010
+                 640ns, A=7, B=7, S in decimal=49, S in binary=110001
+Simulation complete via $finish(1) at time 650 NS + 0
+./multi_tb.sv:31 		$finish;
+xcelium> exit
+TOOL:	xmverilog	20.09-s007: Exiting on Mar 08, 2022 at 17:29:31 CST  (total: 00:00:01)

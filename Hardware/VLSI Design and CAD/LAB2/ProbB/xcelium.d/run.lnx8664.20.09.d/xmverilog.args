@@ -1,0 +1,8 @@
+//
+// File created by:  xmverilog
+// Do not modify this file
+//
+ripple_adder_tb.v
+ripple_adder.v
++define+FSDB
++access+r

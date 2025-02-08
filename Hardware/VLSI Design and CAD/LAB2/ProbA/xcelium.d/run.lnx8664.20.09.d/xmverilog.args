@@ -1,0 +1,8 @@
+//
+// File created by:  xmverilog
+// Do not modify this file
+//
+kmap_tb.v
+kmap.v
++access+r
++define+FSDB

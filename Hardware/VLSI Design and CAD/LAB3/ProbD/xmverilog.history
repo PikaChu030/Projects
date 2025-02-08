@@ -1,0 +1,8 @@
+s1(10Mar2022:15:16:41):  ncverilog fixedpoint_s.v 
+s2(10Mar2022:15:20:50):  ncverilog fixedpoint_s.v 
+s3(10Mar2022:15:22:25):  ncverilog fixedpoint_s.v 
+s4(10Mar2022:15:23:37):  ncverilog fixedpoint_s.v 
+s5(10Mar2022:15:24:29):  ncverilog fixedpoint_s.v 
+s6(10Mar2022:15:25:27):  ncverilog ncverilog fixedpoint_s_tb.v +define+FSDB +access+r 
+s7(10Mar2022:15:25:42):  ncverilog fixedpoint_s_tb.v +define+FSDB +access+r 
+s8(10Mar2022:15:42:35):  ncverilog fixedpoint_s_tb.v +define+FSDB+syn +access+r 

@@ -1,0 +1,8 @@
+//
+// File created by:  xmverilog
+// Do not modify this file
+//
+multi_tb.sv
+multi.v
++access+r
++define+FSDB

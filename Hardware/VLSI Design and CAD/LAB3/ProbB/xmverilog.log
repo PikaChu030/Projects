@@ -1,0 +1,143 @@
+xmverilog(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xmverilog	20.09-s007: Started on Mar 09, 2022 at 18:07:03 CST
+ncverilog
+	ALU_tb.v
+	+define+FSDB
+	+access+r
+xmverilog: *W,NCEXDEP: Executable (ncverilog) is deprecated. Use (xmverilog) instead.
+file: ALU_tb.v
+	module worklib.ALU:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.ALU:v <0x36f56116>
+			streams:   1, words: 11310
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                  2       2
+		Registers:                6       6
+		Scalar wires:             2       -
+		Vectored wires:           4       -
+		Always blocks:            1       1
+		Initial blocks:           3       3
+		Pseudo assignments:       4       4
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.ALU_tb:v
+Loading snapshot worklib.ALU_tb:v .................... Done
+*Verdi* Loading libsscore_xcelium.so
+xcelium> source /usr/cad/cadence/XCELIUM/XCELIUM_20.09.007/tools/xcelium/files/xmsimrc
+xcelium> run
+FSDB Dumper for Xcelium, Release Verdi_S-2021.09, Linux x86_64/64bit, 08/29/2021
+(C) 1996 - 2021 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'ALU.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+alu_enable = 1, alu_op = 00000,
+src1    = 11111111000011110000111100001111,
+src2    = 10000000000000000000000000000000,
+alu_out = 7f0f0f0f,alu_overflow = 1
+
+alu_enable = 1, alu_op = 00001,
+src1    = 00001111000011110000111100001111,
+src2    = 01010000000000000000000000000000,
+alu_out = bf0f0f0f,alu_overflow = 0
+
+alu_enable = 1, alu_op = 00010,
+src1    = 00001111000011110000111100001111,
+src2    = 00000000000011110000000000001111,
+alu_out = 000f000f,alu_overflow = 0
+
+alu_enable = 1, alu_op = 00011,
+src1    = 00001111000011110000111100001111,
+src2    = 00000000111100000000000011110000,
+alu_out = 0fff0fff,alu_overflow = 0
+
+alu_enable = 1, alu_op = 00100,
+src1    = 00001111000011110000111100001111,
+src2    = 11110000111100000000111100001111,
+alu_out = ffff0000,alu_overflow = 0
+
+alu_enable = 1, alu_op = 00101,
+src1    = 00001111000011110000111100001111,
+src2    = 11110000111100000000111100001111,
+alu_out = 0000f0f0,alu_overflow = 0
+
+alu_enable = 1, alu_op = 00110,
+src1    = 11111111000011110000111100001111,
+src2    = 00000000000000000000000000000010,
+alu_out = 3fc3c3c3,alu_overflow = 0
+
+alu_enable = 1, alu_op = 00111,
+src1    = 00001111000011110000111100001111,
+src2    = 00000000000000000000000000000011,
+alu_out = e1e1e1e1,alu_overflow = 0
+
+alu_enable = 1, alu_op = 01000,
+src1    = 00001111000011110000111100001111,
+src2    = 00000000000000000000000000000000,
+alu_out = f0f0f0f0,alu_overflow = 0
+
+alu_enable = 1, alu_op = 01001,
+src1    = 10101111001111001111111100000000,
+src2    = 01010000110000111111111100000000,
+alu_out = ffff00ff,alu_overflow = 0
+
+alu_enable = 1, alu_op = 01010,
+src1    = 10000000000000000001001000110100,
+src2    = 00001111111111110000000100010001,
+alu_out = 0fff0111,alu_overflow = 0
+
+alu_enable = 1, alu_op = 01011,
+src1    = 00001111111111110000000100010001,
+src2    = 10000000000000000001001000110100,
+alu_out = 80001234,alu_overflow = 0
+
+alu_enable = 1, alu_op = 01100,
+src1    = 11111111111111111111111111111111,
+src2    = 00000000000000000000000000000000,
+alu_out = 00000001,alu_overflow = 0
+
+alu_enable = 1, alu_op = 01101,
+src1    = 10000000000000000001001000110100,
+src2    = 00001111111111110000000100010001,
+alu_out = 00000001,alu_overflow = 0
+
+alu_enable = 1, alu_op = 01110,
+src1    = 11111111000000000000000011111111,
+src2    = 00000000000000000000000000000010,
+alu_out = 00000000,alu_overflow = 0
+
+alu_enable = 1, alu_op = 01111,
+src1    = 11111111000000000000000011111111,
+src2    = 00000000000000000000000000000010,
+alu_out = ffc0003f,alu_overflow = 0
+
+alu_enable = 1, alu_op = 10000,
+src1    = 11111111000000000000000011111111,
+src2    = 00000000000000000000000000000010,
+alu_out = fc0003fc,alu_overflow = 0
+
+alu_enable = 1, alu_op = 10001,
+src1    = 11111111000000000000000011111111,
+src2    = 00000000000000000000000000000010,
+alu_out = fc0003fc,alu_overflow = 0
+
+alu_enable = 1, alu_op = 10010,
+src1    = 01001111000000000000000011111111,
+src2    = 00000000000000000000000000000010,
+alu_out = 3c0003fd,alu_overflow = 0
+
+alu_enable = 1, alu_op = 10011,
+src1    = 11111111000000000000000000000000,
+src2    = 00000000000000000000000000000010,
+alu_out = ff000002,alu_overflow = 0
+
+Simulation complete via $finish(1) at time 200 NS + 0
+./ALU_tb.v:81 #10  $finish;
+xcelium> exit
+TOOL:	xmverilog	20.09-s007: Exiting on Mar 09, 2022 at 18:07:05 CST  (total: 00:00:02)

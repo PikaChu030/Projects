@@ -1,0 +1,16 @@
+//
+// File created by:  xrun
+// Do not modify this file
+
+s1::(08Mar2022:13:11:44):( ncverilog kmap.v )
+s2::(08Mar2022:13:12:03):( ncverilog kmap _tb.v kmap.v +access+r +define+FSDB )
+s3::(08Mar2022:13:12:30):( ncverilog kmap_tb.v kmap.v +access+r +define+FSDB )
+s4::(08Mar2022:13:14:27):( ncverilog kmap _tb.v kmap.v +access+r +define+FSDB )
+s5::(08Mar2022:13:15:07):( ncverilog kmap.v )
+s6::(08Mar2022:13:15:32):( ncverilog kmap_tb.v kmap.v +access+r +define+FSDB )
+s7::(08Mar2022:13:17:43):( ncverilog kmap_tb.v kmap.v +access+r +define+FSDB )
+s8::(08Mar2022:13:18:32):( ncverilog kmap.v )
+s9::(08Mar2022:13:18:41):( ncverilog kmap_tb.v kmap.v +access+r +define+FSDB )
+s10::(08Mar2022:13:18:55):( ncverilog kmap.v )
+s11::(08Mar2022:13:20:32):( ncverilog kmap.v )
+s12::(08Mar2022:13:20:36):( ncverilog kmap_tb.v kmap.v +access+r +define+FSDB )

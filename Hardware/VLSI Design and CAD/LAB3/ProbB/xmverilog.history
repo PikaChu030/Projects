@@ -1,0 +1,15 @@
+s1(09Mar2022:14:28:15):  ncverilog ALU.v 
+s2(09Mar2022:14:30:34):  ncverilog ALU.v 
+s3(09Mar2022:14:30:59):  ncverilog ALU_tb.v +define+FSDB +access+r 
+s4(09Mar2022:14:33:42):  ncverilog ALU_tb.v +define+FSDB +access+r 
+s5(09Mar2022:14:44:33):  ncverilog ALU_tb.v +define+FSDB +access+r 
+s6(09Mar2022:17:53:05):  ncverilog ALU.v 
+s7(09Mar2022:17:53:09):  ncverilog ALU_tb.v +define+FSDB +access+r 
+s8(09Mar2022:17:55:01):  ncverilog ALU.v 
+s9(09Mar2022:17:55:13):  ncverilog ALU_tb.v +define+FSDB +access+r 
+s10(09Mar2022:18:02:53):  ncverilog ALU.v 
+s11(09Mar2022:18:02:57):  ncverilog ALU_tb.v +define+FSDB +access+r 
+s12(09Mar2022:18:05:11):  ncverilog ALU.v 
+s13(09Mar2022:18:05:16):  ncverilog ALU_tb.v +define+FSDB +access+r 
+s14(09Mar2022:18:07:00):  ncverilog ALU.v 
+s15(09Mar2022:18:07:03):  ncverilog ALU_tb.v +define+FSDB +access+r 

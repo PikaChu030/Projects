@@ -1,0 +1,52 @@
+xmverilog(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xmverilog	20.09-s007: Started on Mar 08, 2022 at 15:06:39 CST
+ncverilog
+	ripple_adder_tb.v
+	ripple_adder.v
+	+define+FSDB
+	+access+r
+xmverilog: *W,NCEXDEP: Executable (ncverilog) is deprecated. Use (xmverilog) instead.
+file: ripple_adder.v
+	module worklib.FullAdder:v
+		errors: 0, warnings: 0
+	module worklib.ripple_adder:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Building instance overlay tables: .................... Done
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                  8       3
+		Primitives:              37       3
+		Registers:                3       3
+		Scalar wires:             1       -
+		Expanded wires:          12       2
+		Initial blocks:           3       3
+		Pseudo assignments:       3       3
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.ripple_adder_tb:v
+Loading snapshot worklib.ripple_adder_tb:v .................... Done
+*Verdi* Loading libsscore_xcelium.so
+xcelium> source /usr/cad/cadence/XCELIUM/XCELIUM_20.09.007/tools/xcelium/files/xmsimrc
+xcelium> run
+FSDB Dumper for Xcelium, Release Verdi_S-2021.09, Linux x86_64/64bit, 08/29/2021
+(C) 1996 - 2021 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'ripple_adder.fsdb'
+*Verdi* : Begin traversing the scope (ripple_adder_tb.ripple_adder), layer (0).
+*Verdi* : End of traversing.
+                   0ns, A=011111, B=001100, addsub=0, S=43, Cout=0, ov_flag=1
+                  10ns, A=000111, B=111011, addsub=0, S= 2, Cout=1, ov_flag=0
+                  20ns, A=110110, B=001101, addsub=0, S= 3, Cout=1, ov_flag=0
+                  30ns, A=100001, B=101000, addsub=0, S= 9, Cout=1, ov_flag=1
+                  40ns, A=100001, B=101000, addsub=1, S=57, Cout=0, ov_flag=0
+                  50ns, A=100100, B=001010, addsub=1, S=26, Cout=1, ov_flag=1
+                  60ns, A=001000, B=011111, addsub=1, S=41, Cout=0, ov_flag=0
+                  70ns, A=010100, B=000111, addsub=1, S=13, Cout=1, ov_flag=0
+                  80ns, A=010110, B=100111, addsub=1, S=47, Cout=0, ov_flag=1
+Simulation complete via $finish(1) at time 90 NS + 0
+./ripple_adder_tb.v:35   #`INTERVAL $finish;
+xcelium> exit
+TOOL:	xmverilog	20.09-s007: Exiting on Mar 08, 2022 at 15:06:40 CST  (total: 00:00:01)

@@ -1,0 +1,87 @@
+#----------------------------------------
+# JasperGold Version Info
+# tool      : JasperGold 2018.03
+# platform  : Linux 3.10.0-957.21.3.el7.x86_64
+# version   : 2018.03p001 64 bits
+# build date: 2018.04.24 18:13:05 PDT
+#----------------------------------------
+# started Tue Mar 29 13:57:28 CST 2022
+# hostname  : vlsicad9
+# pid       : 15744
+# arguments : '-label' 'session_0' '-console' 'vlsicad9:46405' '-style' 'windows' '-data' 'AQAAADx/////AAAAAAAAA3oBAAAAEABMAE0AUgBFAE0ATwBWAEU=' '-proj' '/home/user2/vlsi22/vlsi22114/Lab5/Lab5_2/jgproject/sessionLogs/session_0' '-init' '-hidden' '/home/user2/vlsi22/vlsi22114/Lab5/Lab5_2/jgproject/.tmp/.initCmds.tcl' 'superlint.tcl'
+
+Any disclosure about the Cadence Design Systems software or its use
+model to any third party violates the written Non-Disclosure Agreement
+between Cadence Design Systems, Inc. and the customer.
+
+THIS SOFTWARE CONTAINS CONFIDENTIAL INFORMATION AND TRADE SECRETS OF
+CADENCE DESIGN SYSTEMS, INC. USE, DISCLOSURE, OR REPRODUCTION IS
+PROHIBITED WITHOUT THE PRIOR EXPRESS WRITTEN PERMISSION OF CADENCE
+DESIGN SYSTEMS, INC.
+
+Copyright (C) 2000-2018 Cadence Design Systems, Inc. All Rights
+Reserved.  Unpublished -- rights reserved under the copyright laws of
+the United States.
+
+This product includes software developed by others and redistributed
+according to license agreement. See doc/third_party_readme.txt for
+further details.
+
+RESTRICTED RIGHTS LEGEND
+
+Use, duplication, or disclosure by the Government is subject to
+restrictions as set forth in subparagraph (c) (1) (ii) of the Rights in
+Technical Data and Computer Software clause at DFARS 252.227-7013 or
+subparagraphs (c) (1) and (2) of Commercial Computer Software -- Restricted
+Rights at 48 CFR 52.227-19, as applicable.
+
+
+                          Cadence Design Systems, Inc. 
+                          2655 Seely Avenue
+                          San Jose, CA 95134
+                          Phone: 408.943.1234
+
+For technical assistance visit http://support.cadence.com.
+
+JasperGold Apps Analysis Session - /home/user2/vlsi22/vlsi22114/Lab5/Lab5_2/jgproject/sessionLogs/session_0
+
+INFO: successfully checked out licenses "jasper_pint" and "jasper_dao".
+INFO: reading configuration file "/home/user2/vlsi22/vlsi22114/.config/jasper/jaspergold.conf".
+% check_superlint -init
+% ##------------------Don't touch----------------------##
+% clear -all
+INFO (IPF121): Cleared environment completely for new design analysis.
+% 
+% # Config rules
+% config_rtlds -rule -enable -domain { LINT }
+% config_rtlds -rule -disable -domain { DFT AUTO_FORMAL }
+% 
+% # ivcad2020_constrain //
+% config_rtlds -rule  -disable -category { NAMING }
+% config_rtlds -rule  -disable -tag { IDN_NR_CKYW IDN_NR_SVKY NAM_NR_REPU MOD_NR_PGAT MOD_NO_IPRG FLP_NR_MXCS REG_NR_RWRC INS_NR_INPR MOD_NS_GLGC OTP_NR_ASYA} 
+% # ivcad2020_constrain //
+% 
+% ##------------------Don't touch----------------------##
+% 
+% # import and elaborate design //
+% analyze -v2k ./BP.v; ## modify your file name ##
+[-- (VERI-1482)] Analyzing Verilog file './BP.v'
+% elaborate -bbox true -top BP; ## modify your top module ##
+INFO (ISW003): Top module name is "BP".
+[INFO (VERI-1018)] ./BP.v(1): compiling module 'BP'
+BP
+[<embedded>] % 
+[<embedded>] % # Setup clock and reset
+[<embedded>] % clock clk; ## modify your clock name ##
+[<embedded>] % reset rst; ## modify your reset name ##
+INFO (IPM031): Clearing proof results of all properties.
+INFO (IRS006): Current reset condition is "rst".
+[<embedded>] % 
+[<embedded>] % # Extract checks
+[<embedded>] % check_superlint -extract
+INFO (ISL018): Started extraction of structural checks
+INFO (ISL016): Extracted 0 STRUCTURAL checks.
+[<embedded>] % 
+INFO (IPL005): Received request to exit from the console.
+INFO: Waiting for proof threads to stop...
+INFO: Proof threads stopped.

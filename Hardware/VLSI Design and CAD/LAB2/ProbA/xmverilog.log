@@ -1,0 +1,58 @@
+xmverilog(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xmverilog	20.09-s007: Started on Mar 08, 2022 at 13:20:36 CST
+ncverilog
+	kmap_tb.v
+	kmap.v
+	+access+r
+	+define+FSDB
+xmverilog: *W,NCEXDEP: Executable (ncverilog) is deprecated. Use (xmverilog) instead.
+file: kmap.v
+	module worklib.kmap:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.kmap_tb:v <0x3c1c6b1e>
+			streams:   8, words: 16295
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                  2       2
+		Primitives:               9       1
+		Registers:                6       6
+		Scalar wires:             4       -
+		Initial blocks:           3       3
+		Pseudo assignments:       4       4
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.kmap_tb:v
+Loading snapshot worklib.kmap_tb:v .................... Done
+*Verdi* Loading libsscore_xcelium.so
+xcelium> source /usr/cad/cadence/XCELIUM/XCELIUM_20.09.007/tools/xcelium/files/xmsimrc
+xcelium> run
+FSDB Dumper for Xcelium, Release Verdi_S-2021.09, Linux x86_64/64bit, 08/29/2021
+(C) 1996 - 2021 by Synopsys, Inc.
+*Verdi* : Create FSDB file 'kmap.fsdb'
+*Verdi* : Begin traversing the scope (kmap_tb.kmap), layer (0).
+*Verdi* : End of traversing.
+                   0ns, A=0, B=0, C=0 , D=0 , Out=0
+                  10ns, A=0, B=0, C=0 , D=1 , Out=1
+                  20ns, A=0, B=0, C=1 , D=0 , Out=0
+                  30ns, A=0, B=0, C=1 , D=1 , Out=1
+                  40ns, A=0, B=1, C=0 , D=0 , Out=1
+                  50ns, A=0, B=1, C=0 , D=1 , Out=1
+                  60ns, A=0, B=1, C=1 , D=0 , Out=1
+                  70ns, A=0, B=1, C=1 , D=1 , Out=0
+                  80ns, A=1, B=0, C=0 , D=0 , Out=0
+                  90ns, A=1, B=0, C=0 , D=1 , Out=1
+                 100ns, A=1, B=0, C=1 , D=0 , Out=0
+                 110ns, A=1, B=0, C=1 , D=1 , Out=1
+                 120ns, A=1, B=1, C=0 , D=0 , Out=1
+                 130ns, A=1, B=1, C=0 , D=1 , Out=1
+                 140ns, A=1, B=1, C=1 , D=0 , Out=1
+                 150ns, A=1, B=1, C=1 , D=1 , Out=1
+Simulation complete via $finish(1) at time 160 NS + 0
+./kmap_tb.v:41 	#`INTERVAL $finish;
+xcelium> exit
+TOOL:	xmverilog	20.09-s007: Exiting on Mar 08, 2022 at 13:20:37 CST  (total: 00:00:01)

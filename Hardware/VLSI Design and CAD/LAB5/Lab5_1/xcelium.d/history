@@ -1,0 +1,20 @@
+//
+// File created by:  xrun
+// Do not modify this file
+
+s1::(29Mar2022:13:04:54):( ncverilog det_1001.v )
+s2::(29Mar2022:13:06:03):( ncverilog det_1001_tb.v +access+r +define+FSDB )
+s3::(29Mar2022:13:13:05):( ncverilog det_1001.v )
+s4::(29Mar2022:13:13:08):( ncverilog det_1001_tb.v +access+r +define+FSDB )
+s5::(29Mar2022:13:17:04):( ncverilog det_1001_tb.v +access+r +define+FSDB )
+s6::(29Mar2022:13:17:44):( ncverilog det_1001_tb.v +access+r +define+FSDB )
+s7::(29Mar2022:13:18:08):( ncverilog det_1001_tb.v +access+r +define+FSDB )
+s8::(29Mar2022:13:20:03):( ncverilog det_1001_tb.v +access+r +define+FSDB )
+s9::(29Mar2022:13:22:53):( ncverilog det_1001_tb.v +access+r +define+FSDB )
+s10::(29Mar2022:13:23:16):( ncverilog det_1001_tb.v +access+r +define+FSDB )
+s11::(29Mar2022:13:25:52):( ncverilog det_1001_tb.v +access+r +define+FSDB )
+s12::(29Mar2022:13:26:40):( ncverilog det_1001_tb.v +access+r +define+FSDB )
+s13::(29Mar2022:13:29:10):( ncverilog det_1001_tb.v +access+r +define+FSDB )
+s14::(29Mar2022:13:34:59):( ncverilog det_1001_tb.v +access+r +define+FSDB )
+s15::(29Mar2022:13:35:41):( ncverilog det_1001_tb.v +access+r +define+FSDB )
+s16::(30Mar2022:13:37:55):( ncverilog det_1001_tb.v +access+r +define+FSDB+syn )

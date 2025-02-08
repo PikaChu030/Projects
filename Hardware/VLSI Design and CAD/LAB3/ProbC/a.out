@@ -1,0 +1,48 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000002ca2d8b6e00 .scope module, "fixedpoint" "fixedpoint" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "int_in";
+    .port_info 1 /OUTPUT 8 "result";
+L_000002ca2d8f80a8 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+L_000002ca2d8667d0 .functor XNOR 1, L_000002ca2d8b3670, L_000002ca2d8f80a8, C4<0>, C4<0>;
+v000002ca2d86a060_0 .net *"_ivl_13", 0 0, L_000002ca2d8b3670;  1 drivers
+v000002ca2d8b69e0_0 .net/2u *"_ivl_14", 0 0, L_000002ca2d8f80a8;  1 drivers
+v000002ca2d8b2db0_0 .net *"_ivl_16", 0 0, L_000002ca2d8667d0;  1 drivers
+v000002ca2d8b3210_0 .net *"_ivl_19", 8 0, L_000002ca2d8b3170;  1 drivers
+L_000002ca2d8f8138 .functor BUFT 1, C4<0000000001011001>, C4<0>, C4<0>, C4<0>;
+v000002ca2d8b2950_0 .net *"_ivl_2", 15 0, L_000002ca2d8f8138;  1 drivers
+v000002ca2d8b2770_0 .net *"_ivl_21", 8 0, L_000002ca2d8b2b30;  1 drivers
+L_000002ca2d8f80f0 .functor BUFT 1, C4<000000001>, C4<0>, C4<0>, C4<0>;
+v000002ca2d8b2ef0_0 .net/2u *"_ivl_22", 8 0, L_000002ca2d8f80f0;  1 drivers
+v000002ca2d8b2d10_0 .net *"_ivl_24", 8 0, L_000002ca2d8b3490;  1 drivers
+v000002ca2d8b2f90_0 .net *"_ivl_26", 8 0, L_000002ca2d8b3530;  1 drivers
+v000002ca2d8b28b0_0 .net *"_ivl_6", 15 0, L_000002ca2d8b30d0;  1 drivers
+L_000002ca2d8f8060 .functor BUFT 1, C4<00000000>, C4<0>, C4<0>, C4<0>;
+v000002ca2d8b32b0_0 .net *"_ivl_9", 7 0, L_000002ca2d8f8060;  1 drivers
+o000002ca2d8b71a8 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+v000002ca2d8b35d0_0 .net "int_in", 7 0, o000002ca2d8b71a8;  0 drivers
+L_000002ca2d8f8018 .functor BUFT 1, C4<01011001>, C4<0>, C4<0>, C4<0>;
+v000002ca2d8b33f0_0 .net "multi", 7 0, L_000002ca2d8f8018;  1 drivers
+v000002ca2d8b2e50_0 .net "result", 7 0, L_000002ca2d8b2810;  1 drivers
+v000002ca2d8b3030_0 .net "temp", 15 0, L_000002ca2d8b3350;  1 drivers
+L_000002ca2d8b30d0 .concat [ 8 8 0 0], o000002ca2d8b71a8, L_000002ca2d8f8060;
+L_000002ca2d8b3350 .arith/mult 16, L_000002ca2d8f8138, L_000002ca2d8b30d0;
+L_000002ca2d8b3670 .part L_000002ca2d8b3350, 6, 1;
+L_000002ca2d8b3170 .part L_000002ca2d8b3350, 7, 9;
+L_000002ca2d8b2b30 .part L_000002ca2d8b3350, 7, 9;
+L_000002ca2d8b3490 .arith/sum 9, L_000002ca2d8b2b30, L_000002ca2d8f80f0;
+L_000002ca2d8b3530 .functor MUXZ 9, L_000002ca2d8b3490, L_000002ca2d8b3170, L_000002ca2d8667d0, C4<>;
+L_000002ca2d8b2810 .part L_000002ca2d8b3530, 0, 8;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "fixedpoint.v";

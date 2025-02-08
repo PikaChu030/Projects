@@ -1,0 +1,9 @@
+*design* DebussyLib (btIdent Verdi_S-2021.09)
+Command arguments:
+    +define+verilog
+    /home/user2/vlsi22/vlsi22114/Lab2/ProbA/kmap.v
+
+Highest level modules:
+kmap
+
+Total	0 error(s),   0 warning(s)

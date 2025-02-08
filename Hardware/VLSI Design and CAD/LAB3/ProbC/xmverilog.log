@@ -1,0 +1,68 @@
+xmverilog(64): 20.09-s007: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	xmverilog	20.09-s007: Started on Mar 09, 2022 at 22:09:36 CST
+ncverilog
+	fixedpoint_tb.v
+	+define+FSDB
+	+access+r
+xmverilog: *W,NCEXDEP: Executable (ncverilog) is deprecated. Use (xmverilog) instead.
+file: fixedpoint_tb.v
+	module worklib.fixedpoint:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.fixedpoint:v <0x1254bc26>
+			streams:   3, words:   640
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                  2       2
+		Registers:                2       2
+		Vectored wires:           4       -
+		Initial blocks:           4       4
+		Cont. assignments:        3       3
+		Pseudo assignments:       1       1
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.fixedpoint_tb:v
+Loading snapshot worklib.fixedpoint_tb:v .................... Done
+*Verdi* Loading libsscore_xcelium.so
+xcelium> source /usr/cad/cadence/XCELIUM/XCELIUM_20.09.007/tools/xcelium/files/xmsimrc
+xcelium> run
+FSDB Dumper for Xcelium, Release Verdi_S-2021.09, Linux x86_64/64bit, 08/29/2021
+(C) 1996 - 2021 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'fixedpoint.fsdb'
+*Verdi* : Begin traversing the scopes, layer (0).
+*Verdi* : End of traversing.
+                   0 int_in= 32 , result= 22 
+-----------------------------------------------------------------------
+
+time                   5  output is correct
+
+                  10 int_in= 55 , result= 38 
+time                  15  output is correct
+
+                  20 int_in= 10 , result=  7 
+time                  25  output is correct
+
+                  30 int_in=  9 , result=  6 
+time                  35  output is correct
+
+-----------------------------------------------------------------------
+
+    \|/     ***********************************************     \|/   
+  |^^^^^^|  **                                           **  |^^^^^^| 
+  |  o o |  **                                           **  | o o  | 
+  |_ _v__|  **             Congratulations !!            **  |__v___| 
+   \/||\/   **               Test PASS  !!               **   \/||\/  
+     ||     **                                           **     ||    
+    /  \    **                                           **    /  \   
+            ***********************************************           
+-----------------------------------------------------------------------
+
+Simulation complete via $finish(1) at time 50 NS + 0
+./fixedpoint_tb.v:82   #20   $finish ;       // Stop simulate
+xcelium> exit
+TOOL:	xmverilog	20.09-s007: Exiting on Mar 09, 2022 at 22:09:37 CST  (total: 00:00:01)

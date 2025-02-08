@@ -1,0 +1,7 @@
+//
+// File created by:  xmverilog
+// Do not modify this file
+//
+fixedpoint_s_tb.v
++define+FSDB+syn
++access+r
