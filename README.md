@@ -62,7 +62,7 @@ More works will be added continuously
 - Machine Learning (ML)
 - Deep Learning (DL)   
 9. Role-Playing Game (RPG) - C:
--
+- UX, UI
 10. Karnaugh map (software) - C++:  
 - Data Structure  
 - Logic Circuit  
