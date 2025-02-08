@@ -25,7 +25,6 @@ More works will be added continuously
 - Virtuoso: Schematic
 - HSPICE: Model
 - Laker: Layout, DRC, LVS, PEX
-4. (other projects will be added continuously...)
 
 ## Software
 1. Predator Prey Simulation - Python:
@@ -70,4 +69,3 @@ More works will be added continuously
 11. Quine–McCluskey algorithm (software) - C++:
 - Data Structure
 - Logic Circuit 
-12. (other projects will be added continuously...)  
