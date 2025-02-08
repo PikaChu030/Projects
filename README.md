@@ -27,12 +27,7 @@ More works will be added continuously
 - Laker: Layout, DRC, LVS, PEX
 
 ## Software
-1. Predator Prey Simulation - Python:
-- Profile  
-- Source Control  
-- Debug  
-- CI/CD Tools  
-2. Assessing ML Models for Species Data Modelling - Python:  
+1. Assessing ML Models for Species Data Modelling - Python:  
 - Machine Learning (ML)  
 - Deep Learning (DL)  
 - Natural language processing (NLP)  
@@ -43,24 +38,29 @@ More works will be added continuously
 - Principal component analysis (PCA)    
 - Exploratory Data Analysis (EDA)   
 - Testing  
-- Optimization  
-3. Computer Graphics Rendering - C++:  
-- Graphics  
-4. REST Service - Java:  
-- Maven  
-- Docker
-- Postman  
-5. Database (estimated to be added by 26/03/2025) - Java:  
-- Database  
-6. Cloud Programming (estimated to be added by 26/03/2025) - Java:
-- Cloud Programming
-7. Smart Contract - Solidty:
-- Blockchain & Distributed Ledger
-8. Master Dissertation (estimated to be added by 31/07/2025) (software) - Python:  
+- Optimization
+2. Predator Prey Simulation - Python:
+- Profile  
+- Source Control  
+- Debug  
+- CI/CD Tools  
+3. Master Dissertation (estimated to be added by 31/07/2025) (software) - Python:  
 - Large Language Model (LLM)  
 - Natural language processing (NLP)
 - Machine Learning (ML)
-- Deep Learning (DL)   
+- Deep Learning (DL)
+4. Cloud Programming (estimated to be added by 26/03/2025) - Java:
+- Cloud Programming
+5. Database (estimated to be added by 26/03/2025) - Java:  
+- Database    
+6. Computer Graphics Rendering - C++:  
+- Graphics  
+7. REST Service - Java:  
+- Maven  
+- Docker
+- Postman  
+8. Smart Contract - Solidty:
+- Blockchain & Distributed Ledger
 9. Role-Playing Game (RPG) - C:
 - UX, UI
 10. Karnaugh map (software) - C++:  
