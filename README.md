@@ -2,7 +2,7 @@
 This repository is used for job application  
 More works will be added continuously
 
-*Last Updated: 07/02/2025 (DD/MM/YYYY)*  
+*Last Updated: 08/02/2025 (DD/MM/YYYY)*  
 
 ## Hardware & Software
 1. AI-On-Chip Machine Learning and Inference - Python:  
