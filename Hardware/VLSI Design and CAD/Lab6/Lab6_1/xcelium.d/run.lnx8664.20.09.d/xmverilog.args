@@ -1,0 +1,7 @@
+//
+// File created by:  xmverilog
+// Do not modify this file
+//
+top_tb2.v
++access+r
++define+FSDB+syn

@@ -1,0 +1,7 @@
+       1 xnor.
+       2 xnor.x_pm_nor%y.
+       3 xnor.x_pm_nor%out_3.
+       4 xnor.x_pm_nor%vdd.
+       5 xnor.x_pm_nor%x.
+       6 xnor.x_pm_nor%gnd.
+       7 xnor.x_pm_nor%c.

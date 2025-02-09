@@ -1,0 +1,85 @@
+* "simulator" "HSPICE" 
+* "version" "N-2017.12 linux64"
+* "format" "HSP"
+* "rundate" "18:48:51 05/10/2022 "
+* "netlist" "testbench.sp "
+* "runtitle" "	**testbench**"
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ a =   0.            
++ b =   0.            
++ out_2 =   1.8000        
++ vdd =   1.8000        
++ xnand.n_a_m_n1_g =   0.            
++ xnand.n_a_m_p1_g =   0.            
++ xnand.n_b_m_n2_g =   0.            
++ xnand.n_b_m_p2_g =   0.            
++ xnand.n_c_m_n1_s =  60.1958m       
++ xnand.n_c_m_n2_d =  60.1958m       
++ xnand.n_gnd_m_n2_b =  15.2174p       
++ xnand.n_gnd_m_n2_s =  78.6769p       
++ xnand.n_out_2_m_n1_d =   1.8000        
++ xnand.n_out_2_m_p1_d =   1.8000        
++ xnand.n_out_2_m_p2_d =   1.8000        
++ xnand.n_vdd_m_p1_b =   1.8000        
++ xnand.n_vdd_m_p1_s =   1.8000        
++ xnand.n_vdd_m_p2_b =   1.8000        
++ xnand.n_vdd_m_p2_s =   1.8000        
++ xnand.x_pm_nand%b.2 =   0.            
++ xnand.x_pm_nand%b.4 =   0.            
++ xnand.x_pm_nand%b.7 =   0.            
++ xnand.x_pm_nand%b.11 =   0.            
++ xnand.x_pm_nand%b.15 =   0.            
++ xnand.x_pm_nand%gnd.2 = 464.7005f       
++ xnand.x_pm_nand%gnd.3 = 507.2739f       
++ xnand.x_pm_nand%gnd.4 = 508.6453f       
++ xnand.x_pm_nand%gnd.5 = 479.4953f       
++ xnand.x_pm_nand%gnd.8 =   8.7205p       
++ xnand.x_pm_nand%gnd.9 = 689.4252f       
++ xnand.x_pm_nand%gnd.15 =   9.0261p       
++ xnand.x_pm_nand%gnd.16 =   1.3729p       
++ xnand.x_pm_nand%gnd.23 =  60.3269p       
++ xnand.x_pm_nand%out_2.4 =   1.8000        
++ xnand.x_pm_nand%out_2.9 =   1.8000        
++ xnand.x_pm_nand%out_2.10 =   1.8000        
++ xnand.x_pm_nand%out_2.14 =   1.8000        
++ xnand.x_pm_nand%out_2.15 =   1.8000        
++ xnand.x_pm_nand%out_2.17 =   1.8000        
++ xnand.x_pm_nand%out_2.20 =   1.8000        
++ xnand.x_pm_nand%c.2 =  60.1958m       
++ xnand.x_pm_nand%c.3 =  60.1958m       
++ xnand.x_pm_nand%c.4 =  60.1958m       
++ xnand.x_pm_nand%c.5 =  60.1958m       
++ xnand.x_pm_nand%c.6 =  60.1958m       
++ xnand.x_pm_nand%c.7 =  60.1958m       
++ xnand.x_pm_nand%c.8 =  60.1958m       
++ xnand.x_pm_nand%c.9 =  60.1958m       
++ xnand.x_pm_nand%c.12 =  60.1958m       
++ xnand.x_pm_nand%c.13 =  60.1958m       
++ xnand.x_pm_nand%c.17 =  60.1958m       
++ xnand.x_pm_nand%c.18 =  60.1958m       
++ xnand.x_pm_nand%a.2 =   0.            
++ xnand.x_pm_nand%a.6 =   0.            
++ xnand.x_pm_nand%a.10 =   0.            
++ xnand.x_pm_nand%a.12 =   0.            
++ xnand.x_pm_nand%a.15 =   0.            
++ xnand.x_pm_nand%vdd.6 =   1.8000        
++ xnand.x_pm_nand%vdd.7 =   1.8000        
++ xnand.x_pm_nand%vdd.11 =   1.8000        
++ xnand.x_pm_nand%vdd.12 =   1.8000        
++ xnand.x_pm_nand%vdd.15 =   1.8000        
++ xnand.x_pm_nand%vdd.16 =   1.8000        
++ xnand.x_pm_nand%vdd.21 =   1.8000        
++ xnand.x_pm_nand%vdd.22 =   1.8000        
++ xnand.x_pm_nand%vdd.25 =   1.8000        
++ xnand.x_pm_nand%vdd.26 =   1.8000        
++ xnand.x_pm_nand%vdd.31 =   1.8000        
++ xnand.x_pm_nand%vdd.34 =   1.8000        
++ xnand.x_pm_nand%vdd.35 =   1.8000        
++ xnand.x_pm_nand%vdd.38 =   1.8000        
++ xnand.x_pm_nand%vdd.40 =   1.8000        
+***   END: Saved Operating Point ***                     

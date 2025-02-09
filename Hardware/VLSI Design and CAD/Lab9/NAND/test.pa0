@@ -1,0 +1,7 @@
+       1 xnand.
+       2 xnand.x_pm_nand%b.
+       3 xnand.x_pm_nand%gnd.
+       4 xnand.x_pm_nand%out_2.
+       5 xnand.x_pm_nand%c.
+       6 xnand.x_pm_nand%a.
+       7 xnand.x_pm_nand%vdd.

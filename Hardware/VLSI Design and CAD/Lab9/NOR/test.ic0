@@ -1,0 +1,85 @@
+* "simulator" "HSPICE" 
+* "version" "N-2017.12 linux64"
+* "format" "HSP"
+* "rundate" "18:59:51 05/10/2022 "
+* "netlist" "testbench.sp "
+* "runtitle" "**testbench**"
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ out_3 =   1.8000        
++ vdd =   1.8000        
++ x =   0.            
++ y =   0.            
++ xnor.n_c_m_p1_d =   1.8000        
++ xnor.n_c_m_p2_s =   1.8000        
++ xnor.n_gnd_m_n1_b =  39.8556p       
++ xnor.n_gnd_m_n1_s = 469.2973p       
++ xnor.n_gnd_m_n2_s = 498.6057p       
++ xnor.n_out_3_m_n1_d =   1.8000        
++ xnor.n_out_3_m_n2_d =   1.8000        
++ xnor.n_out_3_m_p2_d =   1.8000        
++ xnor.n_vdd_m_p1_b =   1.8000        
++ xnor.n_vdd_m_p1_s =   1.8000        
++ xnor.n_vdd_m_p2_b =   1.8000        
++ xnor.n_x_m_n2_g =   0.            
++ xnor.n_x_m_p1_g =   0.            
++ xnor.n_y_m_n1_g =   0.            
++ xnor.n_y_m_p2_g =   0.            
++ xnor.x_pm_nor%y.2 =   0.            
++ xnor.x_pm_nor%y.4 =   0.            
++ xnor.x_pm_nor%y.7 =   0.            
++ xnor.x_pm_nor%y.11 =   0.            
++ xnor.x_pm_nor%y.15 =   0.            
++ xnor.x_pm_nor%out_3.4 =   1.8000        
++ xnor.x_pm_nor%out_3.5 =   1.8000        
++ xnor.x_pm_nor%out_3.9 =   1.8000        
++ xnor.x_pm_nor%out_3.10 =   1.8000        
++ xnor.x_pm_nor%out_3.14 =   1.8000        
++ xnor.x_pm_nor%out_3.17 =   1.8000        
++ xnor.x_pm_nor%out_3.21 =   1.8000        
++ xnor.x_pm_nor%vdd.8 =   1.8000        
++ xnor.x_pm_nor%vdd.9 =   1.8000        
++ xnor.x_pm_nor%vdd.12 =   1.8000        
++ xnor.x_pm_nor%vdd.19 =   1.8000        
++ xnor.x_pm_nor%vdd.20 =   1.8000        
++ xnor.x_pm_nor%vdd.25 =   1.8000        
++ xnor.x_pm_nor%vdd.29 =   1.8000        
++ xnor.x_pm_nor%x.2 =   0.            
++ xnor.x_pm_nor%x.6 =   0.            
++ xnor.x_pm_nor%x.10 =   0.            
++ xnor.x_pm_nor%x.12 =   0.            
++ xnor.x_pm_nor%x.15 =   0.            
++ xnor.x_pm_nor%gnd.2 =  30.3873p       
++ xnor.x_pm_nor%gnd.3 =  31.3122p       
++ xnor.x_pm_nor%gnd.6 =  22.0322p       
++ xnor.x_pm_nor%gnd.13 =  33.8937p       
++ xnor.x_pm_nor%gnd.14 =  26.5239p       
++ xnor.x_pm_nor%gnd.21 = 363.3243p       
++ xnor.x_pm_nor%gnd.22 =   5.8634p       
++ xnor.x_pm_nor%gnd.26 = 394.2085p       
++ xnor.x_pm_nor%gnd.27 =  36.7476p       
++ xnor.x_pm_nor%gnd.29 = 427.9958f       
++ xnor.x_pm_nor%gnd.34 = 445.6438f       
++ xnor.x_pm_nor%c.2 =   1.8000        
++ xnor.x_pm_nor%c.3 =   1.8000        
++ xnor.x_pm_nor%c.4 =   1.8000        
++ xnor.x_pm_nor%c.5 =   1.8000        
++ xnor.x_pm_nor%c.6 =   1.8000        
++ xnor.x_pm_nor%c.7 =   1.8000        
++ xnor.x_pm_nor%c.8 =   1.8000        
++ xnor.x_pm_nor%c.9 =   1.8000        
++ xnor.x_pm_nor%c.10 =   1.8000        
++ xnor.x_pm_nor%c.11 =   1.8000        
++ xnor.x_pm_nor%c.14 =   1.8000        
++ xnor.x_pm_nor%c.15 =   1.8000        
++ xnor.x_pm_nor%c.18 =   1.8000        
++ xnor.x_pm_nor%c.21 =   1.8000        
++ xnor.x_pm_nor%c.22 =   1.8000        
++ xnor.x_pm_nor%c.24 =   1.8000        
++ xnor.x_pm_nor%c.26 =   1.8000        
++ xnor.x_pm_nor%c.29 =   1.8000        
+***   END: Saved Operating Point ***                     
